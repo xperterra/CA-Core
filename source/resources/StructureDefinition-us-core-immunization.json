@@ -1,0 +1,263 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "us-core-immunization",
+  "url": "http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-immunization",
+  "version": "4.0.0",
+  "name": "USCoreImmunizationProfile",
+  "title": "US Core Immunization Profile",
+  "status": "active",
+  "date": "2016-08-01",
+  "publisher": "HL7 US Realm Steering Committee",
+  "description": "Defines constraints and extensions on the Immunization resource for the minimal set of data to query and retrieve  patient's immunization information.",
+  "fhirVersion": "4.0.0",
+  "mapping": [
+    {
+      "identity": "quick",
+      "uri": "http://unknown.org/QUICK",
+      "name": "QUICK"
+    },
+    {
+      "identity": "argonaut-dq-dstu2",
+      "uri": "http://unknown.org/Argonaut-DQ-DSTU2",
+      "name": "Argonaut-DQ-DSTU2"
+    },
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "cda",
+      "uri": "http://hl7.org/v3/cda",
+      "name": "CDA (R2)"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Immunization",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Immunization",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Immunization",
+        "path": "Immunization",
+        "short": "US Core Immunization Profile",
+        "definition": "The US Core Immunization Profile is based upon the core FHIR Immunization Resource and created to meet the 2015 Edition Common Clinical Data Set 'Immunizations' requirements.",
+        "mustSupport": false,
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "quick",
+            "map": "ImmunizationPerformanceOccurrence"
+          },
+          {
+            "identity": "quick",
+            "map": "ImmunizationPerformanceOccurrence"
+          },
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "Immunization"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.status",
+        "path": "Immunization.status",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false,
+        "binding": {
+          "strength": "required",
+          "description": "Constrained list of immunizaiotn status",
+          "valueSet": "http://hl7.org/fhir/ValueSet/immunization-status"
+        },
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "Immunization.status"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.statusReason",
+        "path": "Immunization.statusReason",
+        "min": 0,
+        "max": "1",
+        "mustSupport": true,
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "Immunization.wasNotGiven"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.vaccineCode",
+        "path": "Immunization.vaccineCode",
+        "short": "Vaccine Product Type (bind to CVX)",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "constraint": [
+          {
+            "extension": [
+              {
+                "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bestpractice",
+                "valueBoolean": true
+              }
+            ],
+            "key": "us-core-1",
+            "severity": "warning",
+            "human": "SHOULD have a translation to the NDC value set",
+            "expression": "coding.where(system='http://hl7.org/fhir/sid/ndc').empty()",
+            "xpath": "not(exists(f:coding/f:system[@value='http://hl7.org/fhir/sid/ndc']))"
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet",
+              "valueCanonical": "http://hl7.org/fhir/us/core-r4/ValueSet/us-core-cvx"
+            }
+          ],
+          "strength": "extensible",
+          "description": "The CVX (vaccine administered) code system",
+          "valueSet": "http://hl7.org/fhir/us/core-r4/ValueSet/us-core-cvx"
+        },
+        "mapping": [
+          {
+            "identity": "quick",
+            "map": "vaccine"
+          },
+          {
+            "identity": "quick",
+            "map": "vaccine"
+          },
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "Immunization.vaccineCode"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.patient",
+        "path": "Immunization.patient",
+        "alias": [
+          "Patient"
+        ],
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-patient"
+            ]
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "quick",
+            "map": "subject"
+          },
+          {
+            "identity": "quick",
+            "map": "subject"
+          },
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "Immunization.patient"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.occurrence[x]",
+        "path": "Immunization.occurrence[x]",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "quick",
+            "map": "performanceTime"
+          },
+          {
+            "identity": "quick",
+            "map": "performanceTime"
+          },
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "Immunization.date"
+          }
+        ]
+      },
+      {
+        "id": "Immunization.primarySource",
+        "path": "Immunization.primarySource",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "boolean"
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "quick",
+            "map": "reported"
+          },
+          {
+            "identity": "quick",
+            "map": "reported"
+          },
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "Immunization.reported"
+          }
+        ]
+      }
+    ]
+  }
+}

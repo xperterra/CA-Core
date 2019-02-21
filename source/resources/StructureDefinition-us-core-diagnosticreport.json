@@ -1,0 +1,293 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "us-core-diagnosticreport",
+  "url": "http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-diagnosticreport",
+  "version": "4.0.0",
+  "name": "USCoreDiagnosticReportProfile",
+  "title": "US Core DiagnosticReport Profile",
+  "status": "active",
+  "date": "2016-08-01",
+  "publisher": "HL7 US Realm Steering Committee",
+  "description": "Defines constraints and extensions on the DiagnosticReport resource  for the minimal set of data to query and retrieve diagnostic reports associated with a patient",
+  "fhirVersion": "4.0.0",
+  "mapping": [
+    {
+      "identity": "argonaut-dq-dstu2",
+      "uri": "http://unknown.org/Argonaut-DQ-DSTU2",
+      "name": "Argonaut-DQ-DSTU2"
+    },
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "DiagnosticReport",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/DiagnosticReport",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "DiagnosticReport",
+        "path": "DiagnosticReport",
+        "short": "US Core Diagnostic Report Profile",
+        "definition": "The US Core Diagnostic Report Profile is based upon the core FHIR DiagnosticReport Resource and created to meet the 2015 Edition Common Clinical Data Set 'Laboratory test(s) and Laboratory value(s)/result(s)' requirements.",
+        "alias": [
+          "Lab Result",
+          "Lab Report"
+        ],
+        "mustSupport": false,
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "DiagnosticReport"
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.status",
+        "path": "DiagnosticReport.status",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false,
+        "binding": {
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/diagnostic-report-status"
+        },
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "DiagnosticReport.status"
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.category",
+        "path": "DiagnosticReport.category",
+        "alias": [
+          "Department",
+          "Sub-department",
+          "service",
+          "discipline"
+        ],
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://terminology.hl7.org/CodeSystem/v2-0074",
+              "code": "LAB"
+            }
+          ]
+        },
+        "mustSupport": true,
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "DiagnosticReport.category"
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.code",
+        "path": "DiagnosticReport.code",
+        "short": "US Core Laboratory Report Order Code",
+        "definition": "The test, panel or battery that was ordered.",
+        "comment": "UsageNote= The typical patterns for codes are:  1)  a LOINC code either as a  translation from a \"local\" code or as a primary code, or 2)  a local code only if no suitable LOINC exists,  or 3)  both the local and the LOINC translation.   Systems SHALL be capable of sending the local code if one exists.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false,
+        "binding": {
+          "strength": "extensible",
+          "description": "LOINC codes",
+          "valueSet": "http://hl7.org/fhir/ValueSet/report-codes"
+        },
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "DiagnosticReport.code"
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.subject",
+        "path": "DiagnosticReport.subject",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-patient"
+            ]
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "DiagnosticReport.subject"
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.effective[x]",
+        "path": "DiagnosticReport.effective[x]",
+        "short": "Specimen Collection Datetime or Period",
+        "definition": "This is the Specimen Collection Datetime or Period which is the physically relevent dateTime for laboratory tests.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "dateTime"
+          },
+          {
+            "code": "Period"
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "DiagnosticReport.effective[x]"
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.issued",
+        "path": "DiagnosticReport.issued",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "instant"
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "DiagnosticReport.issued"
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.performer",
+        "path": "DiagnosticReport.performer",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-practitioner",
+              "http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-organization"
+            ]
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "DiagnosticReport.performer"
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.result",
+        "path": "DiagnosticReport.result",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-observationresults"
+            ]
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "DiagnosticReport.result"
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.media",
+        "path": "DiagnosticReport.media",
+        "min": 0,
+        "max": "*",
+        "mustSupport": true,
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "DiagnosticReport.image"
+          }
+        ]
+      },
+      {
+        "id": "DiagnosticReport.presentedForm",
+        "path": "DiagnosticReport.presentedForm",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "Attachment"
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "DiagnosticReport.presentedForm"
+          }
+        ]
+      }
+    ]
+  }
+}

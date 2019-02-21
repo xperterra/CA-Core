@@ -1,0 +1,173 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "us-core-careteam",
+  "url": "http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-careteam",
+  "version": "4.0.0",
+  "name": "USCoreCareTeamProfile",
+  "title": "US Core CareTeam Profile",
+  "status": "active",
+  "date": "2016-08-01",
+  "publisher": "HL7 US Realm Steering Committee",
+  "description": "Defines constraints and extensions on the CareTeam resource for the minimal set of data to query and retrieve a patient's Care Team.",
+  "fhirVersion": "4.0.0",
+  "mapping": [
+    {
+      "identity": "argonaut-dq-dstu2",
+      "uri": "http://unknown.org/Argonaut-DQ-DSTU2",
+      "name": "Argonaut-DQ-DSTU2"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "CareTeam",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/CareTeam",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "CareTeam",
+        "path": "CareTeam",
+        "short": "US Core CareTeam Profile",
+        "definition": "The US Core CareTeam Profile is based upon the core FHIR CareTeam Resource and created to meet the 2015 Edition Common Clinical Data Set 'Care team member(s)' requirements.",
+        "mustSupport": false,
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "CarePlan"
+          }
+        ]
+      },
+      {
+        "id": "CareTeam.status",
+        "path": "CareTeam.status",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false,
+        "binding": {
+          "strength": "required",
+          "description": "Indicates whether the team is current , represents future intentions or is now a historical record.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/care-team-status"
+        },
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "CarePlan.status"
+          }
+        ]
+      },
+      {
+        "id": "CareTeam.subject",
+        "path": "CareTeam.subject",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-patient"
+            ]
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "CarePlan.subject"
+          }
+        ]
+      },
+      {
+        "id": "CareTeam.participant",
+        "path": "CareTeam.participant",
+        "min": 1,
+        "max": "*",
+        "mustSupport": true,
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "CarePlan.participant"
+          }
+        ]
+      },
+      {
+        "id": "CareTeam.participant.role",
+        "path": "CareTeam.participant.role",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false,
+        "binding": {
+          "extension": [
+            {
+              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet",
+              "valueCanonical": "http://hl7.org/fhir/us/core-r4/ValueSet/us-core-careteam-provider-roles"
+            }
+          ],
+          "strength": "extensible",
+          "description": "Indicates specific responsibility of an individual within the care team, such as Primary physician, Team coordinator, Caregiver, etc.",
+          "valueSet": "http://hl7.org/fhir/us/core-r4/ValueSet/us-core-careteam-provider-roles"
+        },
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "CarePlan.participant.role"
+          }
+        ]
+      },
+      {
+        "id": "CareTeam.participant.member",
+        "path": "CareTeam.participant.member",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-patient",
+              "http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-practitioner",
+              "http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-organization",
+              "http://hl7.org/fhir/StructureDefinition/RelatedPerson"
+            ]
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "CarePlan.participant.member"
+          }
+        ]
+      }
+    ]
+  }
+}

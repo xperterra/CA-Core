@@ -1,0 +1,77 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "us-core-profile-link",
+  "url": "http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-profile-link",
+  "version": "4.0.0",
+  "name": "ProfileResourceAssociationExtension",
+  "title": "Profile-resource association extension",
+  "status": "active",
+  "date": "2019-02-21T11:39:08+00:00",
+  "publisher": "HL7 US Realm Steering Committee",
+  "description": "Used in the CapabilityStatment resource to link profiles to the resources they are based upon for the purpose of describing profile specific capababilties such as specific search criteria or operations which are supported on a profile by profile bases. It is a code that references a resource listed in Capability.rest.resource. For more information on how the Capability resource describes profiles on resources, see [Two uses of Profiles](http://hl7.org/fhir/STU3/profiling.html#profile-uses).",
+  "purpose": "To allow profiles to be associated with resources in CapabilityStatements.",
+  "fhirVersion": "4.0.0",
+  "mapping": [
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    }
+  ],
+  "kind": "complex-type",
+  "abstract": false,
+  "context": [
+    {
+      "type": "element",
+      "expression": "CapapbilityStatement.profile"
+    }
+  ],
+  "type": "Extension",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Extension:profile-link",
+        "path": "Extension",
+        "short": "Resource that this profile is based on",
+        "definition": "This is a code that references a  resource listed in CapabilityStatement.rest.resource.  This is used to link the profile to the resources for the purpose of describing profile specific capababilties such as specific search criteria or operations which are supported on a profile by profile bases.",
+        "comment": "This is helpful for publishing the CapabilityResource narrative.",
+        "min": 0,
+        "max": "*",
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "v2",
+            "map": "No v2 equivalent"
+          },
+          {
+            "identity": "rim",
+            "map": "No RIM equivalent"
+          }
+        ]
+      },
+      {
+        "id": "Extension:profile-link.url",
+        "path": "Extension.url",
+        "fixedUri": "http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-profile-link"
+      },
+      {
+        "id": "Extension:profile-link.valueCode",
+        "path": "Extension.valueCode",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "binding": {
+          "strength": "required",
+          "description": "One of the resource types defined as part of FHIR.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/resource-types"
+        }
+      }
+    ]
+  }
+}

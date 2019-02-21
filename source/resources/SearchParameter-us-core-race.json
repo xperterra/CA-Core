@@ -1,0 +1,18 @@
+{
+  "resourceType": "SearchParameter",
+  "id": "us-core-race",
+  "url": "http://hl7.org/fhir/us/core-r4/SearchParameter/us-core-race",
+  "name": "USCoreRace",
+  "status": "active",
+  "date": "2016-12-22",
+  "publisher": "US Realm Steering Committee",
+  "description": "Returns patients with a race extension matching the specified code.",
+  "code": "race",
+  "base": [
+    "Patient"
+  ],
+  "type": "token",
+  "expression": "Patient.extension.where(url = 'http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-race').extension.value.code",
+  "xpath": "f:Patient/f:extension[@url='http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-race']/f:extension/f:valueCoding/f:code/@value",
+  "xpathUsage": "normal"
+}

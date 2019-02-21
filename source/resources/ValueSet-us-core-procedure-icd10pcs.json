@@ -1,0 +1,20 @@
+{
+  "resourceType": "ValueSet",
+  "id": "us-core-procedure-icd10pcs",
+  "url": "http://hl7.org/fhir/us/core-r4/ValueSet/us-core-procedure-icd10pcs",
+  "version": "1.0.1",
+  "name": "US_Core_ICD_10_PCS_Procedure_Codes",
+  "title": "US Core ICD-10-PCS Procedure Codes",
+  "status": "active",
+  "date": "2016-08-10",
+  "publisher": "HL7 US Realm Steering Committee",
+  "description": "This value set defines a set of codes from ICD10-PCS that can be used to indicate a type of procedure performed",
+  "copyright": "The International Classification of Diseases, Tenth Revision, Procedure Coding System (ICD-10-PCS) was developed for the Centers for Medicare and Medicaid Services (CMS).  CMS is the U.S. governmental agency responsible for overseeing all changes and modifications to the ICD-10-PCS.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://www.icd10data.com/icd10pcs"
+      }
+    ]
+  }
+}

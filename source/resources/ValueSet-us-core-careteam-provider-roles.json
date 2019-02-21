@@ -1,0 +1,41 @@
+{
+  "resourceType": "ValueSet",
+  "id": "us-core-careteam-provider-roles",
+  "url": "http://hl7.org/fhir/us/core-r4/ValueSet/us-core-careteam-provider-roles",
+  "version": "1.0.1",
+  "name": "CareTeam_Provider_Roles",
+  "title": "CareTeam Provider Roles",
+  "status": "active",
+  "date": "2016-08-08T08:27:28-07:00",
+  "publisher": "HL7 US Realm Steering Committee",
+  "description": "Provider roles codes consist of NUCC Health Care Provider Taxonomy Code Set for providers and SNOMED-CT for - non clinical and organization roles including codes from the SCTID 125676002 Person (person) heirarchy and the SCTID 394730007 Healthcare related organization (qualifier value) heirarchy.",
+  "purpose": "Codes that may be used for implementation of the Argonaut Procedures IG and MU2015 certification.",
+  "copyright": "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement. This value set includes content from NUCC Health Care Provider Taxonomy Code Set for providers which is copyright © 2016+ American Medical Association.  For commercial use, including sales or licensing, a license must be obtained.",
+  "compose": {
+    "include": [
+      {
+        "system": "http://nucc.org/provider-taxonomy"
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "125676002"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "394730007"
+          }
+        ]
+      }
+    ]
+  }
+}

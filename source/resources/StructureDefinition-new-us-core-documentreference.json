@@ -1,0 +1,100 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "new-us-core-documentreference",
+  "url": "http://hl7.org/fhir/us/core-r4/StructureDefinition/new-us-core-documentreference",
+  "version": "4.0.0",
+  "name": "NewUSCoreDocumentReference",
+  "title": "New US Core DocumentReference Profile",
+  "status": "active",
+  "date": "2018-11-02",
+  "publisher": "HL7 US Realm Steering Committee",
+  "description": "The document reference profile used in US Core for retrieving clnical notes",
+  "fhirVersion": "4.0.0",
+  "mapping": [
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "fhircomposition",
+      "uri": "http://hl7.org/fhir/composition",
+      "name": "FHIR Composition"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "cda",
+      "uri": "http://hl7.org/v3/cda",
+      "name": "CDA (R2)"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    },
+    {
+      "identity": "xds",
+      "uri": "http://ihe.net/xds",
+      "name": "XDS metadata equivalent"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "DocumentReference",
+  "baseDefinition": "http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-documentreference",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "DocumentReference",
+        "path": "DocumentReference",
+        "short": "New US Core DocumentReference Profile",
+        "definition": "This is a basic constraint on DocumentRefernce for use in the US Core IG for retrieval of Clinical Notes.",
+        "mustSupport": false,
+        "isModifier": false
+      },
+      {
+        "id": "DocumentReference.category",
+        "path": "DocumentReference.category",
+        "min": 1,
+        "max": "*",
+        "mustSupport": true,
+        "isModifier": false,
+        "binding": {
+          "strength": "extensible",
+          "description": "The US Core DocumentReferences Type Value Set is a &#39;starter set&#39; of categories supported for fetching and storing clinical notes.",
+          "valueSet": "http://hl7.org/fhir/us/core-r4/ValueSet/us-core-documentreference-category"
+        }
+      },
+      {
+        "id": "DocumentReference.author",
+        "path": "DocumentReference.author",
+        "mustSupport": true,
+        "isModifier": false
+      },
+      {
+        "id": "DocumentReference.custodian",
+        "path": "DocumentReference.custodian",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-organization"
+            ]
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false
+      }
+    ]
+  }
+}

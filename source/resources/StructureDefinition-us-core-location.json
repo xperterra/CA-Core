@@ -1,0 +1,196 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "us-core-location",
+  "url": "http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-location",
+  "version": "4.0.0",
+  "name": "USCoreLocationProfile",
+  "title": "US Core Location Profile",
+  "status": "active",
+  "date": "2016-08-01",
+  "publisher": "HL7 US Realm Steering Committee",
+  "description": "Defines basic constraints and extensions on the Location resource for use with other US Core resources",
+  "fhirVersion": "4.0.0",
+  "mapping": [
+    {
+      "identity": "servd",
+      "uri": "http://www.omg.org/spec/ServD/1.0/",
+      "name": "ServD"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "Location",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Location",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Location",
+        "path": "Location",
+        "short": "US Core Location Profile",
+        "mustSupport": false,
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "servd",
+            "map": "Organization"
+          }
+        ]
+      },
+      {
+        "id": "Location.status",
+        "path": "Location.status",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false
+      },
+      {
+        "id": "Location.name",
+        "path": "Location.name",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "servd",
+            "map": "./PrimaryAddress and ./OtherAddresses"
+          }
+        ]
+      },
+      {
+        "id": "Location.telecom",
+        "path": "Location.telecom",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "ContactPoint"
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false
+      },
+      {
+        "id": "Location.address",
+        "path": "Location.address",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Address"
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "servd",
+            "map": "n/a"
+          }
+        ]
+      },
+      {
+        "id": "Location.address.line",
+        "path": "Location.address.line",
+        "min": 0,
+        "max": "*",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false
+      },
+      {
+        "id": "Location.address.city",
+        "path": "Location.address.city",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false
+      },
+      {
+        "id": "Location.address.state",
+        "path": "Location.address.state",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false,
+        "binding": {
+          "strength": "extensible",
+          "description": "Two letter USPS alphabetic codes.",
+          "valueSet": "http://hl7.org/fhir/us/core-r4/ValueSet/us-core-usps-state"
+        },
+        "mapping": [
+          {
+            "identity": "servd",
+            "map": "./Sites"
+          }
+        ]
+      },
+      {
+        "id": "Location.address.postalCode",
+        "path": "Location.address.postalCode",
+        "short": "US Zip Codes",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false
+      },
+      {
+        "id": "Location.managingOrganization",
+        "path": "Location.managingOrganization",
+        "min": 0,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-organization"
+            ]
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false
+      }
+    ]
+  }
+}

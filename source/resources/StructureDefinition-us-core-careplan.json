@@ -1,0 +1,208 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "us-core-careplan",
+  "url": "http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-careplan",
+  "version": "4.0.0",
+  "name": "USCoreCarePlanProfile",
+  "title": "US Core CarePlan Profile",
+  "status": "active",
+  "date": "2016-08-01",
+  "publisher": "HL7 US Realm Steering Committee",
+  "description": "Defines constraints and extensions on the CarePlan resource for the minimal set of data to query and retrieve a patient's Care Plan.",
+  "fhirVersion": "4.0.0",
+  "mapping": [
+    {
+      "identity": "argonaut-dq-dstu2",
+      "uri": "http://unknown.org/Argonaut-DQ-DSTU2",
+      "name": "Argonaut-DQ-DSTU2"
+    },
+    {
+      "identity": "workflow",
+      "uri": "http://hl7.org/fhir/workflow",
+      "name": "Workflow Pattern"
+    },
+    {
+      "identity": "rim",
+      "uri": "http://hl7.org/v3",
+      "name": "RIM Mapping"
+    },
+    {
+      "identity": "w5",
+      "uri": "http://hl7.org/fhir/fivews",
+      "name": "FiveWs Pattern Mapping"
+    },
+    {
+      "identity": "v2",
+      "uri": "http://hl7.org/v2",
+      "name": "HL7 v2 Mapping"
+    }
+  ],
+  "kind": "resource",
+  "abstract": false,
+  "type": "CarePlan",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/CarePlan",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "CarePlan",
+        "path": "CarePlan",
+        "short": "US Core CarePlan Profile",
+        "definition": "The US Core CarePlan Profile is based upon the core FHIR CarePlan Resource and created to meet the 2015 Edition Common Clinical Data Set 'Assessment and Plan of Treatment requirements.",
+        "mustSupport": false,
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "CarePlan"
+          }
+        ]
+      },
+      {
+        "id": "CarePlan.text",
+        "path": "CarePlan.text",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Narrative"
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "CarePlan.text"
+          }
+        ]
+      },
+      {
+        "id": "CarePlan.text.status",
+        "path": "CarePlan.text.status",
+        "definition": "generated | additional.",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false,
+        "binding": {
+          "strength": "required",
+          "description": "Constrained value set of narrative statuses.",
+          "valueSet": "http://hl7.org/fhir/us/core-r4/ValueSet/us-core-narrative-status"
+        },
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "CarePlan.text.status"
+          }
+        ]
+      },
+      {
+        "id": "CarePlan.status",
+        "path": "CarePlan.status",
+        "requirements": "Indicates whether the plan is currently being acted upon, represents future intentions or is now a historical record.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false,
+        "binding": {
+          "strength": "required",
+          "description": "Indicates whether the plan is currently being acted upon, represents future intentions or is now a historical record.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/request-status"
+        },
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "CarePlan.status"
+          }
+        ]
+      },
+      {
+        "id": "CarePlan.intent",
+        "path": "CarePlan.intent",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false,
+        "binding": {
+          "strength": "required",
+          "description": "Codes indicating the degree of authority/intentionality associated with a care plan",
+          "valueSet": "http://hl7.org/fhir/ValueSet/care-plan-intent"
+        },
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "NA (new element in STU3)"
+          }
+        ]
+      },
+      {
+        "id": "CarePlan.category",
+        "path": "CarePlan.category",
+        "definition": "Type of plan.",
+        "requirements": "Identifies what \"kind\" of plan this is to support differentiation between multiple co-existing plans; e.g. \"Home health\", \"psychiatric\", \"asthma\", \"disease management\", \"wellness plan\", etc.",
+        "min": 1,
+        "max": "*",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ],
+        "constraint": [
+          {
+            "key": "us-core-1",
+            "severity": "error",
+            "human": "Must have a category of 'assess-plan' and a code system 'http://hl7.org/fhir/us/core-r4/CodeSystem/careplan-category'",
+            "expression": "where(coding.system='http://hl7.org/fhir/us/core-r4/CodeSystem/careplan-category' and coding.code='assess-plan').exists()",
+            "xpath": "exists(f:coding/code[@value='assess-plan']) and exists(f:coding/system[@value='http://hl7.org/fhir/us/core-r4/CodeSystem/careplan-category'])"
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "CarePlan.category"
+          }
+        ]
+      },
+      {
+        "id": "CarePlan.subject",
+        "path": "CarePlan.subject",
+        "definition": "Who care plan is for.",
+        "requirements": "Identifies the patient or group whose intended care is described by the plan.",
+        "min": 1,
+        "max": "1",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-patient"
+            ]
+          }
+        ],
+        "mustSupport": true,
+        "isModifier": false,
+        "mapping": [
+          {
+            "identity": "argonaut-dq-dstu2",
+            "map": "CarePlan.subject"
+          }
+        ]
+      }
+    ]
+  }
+}

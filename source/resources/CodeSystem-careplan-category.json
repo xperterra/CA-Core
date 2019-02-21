@@ -1,0 +1,22 @@
+{
+  "resourceType": "CodeSystem",
+  "id": "careplan-category",
+  "url": "http://hl7.org/fhir/us/core-r4/CodeSystem/careplan-category",
+  "version": "1.0.1",
+  "name": "USCoreCarePlanCategoryExtensionCodes",
+  "title": "US Core CarePlan Category Extension Codes",
+  "status": "active",
+  "date": "2019-02-21T13:58:34+00:00",
+  "publisher": "HL7 US Realm Steering Committee",
+  "description": "Set of codes that are needed for implementation of the US-Core profiles. These codes are used as extensions to the FHIR and US Core value sets.\n",
+  "caseSensitive": true,
+  "valueSet": "http://hl7.org/fhir/us/core-r4/ValueSet/careplan-category",
+  "content": "complete",
+  "concept": [
+    {
+      "code": "assess-plan",
+      "display": "Assessment and Plan of Treatment",
+      "definition": "The clinical conclusions and assumptions that guide the patient's treatment and the clinical activities formulated for a patient."
+    }
+  ]
+}

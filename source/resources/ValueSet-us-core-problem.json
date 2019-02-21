@@ -1,0 +1,51 @@
+{
+  "resourceType": "ValueSet",
+  "id": "us-core-problem",
+  "url": "http://hl7.org/fhir/us/core-r4/ValueSet/us-core-problem",
+  "identifier": [
+    {
+      "system": "urn:ietf:rfc:3986",
+      "value": "urn:oid:2.16.840.1.113883.3.88.12.3221.7.4"
+    }
+  ],
+  "version": "1.0.1",
+  "name": "Problem_Value_Set",
+  "title": "Problem Value Set",
+  "status": "active",
+  "date": "2016-05-25T16:59:08+10:00",
+  "publisher": "HL7 US Realm Steering Committee",
+  "description": "This describes the problem. Diagnosis/Problem List is broadly defined as a series of brief statements that catalog a patient's medical, nursing, dental, social, preventative and psychiatric events and issues that are relevant to that patient's healthcare (e.g., signs, symptoms, and defined conditions)",
+  "copyright": "This value set includes content from SNOMED CT, which is copyright © 2002+ International Health Terminology Standards Development Organisation (IHTSDO), and distributed by agreement between IHTSDO and HL7. Implementer use of SNOMED CT is not covered by this agreement",
+  "compose": {
+    "include": [
+      {
+        "system": "http://snomed.info/sct",
+        "concept": [
+          {
+            "code": "160245001"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "404684003"
+          }
+        ]
+      },
+      {
+        "system": "http://snomed.info/sct",
+        "filter": [
+          {
+            "property": "concept",
+            "op": "is-a",
+            "value": "243796009"
+          }
+        ]
+      }
+    ]
+  }
+}
