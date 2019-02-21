@@ -1,7 +1,7 @@
 ---
-title: Implemenation Guide Todo List
+title: Implemenation Guide ToDo List
 layout: default
-active: todo
+active: ToDo
 ---
 
-     ...todo...
+This to do list is in framework/todo.md

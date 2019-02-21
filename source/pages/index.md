@@ -15,46 +15,35 @@ layout: default
 
 ### Introduction
 
-The US Core Implementation Guide is based on [FHIR Version R4] and defines the minimum conformance requirements for accessing patient data as defined by the [Argonaut] pilot implementations and the ONC [2015 Edition Common Clinical Data Set (CCDS)].  The Argonaut search and vocabulary requirements, based on [FHIR DSTU2](http://hl7.org/fhir/DSTU2/index.html), are updated in this guide to support [FHIR Version R4]. These profiles are intended to be the foundation for future US Realm FHIR implementation guides. In addition to Argonaut, they are used by [DAF-Research], [QI-Core], and [CIMI].  Under the guidance of HL7 and the HL7 US Realm Steering Committee, the content will expand in future versions to meet the needs specific to the US Realm.
+This 'implementation guide' is a **living document** containing notes and draft profiles developed captured while reviewing the [USCoreR4 Implementation Guide](http://build.fhir.org/ig/HL7/US-Core-R4/) against various Canadian sources, including:
+- [PrescribeIT implementation guides](https://specs.prescribeit.ca/R2.0/)
+- [ON Implementation guides](https://ehealthontario.on.ca/en/architecture/standards/draft), including:
+  - [PCR](https://simplifier.net/provincialclientregi)
+  - [PPR](https://simplifier.net/provincialproviderre)
+  - [DHDR](https://simplifier.net/ontariodigitalhealth)
+  - [OLIS](https://simplifier.net/ontariolaboratoriesi)
+  - [Immunization](https://simplifier.net/digitalhealthimmuniz)
+- [Australian baseline](http://fhir.hl7.org.au/fhir/base2017Jul/)
+- [pan-Canadian HL7v3 specs](https://infocentral.infoway-inforoute.ca/extra/ca/mr0206-html/html/start.html)
 
-These requirements were originally developed, balloted, and published in FHIR DSTU2 as part of the [Office of the National Coordinator for Health Information Technology (ONC)] sponsored [Data Access Framework] (DAF) project. For more information on how DAF became US Core see the [US Core change notes](change-notes.html).  
 
-### US Core Actors
+### Draft Profiles
 
-The following actors are part of the US Core IG:
-
-* US Core Requestor: An application that initiates a data access request to retrieve patient data. This can be thought of as the client in a client-server interaction.
-* US Core Responder: A product that responds to the data access request providing patient data. This can be thought of as the server in a client-server interaction.
-
-
-### US Core Profiles
-
-The list of US Core Profiles is shown below.  Each profile defines the minimum mandatory elements, extensions and terminology requirements that **MUST** be present. For each profile requirements and guidance are given in a simple narrative summary. A formal hierarchical table that presents a [logical view] of the content in both a differential and snapshot view is also provided along with references to appropriate terminologies and examples.  In addition each profile has a "Quick Start" section which is intended as an implementer friendly overview of the required search and read operations.
-
-New DocumentReference and DiagnosticReport Profiles are being introduced for exchanging Clinical Notes. These are *in addition to* the existing US Core DocumentReference and US Core DiagnosticReport Profiles.  Comments are requested on the question of whether these profiles and their use cases should be merged into a single DocumentReference and DiagnosticReport Profile.
-{: .note-to-balloters}
+The following profiles have been developed over the course of the review process described above.  The objective is to refine these to a point where they can be used as a baseline set of Canadian FHIR profiles similar to the USCore.
 
 {% include list-simple-profiles.xhtml %}
 
-- In addition US Core uses the [Vital Signs Profile] from the FHIR Specification.
 
 
-*Note on Searches based on a date or date range:*
+A [General Guidance Section](general-guidance.html) will likely be developed to support use of the profiles.  The page currently contains placeholder content from USCoreR4.  This content may be a useful basis for some Canadian content later.
 
-- Allergies, Immunizations, Medications, Problems and Health Concerns, UDI, Smoking Status do not require a date range search since a system should return all relevant resources.
-- Vital Signs, Laboratory Results, Goals, Encounters, Procedures, and Assessment and Plan of Treatment (CarePlan) include date range search requirements in the Quick Start section on the profile page.
 
-See the *General Guidance* page for a [mapping] to the CCDS.
+###  Conformance Requirements
 
-### US Core Conformance Requirements
-
-The [Capability Statements Section](capstatements.html) outlines conformance requirements for the US Core Servers and Client applications, identifying the specific profiles that need to be supported, the specific RESTful operations that need to be supported, and the search parameters that need to be supported. Note: The individual US Core profiles identify the structural constraints, terminology bindings and invariants, however, implementers must refer to the conformance requirements for details on the RESTful operations, specific profiles and the search parameters applicable to each of the US Core actors.
+A [Capability Statements Section](capstatements.html) will likely also be developed to outline Canadian conformance requirements for clients and servers. The page currently contains placeholder content from USCoreR4.  This content may be a useful basis for some Canadian content later.
 
 ----
 
-
-Primary Authors: Brett Marquard, Nagesh Bashyam, Eric Haas
-
-Secondary Authors: Grahame Grieve, Lloyd McKenzie
+Authors: TBD
 
 {% include link-list.md %}

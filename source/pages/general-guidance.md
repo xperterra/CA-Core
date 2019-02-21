@@ -4,7 +4,16 @@ layout: default
 active: terminology
 ---
 
-This section outlines important definitions and interpretations and requirements common to all US Core actors used in this guide.
+**===========
+
+
+This page currently contains placeholder content from USCoreR4.  This content may be a useful basis for some Canadian content later.
+
+
+===========**
+
+
+This section outlines important definitions and interpretations and requirements common to all  actors used in this guide.
 The conformance verbs used are defined in [FHIR Conformance Rules].
 
 ---
@@ -19,59 +28,32 @@ The conformance verbs used are defined in [FHIR Conformance Rules].
 
 <!-- end TOC -->
 
-### The 2015 Edition Common Clinical Data Set
+### General Guideance
 
-The US Core Profiles are intended to meet the 2015 Edition certification criterion for Patient Selection 170.315(g)(7), and Application Access – Data Category Request 170.315(g)(8). They were created for each of the [2015 Edition Common Clinical Data Set (CCDS)].  The Location, Organization, and Practitioner Profiles are not called out specifically in the certification criteria but are included because they are directly referenced by other profiles.  Where applicable the US Core Profiles are based on the HL7 U.S. [Data Access Framework (DAF)] FHIR DSTU2 Implementation Guide. However, the requirements per resource are a subset of those of the DAF implementation guide.
-
-
-The table below lists the US Core Profile and FHIR Resources used for the corresponding 2015 Edition Common Clinical Data Set (CCDS) Data elements:
-
-No| CCDS Data Element | US Core Profile | FHIR Resource
----|---|---|
-(1) |  Patient Name | [US Core Patient Profile] | Patient
-(2) |  Sex | [US Core Patient Profile] | Patient
-(3) |  Date of birth | [US Core Patient Profile] | Patient
-(4) |  Race | [US Core Patient Profile] | Patient
-(5) |  Ethnicity | [US Core Patient Profile] | Patient
-(6) |  Preferred language | [US Core Patient Profile] | Patient
-(7) |  Smoking status | [US Core Smoking Status Observation Profile] | Observation
-(8) |  Problems | [US Core Condition Profile] | Condition
-(9) |  Medications | [US Core Medication Profile], [US Core Medication Statement Profile], [US Core Medication Request Profile] | Medication, MedicationStatement, MedicationRequest
-(10) |  Medication allergies | [US Core Allergies Profile] | AllergyIntolerance
-(11) |  Laboratory test(s) | [US Core Result Observation Profile], [US Core Diagnostic Report Profile]| Observation, DiagnosticReport
-(12) |  Laboratory value(s)/result(s) |  [US Core Result Observation Profile], [US Core Diagnostic Report Profile] | Observation, DiagnosticReport
-(13) |  Vital signs | [Vital Signs Profile] (From FHIR Core Profiles for Observation) | Observation
-(14) |  (no longer required) | -
-(15) |  Procedures | [US Core Procedure Profile] | Procedure
-(16) |  Care team member(s) | [US Core CareTeam Profile] | CareTeam
-(17) |  Immunizations | [US Core Immunization Profile] | Immunization
-(18) |  Unique device identifier(s) for a patient’s implantable device(s) | [US Core Implanted Device Profile] | Device
-(19) |  Assessment and plan of treatment | [US Core CarePlan Profile] | CarePlan
-(20) |  Goals | [US Core Goal Profile] | Goal
-(21) |  Health concerns | [US Core Condition Profile] | Condition
+TBD
 
 ### Must Support
-In the context of US Core, *Must Support* on any data element SHALL be interpreted as follows:
+In the context of , *Must Support* on any data element SHALL be interpreted as follows:
 
 
-* US Core Responders SHALL be capable of including the data element as part of the query results as specified by the [US Core Server Capability Statement].
-* US Core Requestors SHALL be capable of processing resource instances containing the data elements without generating an error or causing the application to fail. In other words US Core Requestors SHOULD be capable of displaying the data elements for human use or storing it for other purposes.
-* In situations where information on a particular data element is not present and the reason for absence is unknown, US Core Responders SHALL NOT include the data elements in the resource instance returned as part of the query results.
-* When querying US Core Responders, US Core Requestors SHALL interpret missing data elements within resource instances as data not present in the US Core Responder's systems.
-* In situations where information on a particular data element is missing and the US Core Responder knows the precise reason for the absence of data, US Core Responders SHALL send the reason for the missing information using values (such as nullFlavors) from the value set where they exist or using the dataAbsentReason extension.
-* US Core Requestors SHALL be able to process resource instances containing data elements asserting missing information.
+*  Responders SHALL be capable of including the data element as part of the query results as specified by the [ Server Capability Statement].
+*  Requestors SHALL be capable of processing resource instances containing the data elements without generating an error or causing the application to fail. In other words  Requestors SHOULD be capable of displaying the data elements for human use or storing it for other purposes.
+* In situations where information on a particular data element is not present and the reason for absence is unknown,  Responders SHALL NOT include the data elements in the resource instance returned as part of the query results.
+* When querying  Responders,  Requestors SHALL interpret missing data elements within resource instances as data not present in the  Responder's systems.
+* In situations where information on a particular data element is missing and the  Responder knows the precise reason for the absence of data,  Responders SHALL send the reason for the missing information using values (such as nullFlavors) from the value set where they exist or using the dataAbsentReason extension.
+*  Requestors SHALL be able to process resource instances containing data elements asserting missing information.
 
 
-* NOTE: Typically *US Core Responder* Actor = Server and *US Core Requestor Actor* = Client
-* NOTE: US Core Responders who do not have the capability to store or return a data element tagged as Supported in US Core profiles can still claim conformance to the US Core profiles per the US Core conformance resources.
+* NOTE: Typically * Responder* Actor = Server and * Requestor Actor* = Client
+* NOTE:  Responders who do not have the capability to store or return a data element tagged as Supported in  profiles can still claim conformance to the  profiles per the  conformance resources.
 * NOTE: The above definition of Supported is derived from HL7v2 concept "Required but may be empty - RE" described in HL7v2 V28_CH02B_Conformance.doc.
-* NOTE: Readers are advised to understand [FHIR Terminology] requirements, [FHIR RESTful API] based on the HTTP protocol, along with [FHIR Data Types], [FHIR Search] and [FHIR Resource] formats before implementing US Core requirements.
+* NOTE: Readers are advised to understand [FHIR Terminology] requirements, [FHIR RESTful API] based on the HTTP protocol, along with [FHIR Data Types], [FHIR Search] and [FHIR Resource] formats before implementing  requirements.
 
-### Referencing US Core profiles
+### Referencing  profiles
 
-Many of the profiles in this guide [reference]({{site.data.fhir.path}}references.html) other FHIR resources that are also US Core profiles.  This is defined in the formal profile definitions.  For example, [US Core Careteam](StructureDefinition-us-core-careteam.html#profile) references US Core Patient.  For any other references not formally defined in a US Core profiles, the referenced resource SHOULD be a US Core profile if a US Core profile exists for the resource type.  For example, although `Condition.asserter` is not constrained by this guide, the reference to Patient or Practitioner should be a valid US Core Patient or US Core Practitioner.
+Profiles in this guide [reference]({{site.data.fhir.path}}references.html) other FHIR resources that are also profiles.  This is defined in the formal profile definitions.  For any other references not formally defined in a profiles, the referenced resource SHOULD be a profile if a profile exists for the resource type.  ***add examples***
 
-### Using Codes in US Core profiles
+### Using Codes in  profiles
 
 #### Extensible binding for CodeableConcept Datatype
 {:.no_toc}
@@ -182,7 +164,7 @@ Example of translation of CVX vaccine code to NDC code.
 ####  Using UCUM codes in the [Quantity] datatype
 {:.no_toc}
 
-Both the [Vital Signs Profile] and [US Core Result Observation Profile] bind the `valueQuantity` datatypes to the [UCUM] code system.  A FHIR [UCUM Codes value set] that defines all UCUM codes is in the FHIR specification. This guidance specifies how to represent the Quantity datatype when the correct UCUM units are missing or the units are missing altogether which will likely occur in the real world.  
+Both the [Vital Signs Profile] and [ Result Observation Profile] bind the `valueQuantity` datatypes to the [UCUM] code system.  A FHIR [UCUM Codes value set] that defines all UCUM codes is in the FHIR specification. This guidance specifies how to represent the Quantity datatype when the correct UCUM units are missing or the units are missing altogether which will likely occur in the real world.  
 
 **UCUM code provided**
 
@@ -222,7 +204,7 @@ Clinical information that has been removed from the patient's record needs to be
 - The resource status SHOULD be updated to the appropriate status such as  `entered-in-error` or `inactive`, and these resources SHOULD *still* be searchable by client applications.
 
 - If the status is `entered-in-error`:
-    
+
   - for patient viewing systems the content of resource SHOULD be removed. In other words a blank resource.
 
   - A provider facing system MAY be supplied with additional details that the patient viewing system would typically not have access to.
@@ -275,7 +257,7 @@ There are several potential ways to search for resources associated with a speci
 
 ### Across Platform Searches
 
-US Core servers are not required to resolve full URLs that are external to their environment.
+ servers are not required to resolve full URLs that are external to their environment.
 
 ### Guidance on limiting the number of search results
 
