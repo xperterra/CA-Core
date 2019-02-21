@@ -1,0 +1,84 @@
+{
+  "resourceType" : "ImplementationGuide",
+  "id" : "ig",
+  "url" : "http://hl7.org/fhir/ca/core-scratch/ImplementationGuide/ig",
+  "name" : "CA-Core-Scratch",
+  "title" : "CA Core Scratch",
+  "status" : "active",
+  "packageId" : "hl7.fhir.ca.core.scratch",
+  "fhirVersion" : ["4.0.0"],
+  "definition": {
+    "page": {
+      "generation": "markdown",
+      "nameUrl": "index.html",
+      "page": [
+        {
+          "generation": "markdown",
+          "nameUrl": "guidance.html",
+          "title": "General Guidance"
+        },
+        {
+          "generation": "markdown",
+          "nameUrl": "profiles.html",
+          "page": [
+            {
+              "nameUrl" : "StructureDefinition-profile-patient.html",
+              "title" : "Structure Definition: Patient Profile",
+              "generation" : "generated"
+            }
+          ],
+          "title": "Profiles and Extensions"
+        },
+        {
+          "generation": "markdown",
+          "nameUrl": "operations.html",
+          "title": "Operations"
+        },
+        {
+          "generation": "markdown",
+          "nameUrl": "terminology.html",
+          "title": "Terminology"
+        },
+        {
+          "generation": "markdown",
+          "nameUrl": "searchparameters.html",
+          "title": "Search Parameters"
+        },
+        {
+          "generation": "markdown",
+          "nameUrl": "capstatements.html",
+          "title": "Capability Statements"
+        },
+        {
+          "generation": "markdown",
+          "nameUrl": "security.html",
+          "title": "Security"
+        },
+        {
+          "generation": "markdown",
+          "nameUrl": "downloads.html",
+          "title": "Downloads"
+        },
+        {
+          "generation": "markdown",
+          "nameUrl": "all-examples.html",
+          "title": "All Examples"
+        },
+        {
+          "generation": "html",
+          "nameUrl": "toc.html",
+          "title": "Table of Contents"
+        }
+      ],
+      "title": "Home"
+    },
+    "resource": [
+      {
+        "reference" : {
+          "reference" : "StructureDefinition/profile-patient"
+        },
+        "exampleBoolean" : false
+      }
+    ]
+  }
+}

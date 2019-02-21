@@ -1,4 +1,4 @@
-# CA-Core-Baseline
+# CA-Core-Scratch
 
 This 'implementation guide' is a **living document** containing notes and draft profiles developed captured while reviewing the [USCoreR4 Implementation Guide](http://build.fhir.org/ig/HL7/US-Core-R4/) against various Canadian sources, including:
 - [PrescribeIT implementation guides](https://specs.prescribeit.ca/R2.0/)
