@@ -9,18 +9,12 @@
   "canonicalBase": "http://hl7.org/fhir/ca/core-scratch",
   "name": "CA-Core-Scratch",
   "version": "4.0.0",
-  /* replatce below with: "http://snomed.info/sct/20621000087109" */
-  "sct-edition": "http://snomed.info/sct/731000124108",
+  "sct-edition": "http://snomed.info/sct/20621000087109",
   "do-transforms": "false",
   "broken-links": "warning",
   "tool": "jekyll",
   "igtemplate-dir": "~/github/CA-Core-Scratch/",
   "working-dir": "~/github/CA-Core-Scratch/",
-  /* these aren't needed, 1st is a US race / ethnicity code, 2nd something from NIH
-  "special-urls": [
-    "urn:oid:2.16.840.1.113883.6.238",
-    "urn:oid:2.16.840.1.113762.1.4.1021.24"
-  ], */
   "no-inactive-codes": "false",
   "paths": {
     "temp": "generated_output/temp",
