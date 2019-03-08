@@ -1,4 +1,9 @@
 .git
 .DS_Store
+.tstamp
 generated_output
 output
+ig-expansion-parameters.json
+ig-new.json
+ig-new.xml
+ig-validation-parameters.json

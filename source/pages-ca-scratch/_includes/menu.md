@@ -3,7 +3,7 @@
   <li>
     <a href="index.html">Home</a>
   </li>
-  <li class="dropdown">
+  <!-- <li class="dropdown">
     <a href="#" data-toggle="dropdown" class="dropdown-toggle">Guidance<b class="caret">
     </b>
   </a>
@@ -15,17 +15,17 @@
           <a href="clinical-notes-guidance.html">Clinical Notes Guidance</a>
         </li>
       </ul>
-  </li>
+  </li> -->
   <li>
     <a href="profiles.html">Profiles and Extensions</a>
   </li>
-  <li>
+  <!-- <li>
     <a href="searchparameters.html">Search Parameters and Operations</a>
-  </li>
+  </li> -->
   <li>
     <a href="terminology.html">Terminology</a>
   </li>
-  <li class="dropdown">
+  <!-- <li class="dropdown">
     <a href="#" data-toggle="dropdown" class="dropdown-toggle">Capability Statements<b class="caret">
     </b>
   </a>
@@ -43,5 +43,5 @@
 </li>
 <li>
   <a href="downloads.html">Downloads</a>
-</li>
+</li> -->
 </ul>
