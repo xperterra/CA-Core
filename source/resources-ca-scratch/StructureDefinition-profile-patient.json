@@ -1,310 +1,273 @@
 {
-  "resourceType": "StructureDefinition",
-  "id": "profile-patient",
-  "url": "http://hl7.org/fhir/ca/core-baseline/StructureDefinition/profile-patient",
-  "version": "0.0.0",
-  "name": "Patient_Profile",
-  "title": "Patient Profile",
-  "status": "active",
-  "date": "2019-02-21T12:00:00-05:00",
-  "publisher": "TBD",
-  "description": "Proposed constraints and extensions on the Patient Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.",
-  "fhirVersion": "4.0.0",
-  "kind": "resource",
-  "abstract": false,
-  "type": "Patient",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Patient",
-  "derivation": "constraint",
-  "differential": {
-    "element": [
-      {
-        "id": "Patient",
-        "path": "Patient",
-        "short": "US Core Patient Profile",
-        "definition": "The US Core Patient Profile is based upon the core FHIR Patient Resource and designed to meet the applicable patient demographic data elements from the 2015 Edition Common Clinical Data Set.",
-        "mustSupport": false,
-        "isModifier": false,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Patient"
-          }
-        ]
-      },
-      {
-        "id": "Patient.extension:race",
-        "path": "Patient.extension",
-        "sliceName": "race",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-race"
-            ]
-          }
-        ],
-        "mustSupport": true,
-        "isModifier": false,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Patient.extension"
-          }
-        ]
-      },
-      {
-        "id": "Patient.extension:ethnicity",
-        "path": "Patient.extension",
-        "sliceName": "ethnicity",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-ethnicity"
-            ]
-          }
-        ],
-        "mustSupport": true,
-        "isModifier": false,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Patient.extension"
-          }
-        ]
-      },
-      {
-        "id": "Patient.extension:birthsex",
-        "path": "Patient.extension",
-        "sliceName": "birthsex",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "Extension",
-            "profile": [
-              "http://hl7.org/fhir/us/core-r4/StructureDefinition/us-core-birthsex"
-            ]
-          }
-        ],
-        "mustSupport": true,
-        "isModifier": false,
-        "binding": {
-          "strength": "required",
-          "description": "Code for sex assigned at birth",
-          "valueSet": "http://hl7.org/fhir/us/core-r4/ValueSet/us-core-birthsex"
-        },
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Patient.extension"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier",
-        "path": "Patient.identifier",
-        "min": 1,
-        "max": "*",
-        "type": [
-          {
-            "code": "Identifier"
-          }
-        ],
-        "mustSupport": true,
-        "isModifier": false,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Patient.identifier"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier.system",
-        "path": "Patient.identifier.system",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "uri"
-          }
-        ],
-        "mustSupport": true,
-        "isModifier": false,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Patient.identifier.system"
-          }
-        ]
-      },
-      {
-        "id": "Patient.identifier.value",
-        "path": "Patient.identifier.value",
-        "short": "The value that is unique within the system.",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mustSupport": true,
-        "isModifier": false,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Patient.identifier.value"
-          }
-        ]
-      },
-      {
-        "id": "Patient.name",
-        "path": "Patient.name",
-        "min": 1,
-        "max": "*",
-        "type": [
-          {
-            "code": "HumanName"
-          }
-        ],
-        "mustSupport": true,
-        "isModifier": false,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Patient.name"
-          }
-        ]
-      },
-      {
-        "id": "Patient.name.family",
-        "path": "Patient.name.family",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mustSupport": true,
-        "isModifier": false,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Patient.name.family"
-          }
-        ]
-      },
-      {
-        "id": "Patient.name.given",
-        "path": "Patient.name.given",
-        "min": 1,
-        "max": "*",
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mustSupport": true,
-        "isModifier": false,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Patient.name.given"
-          }
-        ]
-      },
-      {
-        "id": "Patient.gender",
-        "path": "Patient.gender",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "code"
-          }
-        ],
-        "mustSupport": true,
-        "isModifier": false,
-        "binding": {
-          "strength": "required",
-          "valueSet": "http://hl7.org/fhir/ValueSet/administrative-gender"
-        },
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Patient.gender"
-          }
-        ]
-      },
-      {
-        "id": "Patient.birthDate",
-        "path": "Patient.birthDate",
-        "min": 0,
-        "max": "1",
-        "type": [
-          {
-            "code": "date"
-          }
-        ],
-        "mustSupport": true,
-        "isModifier": false,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Patient.birthDate"
-          }
-        ]
-      },
-      {
-        "id": "Patient.communication",
-        "path": "Patient.communication",
-        "min": 0,
-        "max": "*",
-        "mustSupport": true,
-        "isModifier": false,
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Patient.communication"
-          }
-        ]
-      },
-      {
-        "id": "Patient.communication.language",
-        "path": "Patient.communication.language",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "CodeableConcept"
-          }
-        ],
-        "mustSupport": true,
-        "isModifier": false,
-        "binding": {
-          "extension": [
+    "resourceType": "StructureDefinition",
+    "id": "profile-patient",
+    "url": "http://hl7.org/fhir/ca/scratch/StructureDefinition/profile-patient",
+    "version": "0.0.0",
+    "name": "Patient_Profile",
+    "title": "Patient Profile",
+    "status": "active",
+    "date": "2019-03-08",
+    "publisher": "TBD",
+    "description": "Proposed constraints and extensions on the Patient Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.",
+    "fhirVersion": "4.0.0",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Patient",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Patient",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
             {
-              "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-maxValueSet",
-              "valueCanonical": "http://hl7.org/fhir/us/core-r4/ValueSet/simple-language"
+                "id": "Patient",
+                "path": "Patient",
+                "short": "Patient Profile",
+                "definition": "The Patient Profile is based upon the core FHIR Patient Resource",
+                "mustSupport": false,
+                "isModifier": false
+            },
+            {
+                "id": "Patient.extension:birthsex",
+                "path": "Patient.extension",
+                "sliceName": "birthsex",
+                "min": 0,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "Extension",
+                        "profile": [
+                            "http://hl7.org/fhir/ca/scratch/StructureDefinition/ext-birthsex"
+                        ]
+                    }
+                ],
+                "mustSupport": false,
+                "isModifier": false,
+                "binding": {
+                    "strength": "required",
+                    "description": "Code for sex assigned at birth",
+                    "valueSet": "http://hl7.org/fhir/ca/scratch/ValueSet/birthsex"
+                }
+            },
+            {
+                "id": "Patient.identifier",
+                "path": "Patient.identifier",
+                "slicing": {
+                    "discriminator": [
+                        {
+                            "type": "pattern",
+                            "path": "type"
+                        }
+                    ],
+                    "rules": "open"
+                },
+                "min": 1,
+                "mustSupport": true
+            },
+            {
+                "id": "Patient.identifier:JHN",
+                "path": "Patient.identifier",
+                "short": "Jurisdictional Health Number",
+                "min": 0,
+                "mustSupport": false
+            },
+            {
+                "id": "Patient.identifier:JHN.extension:versioncode",
+                "path": "Patient.identifier.extension",
+                "min": 0,
+                "max": "1",
+                "short": "Health Number Version Code",
+                "example": [
+                    {
+                        "label": "(Ontario)",
+                        "valueString": "YM"
+                    }
+                ],
+                "type": [
+                    {
+                        "code": "Extension",
+                        "profile": [
+                            "http://hl7.org/fhir/ca/scratch/StructureDefinition/ext-versioncode"
+                        ]
+                    }
+                ],
+                "mustSupport": false
+            },
+            {
+                "id": "Patient.identifier:JHN.type",
+                "path": "Patient.identifier.type",
+                "min": 1,
+                "max": "1",
+                "patternCodeableConcept": {
+                    "coding": [
+                        {
+                            "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                            "code": "JHN"
+                        }
+                    ]
+                },
+                "mustSupport": true
+            },
+            {
+                "id": "Patient.identifier:JHN.system",
+                "path": "Patient.identifier.system",
+                "short": "A Health Number Naming System from Canadian URI Registry",
+                "example": [
+                    {
+                        "label": "(Ontario)",
+                        "valueUri": "https://fhir.infoway-inforoute.ca/NamingSystem/ca-on-patient-hcn"
+                    }
+                ],
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "uri"
+                    }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "Patient.identifier:JHN.value",
+                "path": "Patient.identifier.value",
+                "short": "Health",
+                "min": 1,
+                "max": "1",
+                "example": [
+                    {
+                        "label": "(Ontario)",
+                        "valueString": "5584486647"
+                    }
+                ],
+                "type": [
+                    {
+                        "code": "string"
+                    }
+                ],
+                "mustSupport": true,
+                "isModifier": false
+            },
+            {
+                "id": "Patient.identifier:OTH",
+                "path": "Patient.identifier",
+                "short": "Other Identifier"
+            },
+            {
+                "id": "Patient.identifier:OTH.type",
+                "path": "Patient.identifier.type",
+                "example": [
+                    {
+                        "label": "Pattern",
+                        "valueString": "{\"coding\":[{\"system\":\"http://terminology.hl7.org/CodeSystem/v2-0203\",\"code\":\"MR\"}]}"
+                    }
+                ],
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "CodeableConcept"
+                    }
+                ],
+                "mustSupport": true,
+                "binding": {
+                    "strength": "extensible",
+                    "description": "A coded type for an identifier that can be used to determine which identifier to use for a specific purpose.",
+                    "valueSet": "http://hl7.org/fhir/ValueSet/identifier-type"
+                }
+            },
+            {
+                "id": "Patient.identifier:OTH.system",
+                "path": "Patient.identifier.system",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "uri"
+                    }
+                ],
+                "mustSupport": true,
+                "isModifier": false
+            },
+            {
+                "id": "Patient.identifier:OTH.value",
+                "path": "Patient.identifier.value",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "string"
+                    }
+                ],
+                "mustSupport": true,
+                "isModifier": false
+            },
+            {
+                "id": "Patient.name",
+                "path": "Patient.name",
+                "min": 1,
+                "max": "*",
+                "type": [
+                    {
+                        "code": "HumanName"
+                    }
+                ],
+                "mustSupport": true,
+                "isModifier": false
+            },
+            {
+                "id": "Patient.name.family",
+                "path": "Patient.name.family",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "string"
+                    }
+                ],
+                "mustSupport": true,
+                "isModifier": false
+            },
+            {
+                "id": "Patient.name.given",
+                "path": "Patient.name.given",
+                "min": 1,
+                "max": "*",
+                "type": [
+                    {
+                        "code": "string"
+                    }
+                ],
+                "mustSupport": true,
+                "isModifier": false
+            },
+            {
+                "id": "Patient.gender",
+                "path": "Patient.gender",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "code"
+                    }
+                ],
+                "mustSupport": true,
+                "isModifier": false,
+                "binding": {
+                    "strength": "required",
+                    "valueSet": "http://hl7.org/fhir/ValueSet/administrative-gender"
+                }
+            },
+            {
+                "id": "Patient.birthDate",
+                "path": "Patient.birthDate",
+                "min": 0,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "date"
+                    }
+                ],
+                "mustSupport": true,
+                "isModifier": false
             }
-          ],
-          "strength": "extensible",
-          "valueSet": "http://hl7.org/fhir/us/core-r4/ValueSet/simple-language"
-        },
-        "mapping": [
-          {
-            "identity": "argonaut-dq-dstu2",
-            "map": "Patient.communication.language"
-          }
         ]
-      }
-    ]
-  }
+    }
 }
