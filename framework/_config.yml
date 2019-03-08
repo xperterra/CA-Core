@@ -1,7 +1,7 @@
 historypath : ""
 summaries: false #true if want custom profile summaries in summary tab
 diff2: false # true if want to show intermediate differentials
-build: scratch  # choice of ci|local|ballot|version
+build: ci  # choice of ci|local|ballot|version
 example_types:
 
 conformance_types:
