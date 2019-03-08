@@ -33,7 +33,25 @@
   "mappings": "true",
   "gen-examples": "false",
   "resources": {
-
+    "StructureDefinition/ext-birthsex": {
+      "defns": "StructureDefinition-ext-birthsex-definitions.html",
+      "base": "StructureDefinition-ext-birthsex.html",
+      "source": "StructureDefinition-ext-birthsex.json"
+    },
+    "StructureDefinition/ext-versioncode": {
+      "defns": "StructureDefinition-ext-versioncode-definitions.html",
+      "base": "StructureDefinition-ext-versioncode.html",
+      "source": "StructureDefinition-ext-versioncode.json"
+    },
+    "StructureDefinition/profile-patient": {
+      "defns": "StructureDefinition-profile-patient-definitions.html",
+      "base": "StructureDefinition-profile-patient.html",
+      "source": "StructureDefinition-profile-patient.json"
+    },
+    "ValueSet/birthsex": {
+      "base": "ValueSet-birthsex.html",
+      "source": "ValueSet-birthsex.json"
+    }
   },
   "defaults": {
     "AllergyIntolerance": {
