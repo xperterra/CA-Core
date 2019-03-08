@@ -2,14 +2,14 @@
 title: Implementation Guide HomePage
 layout: default
 ---
-
+<!--
 {:.no_toc}
-
+-->
 <!-- TOC  the css styling for this is \pages\assets\css\project.css under 'markdown-toc'-->
-
+<!--
 * Do not remove this line (it will not be displayed)
 {:toc}
-
+-->
 <!-- end TOC -->
 
 ### Introduction
@@ -22,6 +22,8 @@ This 'implementation guide' is a **living document** containing **scratch** note
 
 The intent is to begin to provide a in initial, draft set of FHIR profiles that can be refined
 into a set of Canadian baseline profiles similar to the US-Core.
+
+The working repository for the CI build be found [here](https://github.com/scratch-fhir-profiles/CA-Scratch).
 
 ### Principles
 
@@ -45,12 +47,12 @@ The following **scratch content** has been developed so far:
 
 {% include list-simple-extensions.xhtml %}
 
-### Please Note
+### Note
 
-**Guidance**, **Capability Statements**, etc have not yet been developed.  Some content from the US Core implementation guide may exist in some spections
+Guidance, Capability Statements, and other have not yet been reviewed and added.
 
 ----
 
-Authors: TBD
+Contact: [Russ Buchanan](mailto:rbuchanan@gevityinc.com)
 
 {% include link-list.md %}
