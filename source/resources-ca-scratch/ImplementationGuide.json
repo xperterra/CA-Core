@@ -31,6 +31,12 @@
             },
             {
                 "reference": {
+                    "reference": "StructureDefinition/profile-practitioner"
+                },
+                "exampleBoolean": false
+            },
+            {
+                "reference": {
                     "reference": "ValueSet/birthsex"
                 },
                 "exampleBoolean": false
@@ -45,11 +51,6 @@
                     "nameUrl": "profiles.html",
                     "page": [
                         {
-                            "nameUrl": "StructureDefinition-profile-patient.html",
-                            "title": "Structure Definition: Patient Profile",
-                            "generation": "generated"
-                        },
-                        {
                             "nameUrl": "StructureDefinition-ext-birthsex.html",
                             "title": "Extension: Birth Sex",
                             "generation": "generated"
@@ -57,6 +58,16 @@
                         {
                             "nameUrl": "StructureDefinition-ext-versioncode.html",
                             "title": "Extension: Patient Identifier Version Code",
+                            "generation": "generated"
+                        },
+                        {
+                            "nameUrl": "StructureDefinition-profile-patient.html",
+                            "title": "Structure Definition: Patient Profile",
+                            "generation": "generated"
+                        },
+                        {
+                            "nameUrl": "StructureDefinition-profile-practitioner.html",
+                            "title": "Structure Definition: Practitioner Profile",
                             "generation": "generated"
                         }
                     ],

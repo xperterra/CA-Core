@@ -48,6 +48,11 @@
       "base": "StructureDefinition-profile-patient.html",
       "source": "StructureDefinition-profile-patient.json"
     },
+    "StructureDefinition/profile-practitioner": {
+      "defns": "StructureDefinition-profile-practitioner-definitions.html",
+      "base": "StructureDefinition-profile-practitioner.html",
+      "source": "StructureDefinition-profile-practitioner.json"
+    },
     "ValueSet/birthsex": {
       "base": "ValueSet-birthsex.html",
       "source": "ValueSet-birthsex.json"
