@@ -43,6 +43,16 @@
       "base": "StructureDefinition-ext-versioncode.html",
       "source": "StructureDefinition-ext-versioncode.json"
     },
+    "StructureDefinition/profile-location": {
+      "defns": "StructureDefinition-profile-location-definitions.html",
+      "base": "StructureDefinition-profile-location.html",
+      "source": "StructureDefinition-profile-location.json"
+    },
+    "StructureDefinition/profile-organization": {
+      "defns": "StructureDefinition-profile-organization-definitions.html",
+      "base": "StructureDefinition-profile-organization.html",
+      "source": "StructureDefinition-profile-organization.json"
+    },
     "StructureDefinition/profile-patient": {
       "defns": "StructureDefinition-profile-patient-definitions.html",
       "base": "StructureDefinition-profile-patient.html",

@@ -1,36 +1,33 @@
 {
     "resourceType": "StructureDefinition",
-    "id": "profile-practitioner",
-    "url": "http://hl7.org/fhir/ca/scratch/StructureDefinition/profile-practitioner",
+    "id": "profile-organization",
+    "url": "http://hl7.org/fhir/ca/scratch/StructureDefinition/profile-organization",
     "version": "0.0.0",
-    "name": "Practitioner_Profile",
-    "title": "Practitioner Profile",
+    "name": "Organization_Profile",
+    "title": "Organization Profile",
     "status": "active",
-    "date": "2019-03-13",
+    "date": "2019-03-28",
     "publisher": "TBD",
-    "description": "Proposed constraints and extensions on the Practitioner Profile.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.",
+    "description": "Proposed constraints and extensions on the Organization Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.",
     "fhirVersion": "4.0.0",
     "kind": "resource",
     "abstract": false,
-    "type": "Practitioner",
-    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Practitioner",
+    "type": "Organization",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Organization",
     "derivation": "constraint",
     "differential": {
         "element": [
             {
-                "id": "Practitioner",
-                "path": "Practitioner",
-                "short": "Practitioner Profile",
-                "definition": "The Practitioner Profile is based on the core FHIR Practitioner Resource",
-                "alias": [
-                    "Provider"
-                ],
-                "mustSupport": false,
-                "isModifier": false
+                "id": "Organization",
+                "path": "Organization",
+                "short": "Organization Profile",
+                "definition": "The Organization Profile is based upon the core FHIR Organization Resource",
+                "isModifier": false,
+                "mustSupport": false
             },
             {
-                "id": "Practitioner.identifier",
-                "path": "Practitioner.identifier",
+                "id": "Organization.identifier",
+                "path": "Organization.identifier",
                 "slicing": {
                     "discriminator": [
                         {
@@ -44,15 +41,15 @@
                 "mustSupport": true
             },
             {
-                "id": "Practitioner.identifier:PRN",
-                "path": "Practitioner.identifier",
+                "id": "Organization.identifier:PRN",
+                "path": "Organization.identifier",
                 "short": "Provider Number",
                 "min": 0,
                 "mustSupport": false
             },
             {
-                "id": "Practitioner.identifier:PRN.type",
-                "path": "Practitioner.identifier.type",
+                "id": "Organization.identifier:PRN.type",
+                "path": "Organization.identifier.type",
                 "min": 1,
                 "max": "1",
                 "patternCodeableConcept": {
@@ -66,8 +63,8 @@
                 "mustSupport": true
             },
             {
-                "id": "Practitioner.identifier:PRN.system",
-                "path": "Practitioner.identifier.system",
+                "id": "Organization.identifier:PRN.system",
+                "path": "Organization.identifier.system",
                 "short": "Naming systems used to uniquely identify health care providers within a Jurisditional Provider Registry.",
                 "example": [
                     {
@@ -85,8 +82,8 @@
                 "mustSupport": true
             },
             {
-                "id": "Practitioner.identifier:PRN.value",
-                "path": "Practitioner.identifier.value",
+                "id": "Organization.identifier:PRN.value",
+                "path": "Organization.identifier.value",
                 "min": 1,
                 "max": "1",
                 "type": [
@@ -98,15 +95,15 @@
                 "isModifier": false
             },
             {
-                "id": "Practitioner.identifier:LN",
-                "path": "Practitioner.identifier",
+                "id": "Organization.identifier:LN",
+                "path": "Organization.identifier",
                 "short": "License Number",
                 "min": 0,
                 "mustSupport": false
             },
             {
-                "id": "Practitioner.identifier:LN.type",
-                "path": "Practitioner.identifier.type",
+                "id": "Organization.identifier:LN.type",
+                "path": "Organization.identifier.type",
                 "min": 1,
                 "max": "1",
                 "patternCodeableConcept": {
@@ -120,13 +117,13 @@
                 "mustSupport": true
             },
             {
-                "id": "Practitioner.identifier:LN.system",
-                "path": "Practitioner.identifier.system",
+                "id": "Organization.identifier:LN.system",
+                "path": "Organization.identifier.system",
                 "short": "Healthcare provider registration and license number systems",
                 "example": [
                     {
-                        "label": "(Ontario Nurses)",
-                        "valueUri": "https://fhir.infoway-inforoute.ca/NamingSystem/ca-on-license-nurse"
+                        "label": "(Ontario Labs)",
+                        "valueUri": "https://fhir.infoway-inforoute.ca/NamingSystem/ca-on-lab-license"
                     }
                 ],
                 "min": 1,
@@ -139,8 +136,8 @@
                 "mustSupport": true
             },
             {
-                "id": "Practitioner.identifier:LN.value",
-                "path": "Practitioner.identifier.value",
+                "id": "Organization.identifier:LN.value",
+                "path": "Organization.identifier.value",
                 "min": 1,
                 "max": "1",
                 "type": [
@@ -152,13 +149,13 @@
                 "isModifier": false
             },
             {
-                "id": "Practitioner.identifier:OTH",
-                "path": "Practitioner.identifier",
+                "id": "Organization.identifier:OTH",
+                "path": "Organization.identifier",
                 "short": "Other Identifier"
             },
             {
-                "id": "Practitioner.identifier:OTH.type",
-                "path": "Practitioner.identifier.type",
+                "id": "Organization.identifier:OTH.type",
+                "path": "Organization.identifier.type",
                 "example": [
                     {
                         "label": "Pattern",
@@ -180,8 +177,8 @@
                 }
             },
             {
-                "id": "Practitioner.identifier:OTH.system",
-                "path": "Practitioner.identifier.system",
+                "id": "Organization.identifier:OTH.system",
+                "path": "Organization.identifier.system",
                 "min": 1,
                 "max": "1",
                 "type": [
@@ -193,8 +190,8 @@
                 "isModifier": false
             },
             {
-                "id": "Practitioner.identifier:OTH.value",
-                "path": "Practitioner.identifier.value",
+                "id": "Organization.identifier:OTH.value",
+                "path": "Organization.identifier.value",
                 "min": 1,
                 "max": "1",
                 "type": [
@@ -206,30 +203,21 @@
                 "isModifier": false
             },
             {
-                "id": "Practitioner.name",
-                "path": "Practitioner.name",
+                "id": "Organization.name",
+                "path": "Organization.name",
                 "min": 1,
-                "max": "1",
-                "type": [
-                    {
-                        "code": "HumanName"
-                    }
-                ],
-                "mustSupport": true,
-                "isModifier": false
+                "mustSupport": true
             },
             {
-                "id": "Practitioner.name.family",
-                "path": "Practitioner.name.family",
+                "id": "Organization.telecom",
+                "path": "Organization.telecom",
                 "min": 1,
-                "max": "1",
-                "type": [
-                    {
-                        "code": "string"
-                    }
-                ],
-                "mustSupport": true,
-                "isModifier": false
+                "mustSupport": true
+            },
+            {
+                "id": "Organization.address",
+                "path": "Organization.address",
+                "mustSupport": false
             }
         ]
     }
