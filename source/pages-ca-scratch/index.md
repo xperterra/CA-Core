@@ -23,7 +23,7 @@ This 'implementation guide' is a **living document** containing **scratch** note
 The intent is to begin to provide a in initial, draft set of FHIR profiles that can be refined
 into a set of Canadian baseline profiles similar to the US-Core.
 
-The working repository for the CI build be found [here](https://github.com/scratch-fhir-profiles/CA-Scratch).
+The [GitHub repository for this CI build be found here](https://github.com/scratch-fhir-profiles/CA-Scratch).
 
 ### Principles
 
