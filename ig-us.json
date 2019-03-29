@@ -23,14 +23,14 @@
   "paths": {
     "temp": "generated_output/temp",
     "resources": [
-      "source/resources",
-      "source/examples"
+      "source/resources-us-core",
+      "source/examples-us-core"
     ],
     "output": "output",
     "txCache": "generated_output/txCache",
     "pages": [
       "framework",
-      "source/pages"
+      "source/pages-us-core"
     ],
     "specification": "http://build.fhir.org",
     "qa": "generated_output/qa"
@@ -315,7 +315,6 @@
       "base": "ValueSet-us-core-usps-state.html",
       "source": "valueset-us-core-usps-state.json"
     },
-    /* examples */
     "AllergyIntolerance/example": {
       "base": "AllergyIntolerance-example.html",
       "source": "allergyintolerance-example.xml"
