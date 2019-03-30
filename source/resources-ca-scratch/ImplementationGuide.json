@@ -49,6 +49,12 @@
             },
             {
                 "reference": {
+                    "reference": "StructureDefinition/profile-practitionerrole"
+                },
+                "exampleBoolean": false
+            },
+            {
+                "reference": {
                     "reference": "ValueSet/birthsex"
                 },
                 "exampleBoolean": false
@@ -90,6 +96,11 @@
                         {
                             "nameUrl": "StructureDefinition-profile-practitioner.html",
                             "title": "Structure Definition: Practitioner Profile",
+                            "generation": "generated"
+                        },
+                        {
+                            "nameUrl": "StructureDefinition-profile-practitionerrole.html",
+                            "title": "Structure Definition: PractitionerRole Profile",
                             "generation": "generated"
                         }
                     ],
