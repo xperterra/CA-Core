@@ -63,6 +63,11 @@
       "base": "StructureDefinition-profile-practitioner.html",
       "source": "StructureDefinition-profile-practitioner.json"
     },
+    "StructureDefinition/profile-practitionerrole": {
+      "defns": "StructureDefinition-profile-practitionerrole-definitions.html",
+      "base": "StructureDefinition-profile-practitionerrole.html",
+      "source": "StructureDefinition-profile-practitionerrole.json"
+    },
     "ValueSet/birthsex": {
       "base": "ValueSet-birthsex.html",
       "source": "ValueSet-birthsex.json"
