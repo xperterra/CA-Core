@@ -218,6 +218,25 @@
                 "id": "Organization.address",
                 "path": "Organization.address",
                 "mustSupport": false
+            },
+            {
+                "id": "Organization.partOf",
+                "path": "Organization.partOf",
+                "short": "The organization of which this organization forms a part",
+                "type": [
+                    {
+                        "extension": [
+                            {
+                                "url": "http://hl7.org/fhir/StructureDefinition/structuredefinition-hierarchy",
+                                "valueBoolean": true
+                            }
+                        ],
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/ca/scratch/StructureDefinition/profile-organization"
+                        ]
+                    }
+                ]
             }
         ]
     }

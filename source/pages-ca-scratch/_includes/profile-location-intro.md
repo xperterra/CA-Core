@@ -12,7 +12,7 @@ This profile was generated from [HL7 StructureDefinition](https://www.hl7.org/fh
     - LHIN code << Ontario specific requirement
 - Location.identifier:
     - ON PPR: same / similar structure as Organization
-- Status:
+- Location.status:
     - ON PPR: Optional,
       - Bound to [OperationalStatus](https://simplifier.net/ProvincialProviderRe/ppr-OrganizationOperationalStatus)
       - Extensions for:
@@ -20,7 +20,14 @@ This profile was generated from [HL7 StructureDefinition](https://www.hl7.org/fh
         - Stauts Date
     - V3: Required, Bound to [ServiceDeliveryRoleStatus](https://infocentral.infoway-inforoute.ca/extra/ca/mr0206-html/html/vocabulary.html?type=vs&id=ServiceDeliveryRoleStatus)
     - Note: value sets above are different from eachother and (http://build.fhir.org/codesystem-location-status.html) ... v3 may be semantically equiv "terminated" vs "inactive"
--
+- Location.name: Required in HL7v3 and PPR
+- Location.alias: NOTE slicing on ON PPR FHIR profile to distinguish legal name, short name, other name (extension on other name for language codes)
+- Location.type: Required in HL7v3 and PPR
+    - not required in US Core R4
+    - Bindings used by FHIR, CDN HL7v3 and PPR appear to all be different (**TODO - look deeper**)
+    - ON Specific Requirement --- PPR uses slicing for OC (Org Class), OC (Org Subclass), OT (Org Type) where OC is mandatory BUT structure and bindings are the same for each (ignore)
+- Location.telecom: mustSupport but not required in US Core, not required in CDN v3 or ON PCR
+- Location.address: mustSupport but not required in US Core, required in CDN v3 or ON PCR (left not required)
 
 
 {% include link-list.md %}
