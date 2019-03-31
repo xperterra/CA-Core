@@ -25,7 +25,7 @@
             },
             {
                 "reference": {
-                    "reference": "StructureDefinition/ext-servicelanguage"
+                    "reference": "StructureDefinition/ext-communication"
                 },
                 "exampleBoolean": false
             },
@@ -91,7 +91,7 @@
                             "generation": "generated"
                         },
                         {
-                            "nameUrl": "StructureDefinition-ext-servicelanguage.html",
+                            "nameUrl": "StructureDefinition-ext-communication.html",
                             "title": "Extension: Service Language",
                             "generation": "generated"
                         },

@@ -43,10 +43,10 @@
       "base": "StructureDefinition-ext-birthsex.html",
       "source": "StructureDefinition-ext-birthsex.json"
     },
-    "StructureDefinition/ext-servicelanguage": {
-      "defns": "StructureDefinition-ext-servicelanguage-definitions.html",
-      "base": "StructureDefinition-ext-servicelanguage.html",
-      "source": "StructureDefinition-ext-servicelanguage.json"
+    "StructureDefinition/ext-communication": {
+      "defns": "StructureDefinition-ext-communication-definitions.html",
+      "base": "StructureDefinition-ext-communication.html",
+      "source": "StructureDefinition-ext-communication.json"
     },
     "StructureDefinition/ext-versioncode": {
       "defns": "StructureDefinition-ext-versioncode-definitions.html",

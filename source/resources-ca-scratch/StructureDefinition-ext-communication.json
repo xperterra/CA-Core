@@ -1,10 +1,10 @@
 {
     "resourceType": "StructureDefinition",
-    "id": "ext-servicelanguage",
-    "url": "http://hl7.org/fhir/ca/scratch/StructureDefinition/ext-servicelanguage",
+    "id": "ext-communication",
+    "url": "http://hl7.org/fhir/ca/scratch/StructureDefinition/ext-communication",
     "version": "0.0.0",
-    "name": "ext_ServiceLanguage",
-    "title": "Extension: Service Language",
+    "name": "ext_communication",
+    "title": "Extension: Communication",
     "status": "active",
     "date": "2019-03-08",
     "publisher": "TBD",
@@ -24,7 +24,7 @@
     "differential": {
         "element": [
             {
-                "id": "Extension:servicelanguage",
+                "id": "Extension:communication",
                 "path": "Extension",
                 "short": "Languages used to provide services",
                 "definition": "Indentifies languages that services are provided in at the location.",
@@ -33,23 +33,23 @@
                 "isModifier": false
             },
             {
-                "id": "Extension:servicelanguage.url",
+                "id": "Extension:communication.url",
                 "path": "Extension.url",
-                "fixedUri": "http://hl7.org/fhir/ca/scratch/StructureDefinition/ext-servicelanguage"
+                "fixedUri": "http://hl7.org/fhir/ca/scratch/StructureDefinition/ext-communication"
             },
             {
-                "id": "Extension:servicelanguage.valueCoding",
-                "path": "Extension.valueCoding",
+                "id": "Extension:communication.valueCodeableConcept",
+                "path": "Extension.valueCodeableConcept",
                 "min": 0,
                 "max": "1",
                 "type": [
                     {
-                        "code": "Coding"
+                        "code": "CodeableConcept"
                     }
                 ],
                 "binding": {
-                    "strength": "required",
-                    "description": "Codes for documenting sex at birth",
+                    "strength": "preferred",
+                    "description": "Common Languages",
                     "valueSet": "http://hl7.org/fhir/ValueSet/languages"
                 }
             }
