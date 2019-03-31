@@ -37,14 +37,14 @@
                 ]
             },
             {
-                "id": "Organization.extension:serviceLanguage",
+                "id": "Organization.extension:communication",
                 "path": "Organization.extension",
-                "sliceName": "serviceLanguage",
+                "sliceName": "communication",
                 "type": [
                     {
                         "code": "extension",
                         "profile": [
-                            "http://hl7.org/fhir/ca/scratch/StructureDefinition/ext-servicelanguage"
+                            "http://hl7.org/fhir/ca/scratch/StructureDefinition/ext-communication"
                         ]
                     }
                 ],
