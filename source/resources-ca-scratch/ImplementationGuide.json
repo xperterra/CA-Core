@@ -13,7 +13,19 @@
         "resource": [
             {
                 "reference": {
+                    "reference": "StructureDefinition/ext-affiliation"
+                },
+                "exampleBoolean": false
+            },
+            {
+                "reference": {
                     "reference": "StructureDefinition/ext-birthsex"
+                },
+                "exampleBoolean": false
+            },
+            {
+                "reference": {
+                    "reference": "StructureDefinition/ext-servicelanguage"
                 },
                 "exampleBoolean": false
             },
@@ -69,8 +81,18 @@
                     "nameUrl": "profiles.html",
                     "page": [
                         {
+                            "nameUrl": "StructureDefinition-ext-affiliation.html",
+                            "title": "Extension: Affiliation",
+                            "generation": "generated"
+                        },
+                        {
                             "nameUrl": "StructureDefinition-ext-birthsex.html",
                             "title": "Extension: Birth Sex",
+                            "generation": "generated"
+                        },
+                        {
+                            "nameUrl": "StructureDefinition-ext-servicelanguage.html",
+                            "title": "Extension: Service Language",
                             "generation": "generated"
                         },
                         {

@@ -33,10 +33,20 @@
   "mappings": "true",
   "gen-examples": "false",
   "resources": {
+    "StructureDefinition/ext-affiliation": {
+      "defns": "StructureDefinition-ext-affiliation-definitions.html",
+      "base": "StructureDefinition-ext-affiliation.html",
+      "source": "StructureDefinition-ext-affiliation.json"
+    },
     "StructureDefinition/ext-birthsex": {
       "defns": "StructureDefinition-ext-birthsex-definitions.html",
       "base": "StructureDefinition-ext-birthsex.html",
       "source": "StructureDefinition-ext-birthsex.json"
+    },
+    "StructureDefinition/ext-servicelanguage": {
+      "defns": "StructureDefinition-ext-servicelanguage-definitions.html",
+      "base": "StructureDefinition-ext-servicelanguage.html",
+      "source": "StructureDefinition-ext-servicelanguage.json"
     },
     "StructureDefinition/ext-versioncode": {
       "defns": "StructureDefinition-ext-versioncode-definitions.html",

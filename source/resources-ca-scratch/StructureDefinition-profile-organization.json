@@ -21,7 +21,33 @@
                 "id": "Organization",
                 "path": "Organization",
                 "short": "Organization Profile",
-                "definition": "The Organization Profile is based upon the core FHIR Organization Resource",
+                "definition": "The Organization Profile is based upon the core FHIR Organization Resource"
+            },
+            {
+                "id": "Organization.extension:affiliation",
+                "path": "Organization.extension",
+                "sliceName": "affiliation",
+                "type": [
+                    {
+                        "code": "extension",
+                        "profile": [
+                            "http://hl7.org/fhir/ca/scratch/StructureDefinition/ext-affiliation"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "Organization.extension:serviceLanguage",
+                "path": "Organization.extension",
+                "sliceName": "serviceLanguage",
+                "type": [
+                    {
+                        "code": "extension",
+                        "profile": [
+                            "http://hl7.org/fhir/ca/scratch/StructureDefinition/ext-servicelanguage"
+                        ]
+                    }
+                ],
                 "isModifier": false,
                 "mustSupport": false
             },
