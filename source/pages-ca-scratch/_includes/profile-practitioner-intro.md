@@ -7,12 +7,19 @@ Key differences from [USCoreR4 Practitioner](https://build.fhir.org/ig/HL7/US-Co
 - Other identifiers are still supported
 
 **[ToDo]:**
+
 [x] review structure against USCoreR4 profile and draft constraints
+
 [x] review structure against pan-CDN HL7 v3
+
 [x] review structure against existing CAD FHIR specs
+
 [x] review and update terminology bindings
+
 [] add additional constraints (cross element) from USCoreR4
+
 [] refine constraints (cross element) to CAD requirements ?
+
 [] ?
 
 {% include link-list.md %}

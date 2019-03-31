@@ -13,7 +13,10 @@ Key differences from [USCoreR4 PractitionerRole](https://build.fhir.org/ig/HL7/U
 
 [x] review structure against existing CAD FHIR specs
 
-[x] review and update terminology bindings
+
+[] review and update [PractitionerRole](http://build.fhir.org/valueset-practitioner-role.html) against CDN specs
+
+[] review and update [PracticeSettingCodeValueSet](http://build.fhir.org/valueset-c80-practice-codes.html) against CDN specs
 
 [] add additional constraints (cross element) from USCoreR4
 

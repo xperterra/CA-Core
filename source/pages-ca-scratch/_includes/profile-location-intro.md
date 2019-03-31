@@ -8,6 +8,7 @@ Key differences from [USCoreR4 Location](https://build.fhir.org/ig/HL7/US-Core-R
 - Added slicing for Canadian Jurisdictional Provider identifiers, licensing (same structure as Practitioner, Organization)
 
 **[ToDo]:**
+
 [x] review structure against USCoreR4 profile and draft constraints
 
 [x] review structure against pan-CDN HL7 v3

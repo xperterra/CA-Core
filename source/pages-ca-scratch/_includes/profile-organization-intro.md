@@ -11,6 +11,7 @@ Key differences between this profile and [USCoreR4 Organization](https://build.f
 - Notes: Canadian spect have variation in use of many remaining elements including endpoint.
 
 **[ToDo]:**
+
 [x] review structure against USCoreR4 profile and draft constraints
 
 [x] review structure against pan-CDN HL7 v3

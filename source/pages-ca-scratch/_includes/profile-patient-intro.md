@@ -17,12 +17,19 @@ The Version Code is current captured separately from the JHN because, in Ontario
 - Question: would specific examples like this be helpful to illustrate Canadian requirements?
 
 **[ToDo]:**
+
 [x] review structure against USCoreR4 profile and draft constraints
+
 [x] review structure against pan-CDN HL7 v3
+
 [x] review structure against existing CAD FHIR specs
+
 [x] review and update terminology bindings
+
 [] add additional constraints (cross element) from USCoreR4
+
 [] refine constraints (cross element) to CAD requirements ?
+
 [] ?
 
 {% include link-list.md %}
