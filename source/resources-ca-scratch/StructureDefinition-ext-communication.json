@@ -8,14 +8,14 @@
     "status": "active",
     "date": "2019-03-08",
     "publisher": "TBD",
-    "description": "Indentifies languages that services are provided in at the location.",
+    "description": "Indentifies languages that that services are provided in.",
     "fhirVersion": "4.0.0",
     "kind": "complex-type",
     "abstract": false,
     "context": [
         {
             "type": "element",
-            "expression": "Location"
+            "expression": "Resource"
         }
     ],
     "type": "Extension",

@@ -15,7 +15,11 @@
     "context": [
         {
             "type": "element",
-            "expression": "Resource"
+            "expression": "Location"
+        },
+        {
+            "type": "element",
+            "expression": "Organization"
         }
     ],
     "type": "Extension",
@@ -37,7 +41,7 @@
                 "path": "Extension.extension",
                 "sliceName": "type",
                 "short": "Type of affiliation",
-                "min": 1,
+                "min": 0,
                 "max": "1"
             },
             {

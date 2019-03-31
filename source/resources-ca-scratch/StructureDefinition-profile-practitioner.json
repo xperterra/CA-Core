@@ -6,9 +6,9 @@
     "name": "Practitioner_Profile",
     "title": "Practitioner Profile",
     "status": "active",
-    "date": "2019-03-13",
+    "date": "2019-03-31",
     "publisher": "TBD",
-    "description": "Proposed constraints and extensions on the Practitioner Profile.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.",
+    "description": "Proposed constraints and extensions on the Practitioner Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.",
     "fhirVersion": "4.0.0",
     "kind": "resource",
     "abstract": false,
@@ -21,12 +21,8 @@
                 "id": "Practitioner",
                 "path": "Practitioner",
                 "short": "Practitioner Profile",
-                "definition": "The Practitioner Profile is based on the core FHIR Practitioner Resource",
-                "alias": [
-                    "Provider"
-                ],
-                "mustSupport": false,
-                "isModifier": false
+                "definition": "The Practitioner Profile is based upon the core FHIR Practitioner Resource",
+                "mustSupport": true
             },
             {
                 "id": "Practitioner.identifier",
@@ -208,15 +204,9 @@
             {
                 "id": "Practitioner.name",
                 "path": "Practitioner.name",
-                "min": 1,
+                "min": 0,
                 "max": "1",
-                "type": [
-                    {
-                        "code": "HumanName"
-                    }
-                ],
-                "mustSupport": true,
-                "isModifier": false
+                "mustSupport": true
             },
             {
                 "id": "Practitioner.name.family",

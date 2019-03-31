@@ -1,8 +1,7 @@
 <!--- Text entered into this file will appear at the top of the profiles page before the Formal Views of the profile content. -->
 
-Indentifies languages that services are provided in at the location.
+Indentifies a language that is used to services are provide services at a Location or Organization.
 
-**Notes:**
-- This is adapted (generalized) from the [ext-location-language](https://simplifier.net/ProvincialProviderRe/organizationLanguage) extension used in the ON PPR guide which is semantically different than Resource.language
+**Note** this extension was created to meet the requirement of [ext-location-language](https://simplifier.net/ProvincialProviderRe/organizationLanguage) extension used in the ON PPR guide which is semantically different than Resource.language.  The implementation is different, witht the intent of being more consistent with the Communication element on the Patient and Practioner resources.
 
 {% include link-list.md %}
