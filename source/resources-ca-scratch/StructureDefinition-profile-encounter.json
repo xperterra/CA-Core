@@ -72,7 +72,7 @@
                     {
                         "code": "Reference",
                         "targetProfile": [
-                            "http://hl7.org/fhir/ca/scratch/StructureDefinition/Patient"
+                            "http://hl7.org/fhir/ca/scratch/StructureDefinition/profile-patient"
                         ]
                     }
                 ]
@@ -100,8 +100,8 @@
                     {
                         "code": "Reference",
                         "targetProfile": [
-                            "http://hl7.org/fhir/ca/scratch/StructureDefinition/Practitioner",
-                            "http://hl7.org/fhir/ca/scratch/StructureDefinition/PractitionerRole"
+                            "http://hl7.org/fhir/ca/scratch/StructureDefinition/profile-practitioner",
+                            "http://hl7.org/fhir/ca/scratch/StructureDefinition/profile-practitionerrole"
                         ]
                     }
                 ]
@@ -129,7 +129,7 @@
                     {
                         "code": "Reference",
                         "targetProfile": [
-                            "http://hl7.org/fhir/ca/scratch/StructureDefinition/Condition"
+                            "http://hl7.org/fhir/ca/scratch/StructureDefinition/profile-condition"
                         ]
                     }
                 ]
@@ -162,7 +162,7 @@
                     {
                         "code": "Reference",
                         "targetProfile": [
-                            "http://hl7.org/fhir/ca/scratch/StructureDefinition/Location"
+                            "http://hl7.org/fhir/ca/scratch/StructureDefinition/profile-location"
                         ]
                     }
                 ]
