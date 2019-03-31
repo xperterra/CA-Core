@@ -37,6 +37,18 @@
             },
             {
                 "reference": {
+                    "reference": "StructureDefinition/profile-condition"
+                },
+                "exampleBoolean": false
+            },
+            {
+                "reference": {
+                    "reference": "StructureDefinition/profile-encounter"
+                },
+                "exampleBoolean": false
+            },
+            {
+                "reference": {
                     "reference": "StructureDefinition/profile-location"
                 },
                 "exampleBoolean": false
@@ -98,6 +110,16 @@
                         {
                             "nameUrl": "StructureDefinition-ext-versioncode.html",
                             "title": "Extension: Patient Identifier Version Code",
+                            "generation": "generated"
+                        },
+                        {
+                            "nameUrl": "StructureDefinition-profile-condition.html",
+                            "title": "Structure Definition: Condition Profile",
+                            "generation": "generated"
+                        },
+                        {
+                            "nameUrl": "StructureDefinition-profile-encounter.html",
+                            "title": "Structure Definition: Encounter Profile",
                             "generation": "generated"
                         },
                         {

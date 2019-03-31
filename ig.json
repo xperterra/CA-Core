@@ -53,6 +53,16 @@
       "base": "StructureDefinition-ext-versioncode.html",
       "source": "StructureDefinition-ext-versioncode.json"
     },
+    "StructureDefinition/profile-condition": {
+      "defns": "StructureDefinition-profile-condition-definitions.html",
+      "base": "StructureDefinition-profile-condition.html",
+      "source": "StructureDefinition-profile-condition.json"
+    },
+    "StructureDefinition/profile-encounter": {
+      "defns": "StructureDefinition-profile-encounter-definitions.html",
+      "base": "StructureDefinition-profile-encounter.html",
+      "source": "StructureDefinition-profile-encounter.json"
+    },
     "StructureDefinition/profile-location": {
       "defns": "StructureDefinition-profile-location-definitions.html",
       "base": "StructureDefinition-profile-location.html",

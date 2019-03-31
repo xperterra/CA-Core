@@ -1,0 +1,28 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "profile-condition",
+    "url": "http://hl7.org/fhir/ca/scratch/StructureDefinition/profile-condition",
+    "version": "0.0.0",
+    "name": "Condition_Profile",
+    "title": "Condition Profile",
+    "status": "active",
+    "date": "2019-03-31",
+    "publisher": "TBD",
+    "description": "Proposed constraints and extensions on the Condition Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.",
+    "fhirVersion": "4.0.0",
+    "kind": "resource",
+    "abstract": false,
+    "type": "Condition",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Condition",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "Condition",
+                "path": "Condition",
+                "short": "Condition Profile",
+                "definition": "The Condition Profile is based upon the core FHIR Condition Resource"
+            }
+        ]
+    }
+}
