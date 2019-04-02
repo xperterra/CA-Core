@@ -5,7 +5,7 @@
     "version": "0.0.0",
     "name": "Encounter_Profile",
     "title": "Encounter Profile",
-    "status": "active",
+    "status": "draft",
     "date": "2019-03-31",
     "publisher": "TBD",
     "description": "Proposed constraints and extensions on the Encounter Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.",
@@ -65,7 +65,7 @@
             {
                 "id": "Encounter.subject",
                 "path": "Encounter.subject",
-                "short": "The patient or group present at the encounter",
+                "short": "The patient present at the encounter",
                 "min": 1,
                 "mustSupport": true,
                 "type": [
@@ -80,7 +80,7 @@
             {
                 "id": "Encounter.participant",
                 "path": "Encounter.participant",
-                "short": "List of Practitioners participating in the encounter",
+                "short": "A list of Practitioners participating in the encounter",
                 "mustSupport": true
             },
             {
@@ -152,6 +152,7 @@
             {
                 "id": "Encounter.location",
                 "path": "Encounter.location",
+                "short": "List of locations where the patient has been during the encounter",
                 "mustSupport": true
             },
             {

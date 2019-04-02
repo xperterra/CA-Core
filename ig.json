@@ -48,25 +48,65 @@
       "base": "StructureDefinition-ext-communication.html",
       "source": "StructureDefinition-ext-communication.json"
     },
+    "StructureDefinition/ext-estimated": {
+      "defns": "StructureDefinition-ext-estimated-definitions.html",
+      "base": "StructureDefinition-ext-estimated.html",
+      "source": "StructureDefinition-ext-estimated.json"
+    },
     "StructureDefinition/ext-versioncode": {
       "defns": "StructureDefinition-ext-versioncode-definitions.html",
       "base": "StructureDefinition-ext-versioncode.html",
       "source": "StructureDefinition-ext-versioncode.json"
+    },
+    "StructureDefinition/profile-allergyintolerance": {
+      "defns": "StructureDefinition-profile-allergyintolerance-definitions.html",
+      "base": "StructureDefinition-profile-allergyintolerance.html",
+      "source": "StructureDefinition-profile-allergyintolerance.json"
     },
     "StructureDefinition/profile-condition": {
       "defns": "StructureDefinition-profile-condition-definitions.html",
       "base": "StructureDefinition-profile-condition.html",
       "source": "StructureDefinition-profile-condition.json"
     },
+    "StructureDefinition/profile-device": {
+      "defns": "StructureDefinition-profile-device-definitions.html",
+      "base": "StructureDefinition-profile-device.html",
+      "source": "StructureDefinition-profile-device.json"
+    },
     "StructureDefinition/profile-encounter": {
       "defns": "StructureDefinition-profile-encounter-definitions.html",
       "base": "StructureDefinition-profile-encounter.html",
       "source": "StructureDefinition-profile-encounter.json"
     },
+    "StructureDefinition/profile-immunization": {
+      "defns": "StructureDefinition-profile-immunization-definitions.html",
+      "base": "StructureDefinition-profile-immunization.html",
+      "source": "StructureDefinition-profile-immunization.json"
+    },
     "StructureDefinition/profile-location": {
       "defns": "StructureDefinition-profile-location-definitions.html",
       "base": "StructureDefinition-profile-location.html",
       "source": "StructureDefinition-profile-location.json"
+    },
+    "StructureDefinition/profile-medication": {
+      "defns": "StructureDefinition-profile-medication-definitions.html",
+      "base": "StructureDefinition-profile-medication.html",
+      "source": "StructureDefinition-profile-medication.json"
+    },
+    "StructureDefinition/profile-medicationrequest": {
+      "defns": "StructureDefinition-profile-medicationrequest-definitions.html",
+      "base": "StructureDefinition-profile-medicationrequest.html",
+      "source": "StructureDefinition-profile-medicationrequest.json"
+    },
+    "StructureDefinition/profile-observation": {
+      "defns": "StructureDefinition-profile-observation-definitions.html",
+      "base": "StructureDefinition-profile-observation.html",
+      "source": "StructureDefinition-profile-observation.json"
+    },
+    "StructureDefinition/profile-medicationstatement": {
+      "defns": "StructureDefinition-profile-medicationstatement-definitions.html",
+      "base": "StructureDefinition-profile-medicationstatement.html",
+      "source": "StructureDefinition-profile-medicationstatement.json"
     },
     "StructureDefinition/profile-organization": {
       "defns": "StructureDefinition-profile-organization-definitions.html",
@@ -88,9 +128,26 @@
       "base": "StructureDefinition-profile-practitionerrole.html",
       "source": "StructureDefinition-profile-practitionerrole.json"
     },
+    "StructureDefinition/profile-procedure": {
+      "defns": "StructureDefinition-profile-procedure-definitions.html",
+      "base": "StructureDefinition-profile-procedure.html",
+      "source": "StructureDefinition-profile-procedure.json"
+    },
     "ValueSet/birthsex": {
       "base": "ValueSet-birthsex.html",
       "source": "ValueSet-birthsex.json"
+    },
+    "ValueSet/prescriptiondrugform": {
+      "base": "ValueSet-prescriptiondrugform.html",
+      "source": "ValueSet-prescriptiondrugform.json"
+    },
+    "ValueSet/prescriptionmedicinalproduct": {
+      "base": "ValueSet-prescriptionmedicinalproduct.html",
+      "source": "ValueSet-prescriptionmedicinalproduct.json"
+    },
+    "ValueSet/vaccinecodes": {
+      "base": "ValueSet-vaccinecodes.html",
+      "source": "ValueSet-vaccinecodes.json"
     }
   },
   "defaults": {

@@ -1,0 +1,85 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "profile-medicationstatement",
+    "url": "http://hl7.org/fhir/ca/scratch/StructureDefinition/profile-medicationstatement",
+    "version": "0.0.0",
+    "name": "MedicationStatement_Profile",
+    "title": "MedicationStatement Profile",
+    "status": "draft",
+    "date": "2019-03-31",
+    "publisher": "TBD",
+    "description": "Proposed constraints and extensions on the MedicationStatement Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.",
+    "fhirVersion": "4.0.0",
+    "kind": "resource",
+    "abstract": false,
+    "type": "MedicationStatement",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationStatement",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "MedicationStatement",
+                "path": "MedicationStatement",
+                "short": "MedicationStatement Profile",
+                "definition": "The MedicationStatement Profile is based upon the core FHIR MedicationStatement Resource",
+                "comment": "When interpreting a medicationStatement, the value of the status and NotTaken needed to be considered:\rMedicationStatement.status + MedicationStatement.wasNotTaken\rStatus=Active + NotTaken=T = Not currently taking\rStatus=Completed + NotTaken=T = Not taken in the past\rStatus=Intended + NotTaken=T = No intention of taking\rStatus=Active + NotTaken=F = Taking, but not as prescribed\rStatus=Active + NotTaken=F = Taking\rStatus=Intended +NotTaken= F = Will be taking (not started)\rStatus=Completed + NotTaken=F = Taken in past\rStatus=In Error + NotTaken=N/A = In Error."
+            },
+            {
+                "id": "MedicationStatement.status",
+                "path": "MedicationStatement.status",
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationStatement.medication[x]",
+                "path": "MedicationStatement.medication[x]",
+                "mustSupport": true,
+                "type": [
+                    {
+                        "code": "CodeableConcept"
+                    },
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/ca/scratch/StructureDefinition/profile-medication"
+                        ]
+                    }
+                ],
+                "binding": {
+                    "strength": "extensible",
+                    "description": "A coded concept identifying the substance or product being taken.",
+                    "valueSet": "http://hl7.org/fhir/ca/scratch/ValueSet/prescriptionmedicinalproduct"
+                }
+            },
+            {
+                "id": "MedicationStatement.subject",
+                "path": "MedicationStatement.subject",
+                "mustSupport": true,
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/ca/scratch/StructureDefinition/profile-patient"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "MedicationStatement.effective[x]",
+                "path": "MedicationStatement.effective[x]",
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationStatement.dateAsserted",
+                "path": "MedicationStatement.dateAsserted",
+                "min": 1,
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationStatement.derivedFrom",
+                "path": "MedicationStatement.derivedFrom",
+                "definition": "Allows linking the MedicationStatement to the underlying MedicationRequest, or to other information that supports or is used to derive the MedicationStatement.",
+                "mustSupport": true
+            }
+        ]
+    }
+}

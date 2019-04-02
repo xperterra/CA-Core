@@ -5,7 +5,7 @@
     "version": "0.0.0",
     "name": "Patient_Profile",
     "title": "Patient Profile",
-    "status": "active",
+    "status": "draft",
     "date": "2019-03-31",
     "publisher": "TBD",
     "description": "Proposed constraints and extensions on the Patient Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.",

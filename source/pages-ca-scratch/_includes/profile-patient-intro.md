@@ -18,7 +18,7 @@ The Version Code is current captured separately from the JHN because, in Ontario
 
 **[ToDo]:**
 
-[x] review structure against USCoreR4 profile and draft constraints
+[x] review USCoreR4 profile and draft extensions and restrictions
 
 [x] review structure against pan-CDN HL7 v3
 
@@ -26,7 +26,9 @@ The Version Code is current captured separately from the JHN because, in Ontario
 
 [x] review and update terminology bindings
 
-[] add additional constraints (cross element) from USCoreR4
+[] identifier:JHN.system: **should the list of URIs be constrained using a valueSet?**
+
+[] add constraints (cross element) from USCoreR4
 
 [] refine constraints (cross element) to CAD requirements ?
 

@@ -8,7 +8,7 @@ Key differences from [USCoreR4 Practitioner](https://build.fhir.org/ig/HL7/US-Co
 
 **[ToDo]:**
 
-[x] review structure against USCoreR4 profile and draft constraints
+[x] review USCoreR4 profile and draft extensions and restrictions
 
 [x] review structure against pan-CDN HL7 v3
 
@@ -16,7 +16,9 @@ Key differences from [USCoreR4 Practitioner](https://build.fhir.org/ig/HL7/US-Co
 
 [x] review and update terminology bindings
 
-[] add additional constraints (cross element) from USCoreR4
+[] PRN, LN identifier.system: **should the list of URIs be constrained using valueSets?**
+
+[] add constraints (cross element) from USCoreR4
 
 [] refine constraints (cross element) to CAD requirements ?
 

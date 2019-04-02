@@ -31,7 +31,19 @@
             },
             {
                 "reference": {
+                    "reference": "StructureDefinition/ext-estimated"
+                },
+                "exampleBoolean": false
+            },
+            {
+                "reference": {
                     "reference": "StructureDefinition/ext-versioncode"
+                },
+                "exampleBoolean": false
+            },
+            {
+                "reference": {
+                    "reference": "StructureDefinition/profile-allergyintolerance"
                 },
                 "exampleBoolean": false
             },
@@ -43,13 +55,43 @@
             },
             {
                 "reference": {
+                    "reference": "StructureDefinition/profile-device"
+                },
+                "exampleBoolean": false
+            },
+            {
+                "reference": {
                     "reference": "StructureDefinition/profile-encounter"
                 },
                 "exampleBoolean": false
             },
             {
                 "reference": {
+                    "reference": "StructureDefinition/profile-immunization"
+                },
+                "exampleBoolean": false
+            },
+            {
+                "reference": {
                     "reference": "StructureDefinition/profile-location"
+                },
+                "exampleBoolean": false
+            },
+            {
+                "reference": {
+                    "reference": "StructureDefinition/profile-medication"
+                },
+                "exampleBoolean": false
+            },
+            {
+                "reference": {
+                    "reference": "StructureDefinition/profile-medicationrequest"
+                },
+                "exampleBoolean": false
+            },
+            {
+                "reference": {
+                    "reference": "StructureDefinition/profile-medicationstatement"
                 },
                 "exampleBoolean": false
             },
@@ -79,7 +121,31 @@
             },
             {
                 "reference": {
+                    "reference": "StructureDefinition/profile-procedure"
+                },
+                "exampleBoolean": false
+            },
+            {
+                "reference": {
                     "reference": "ValueSet/birthsex"
+                },
+                "exampleBoolean": false
+            },
+            {
+                "reference": {
+                    "reference": "ValueSet/prescriptiondrugform"
+                },
+                "exampleBoolean": false
+            },
+            {
+                "reference": {
+                    "reference": "ValueSet/prescriptionmedicinalproduct"
+                },
+                "exampleBoolean": false
+            },
+            {
+                "reference": {
+                    "reference": "ValueSet/vaccinecodes"
                 },
                 "exampleBoolean": false
             }
@@ -108,8 +174,18 @@
                             "generation": "generated"
                         },
                         {
+                            "nameUrl": "StructureDefinition-ext-estimated.html",
+                            "title": "Extension: Estimated Flag",
+                            "generation": "generated"
+                        },
+                        {
                             "nameUrl": "StructureDefinition-ext-versioncode.html",
                             "title": "Extension: Patient Identifier Version Code",
+                            "generation": "generated"
+                        },
+                        {
+                            "nameUrl": "StructureDefinition-profile-allergyintolerance.html",
+                            "title": "Structure Definition: AllergyIntolerance Profile",
                             "generation": "generated"
                         },
                         {
@@ -118,13 +194,38 @@
                             "generation": "generated"
                         },
                         {
+                            "nameUrl": "StructureDefinition-profile-device.html",
+                            "title": "Structure Definition: Device Profile",
+                            "generation": "generated"
+                        },
+                        {
                             "nameUrl": "StructureDefinition-profile-encounter.html",
                             "title": "Structure Definition: Encounter Profile",
                             "generation": "generated"
                         },
                         {
+                            "nameUrl": "StructureDefinition-profile-immunization.html",
+                            "title": "Structure Definition: Immunization Profile",
+                            "generation": "generated"
+                        },
+                        {
                             "nameUrl": "StructureDefinition-profile-location.html",
                             "title": "Structure Definition: Location Profile",
+                            "generation": "generated"
+                        },
+                        {
+                            "nameUrl": "StructureDefinition-profile-medication.html",
+                            "title": "Structure Definition: Medication Profile",
+                            "generation": "generated"
+                        },
+                        {
+                            "nameUrl": "StructureDefinition-profile-medicationrequest.html",
+                            "title": "Structure Definition: MedicationRequest Profile",
+                            "generation": "generated"
+                        },
+                        {
+                            "nameUrl": "StructureDefinition-profile-medicationstatement.html",
+                            "title": "Structure Definition: MedicationStatement Profile",
                             "generation": "generated"
                         },
                         {
@@ -145,6 +246,11 @@
                         {
                             "nameUrl": "StructureDefinition-profile-practitionerrole.html",
                             "title": "Structure Definition: PractitionerRole Profile",
+                            "generation": "generated"
+                        },
+                        {
+                            "nameUrl": "StructureDefinition-profile-procedure.html",
+                            "title": "Structure Definition: Procedure Profile",
                             "generation": "generated"
                         }
                     ],

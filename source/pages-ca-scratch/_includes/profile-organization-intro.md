@@ -12,7 +12,7 @@ Key differences between this profile and [USCoreR4 Organization](https://build.f
 
 **[ToDo]:**
 
-[x] review structure against USCoreR4 profile and draft constraints
+[x] review USCoreR4 profile and draft extensions and restrictions
 
 [x] review structure against pan-CDN HL7 v3
 
@@ -20,7 +20,9 @@ Key differences between this profile and [USCoreR4 Organization](https://build.f
 
 [x] review and update terminology bindings
 
-[] add additional constraints (cross element) from USCoreR4
+[] PRN, LN identifier.system: **should the list of URIs be constrained using valueSets?**
+
+[] add constraints (cross element) from USCoreR4
 
 [] refine constraints (cross element) to CAD requirements ?
 

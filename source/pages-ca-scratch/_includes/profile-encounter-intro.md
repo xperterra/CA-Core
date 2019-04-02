@@ -8,7 +8,7 @@ Key differences from [USCoreR4 Encounter](https://build.fhir.org/ig/HL7/US-Core-
 
 **[ToDo]:**
 
-[x] review structure against USCoreR4 profile and draft constraints
+[x] review USCoreR4 profile and draft extensions and restrictions
 
 [] review structure against pan-CDN HL7 v3
 
@@ -16,7 +16,7 @@ Key differences from [USCoreR4 Encounter](https://build.fhir.org/ig/HL7/US-Core-
 
 [] review [US_Core_Encounter_Type](http://build.fhir.org/ig/HL7/US-Core-R4/ValueSet-us-core-encounter-type.html) valueSet against CAD equiv and update **Encounter.type** binding (if necessary)
 
-[] add additional constraints (cross element) from USCoreR4
+[] add constraints (cross element) from USCoreR4
 
 [] refine constraints (cross element) to CAD requirements ?
 

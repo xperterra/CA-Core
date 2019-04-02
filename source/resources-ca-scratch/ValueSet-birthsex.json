@@ -3,7 +3,7 @@
     "id": "birthsex",
     "url": "http://hl7.org/fhir/ca/scratch/ValueSet/birthsex",
     "version": "4.0.0",
-    "name": "birthsex",
+    "name": "BirthSex",
     "title": "Birth Sex",
     "status": "active",
     "date": "2019-03-08",
