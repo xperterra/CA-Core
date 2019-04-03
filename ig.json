@@ -98,11 +98,6 @@
       "base": "StructureDefinition-profile-medicationrequest.html",
       "source": "StructureDefinition-profile-medicationrequest.json"
     },
-    "StructureDefinition/profile-observation": {
-      "defns": "StructureDefinition-profile-observation-definitions.html",
-      "base": "StructureDefinition-profile-observation.html",
-      "source": "StructureDefinition-profile-observation.json"
-    },
     "StructureDefinition/profile-medicationstatement": {
       "defns": "StructureDefinition-profile-medicationstatement-definitions.html",
       "base": "StructureDefinition-profile-medicationstatement.html",
@@ -112,6 +107,11 @@
       "defns": "StructureDefinition-profile-organization-definitions.html",
       "base": "StructureDefinition-profile-organization.html",
       "source": "StructureDefinition-profile-organization.json"
+    },
+    "StructureDefinition/profile-observation": {
+      "defns": "StructureDefinition-profile-observation-definitions.html",
+      "base": "StructureDefinition-profile-observation.html",
+      "source": "StructureDefinition-profile-observation.json"
     },
     "StructureDefinition/profile-patient": {
       "defns": "StructureDefinition-profile-patient-definitions.html",

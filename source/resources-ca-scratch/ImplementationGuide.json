@@ -97,6 +97,12 @@
             },
             {
                 "reference": {
+                    "reference": "StructureDefinition/profile-observation"
+                },
+                "exampleBoolean": false
+            },
+            {
+                "reference": {
                     "reference": "StructureDefinition/profile-organization"
                 },
                 "exampleBoolean": false
@@ -226,6 +232,11 @@
                         {
                             "nameUrl": "StructureDefinition-profile-medicationstatement.html",
                             "title": "Structure Definition: MedicationStatement Profile",
+                            "generation": "generated"
+                        },
+                        {
+                            "nameUrl": "StructureDefinition-profile-observation.html",
+                            "title": "Structure Definition: Organization Profile",
                             "generation": "generated"
                         },
                         {
