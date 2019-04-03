@@ -139,6 +139,12 @@
             },
             {
                 "reference": {
+                    "reference": "ValueSet/healthconcerncode"
+                },
+                "exampleBoolean": false
+            },
+            {
+                "reference": {
                     "reference": "ValueSet/prescriptiondrugform"
                 },
                 "exampleBoolean": false

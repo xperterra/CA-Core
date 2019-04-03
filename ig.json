@@ -137,6 +137,10 @@
       "base": "ValueSet-birthsex.html",
       "source": "ValueSet-birthsex.json"
     },
+    "ValueSet/healthconcerncode": {
+      "base": "ValueSet-healthconcerncode.html",
+      "source": "ValueSet-healthconcerncode.json"
+    },
     "ValueSet/prescriptiondrugform": {
       "base": "ValueSet-prescriptiondrugform.html",
       "source": "ValueSet-prescriptiondrugform.json"

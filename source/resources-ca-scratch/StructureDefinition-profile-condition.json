@@ -28,12 +28,6 @@
                 "path": "Condition.clinicalStatus",
                 "mustSupport": true,
                 "binding": {
-                    "extension": [
-                        {
-                            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-                            "valueString": "ConditionClinicalStatus"
-                        }
-                    ],
                     "strength": "required",
                     "valueSet": "http://hl7.org/fhir/ValueSet/condition-clinical|4.0.0"
                 }
@@ -44,12 +38,6 @@
                 "min": 1,
                 "mustSupport": true,
                 "binding": {
-                    "extension": [
-                        {
-                            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-                            "valueString": "ConditionVerificationStatus"
-                        }
-                    ],
                     "strength": "required",
                     "valueSet": "http://hl7.org/fhir/ValueSet/condition-ver-status|4.0.0"
                 }
@@ -61,12 +49,6 @@
                 "max": "1",
                 "mustSupport": true,
                 "binding": {
-                    "extension": [
-                        {
-                            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-                            "valueString": "ConditionCategory"
-                        }
-                    ],
                     "strength": "extensible",
                     "valueSet": "http://hl7.org/fhir/ValueSet/condition-category"
                 }
@@ -78,14 +60,8 @@
                 "max": "1",
                 "mustSupport": true,
                 "binding": {
-                    "extension": [
-                        {
-                            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
-                            "valueString": "ConditionKind"
-                        }
-                    ],
-                    "strength": "example",
-                    "valueSet": "http://hl7.org/fhir/ValueSet/condition-code"
+                    "strength": "extensible",
+                    "valueSet": "http://hl7.org/fhir/ca/scratch/ValueSet/healthconcerncode"
                 }
             },
             {
