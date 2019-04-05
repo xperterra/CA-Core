@@ -24,19 +24,6 @@
                 "definition": "The Location Profile is based upon the core FHIR Location Resource"
             },
             {
-                "id": "Location.extension:affiliation",
-                "path": "Location.extension",
-                "sliceName": "affiliation",
-                "type": [
-                    {
-                        "code": "extension",
-                        "profile": [
-                            "http://hl7.org/fhir/ca/scratch/StructureDefinition/ext-affiliation"
-                        ]
-                    }
-                ]
-            },
-            {
                 "id": "Location.extension:communication",
                 "path": "Location.extension",
                 "sliceName": "communication",

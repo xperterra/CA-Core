@@ -33,11 +33,6 @@
   "mappings": "true",
   "gen-examples": "false",
   "resources": {
-    "StructureDefinition/ext-affiliation": {
-      "defns": "StructureDefinition-ext-affiliation-definitions.html",
-      "base": "StructureDefinition-ext-affiliation.html",
-      "source": "StructureDefinition-ext-affiliation.json"
-    },
     "StructureDefinition/ext-birthsex": {
       "defns": "StructureDefinition-ext-birthsex-definitions.html",
       "base": "StructureDefinition-ext-birthsex.html",
@@ -103,15 +98,20 @@
       "base": "StructureDefinition-profile-medicationstatement.html",
       "source": "StructureDefinition-profile-medicationstatement.json"
     },
+    "StructureDefinition/profile-observation": {
+      "defns": "StructureDefinition-profile-observation-definitions.html",
+      "base": "StructureDefinition-profile-observation.html",
+      "source": "StructureDefinition-profile-observation.json"
+    },
     "StructureDefinition/profile-organization": {
       "defns": "StructureDefinition-profile-organization-definitions.html",
       "base": "StructureDefinition-profile-organization.html",
       "source": "StructureDefinition-profile-organization.json"
     },
-    "StructureDefinition/profile-observation": {
-      "defns": "StructureDefinition-profile-observation-definitions.html",
-      "base": "StructureDefinition-profile-observation.html",
-      "source": "StructureDefinition-profile-observation.json"
+    "StructureDefinition/profile-organizationaffiliation": {
+      "defns": "StructureDefinition-profile-organizationaffiliation-definitions.html",
+      "base": "StructureDefinition-profile-organizationaffiliation.html",
+      "source": "StructureDefinition-profile-organizationaffiliation.json"
     },
     "StructureDefinition/profile-patient": {
       "defns": "StructureDefinition-profile-patient-definitions.html",

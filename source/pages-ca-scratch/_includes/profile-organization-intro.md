@@ -4,7 +4,6 @@ This profile was generated from [HL7 StructureDefinition](https://www.hl7.org/fh
 
 Key differences between this profile and [USCoreR4 Organization](https://build.fhir.org/ig/HL7/US-Core-R4/StructureDefinition-us-core-organization.html) are:
 - Added extension for Communication language to be consistent with Location (ON PPR has a Location Language element, added ext_communication to support requirement more generally)
-- Added extension for Affiliation to be consistent with Location (PPR has an Affiliation extension that appears to have a different semantic meaning than Organization.partOf)
 - Added slicing for Canadian Jurisdictional Provider identifiers, licensing (same structure as Practitioner, Location)
 - Organization.active: Required in US Core but not in CDN specs reviewed, **removed constraint**
 

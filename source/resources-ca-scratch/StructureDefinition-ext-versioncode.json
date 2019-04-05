@@ -4,7 +4,7 @@
     "url": "http://hl7.org/fhir/ca/scratch/StructureDefinition/ext-versioncode",
     "version": "0.0.0",
     "name": "ExtensionVersionCode",
-    "title": "Extension: Patient Identifier Version Code",
+    "title": "Extension: Version Code",
     "status": "draft",
     "date": "2019-03-08",
     "publisher": "TBD",

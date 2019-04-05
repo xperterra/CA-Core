@@ -24,19 +24,6 @@
                 "definition": "The Organization Profile is based upon the core FHIR Organization Resource"
             },
             {
-                "id": "Organization.extension:affiliation",
-                "path": "Organization.extension",
-                "sliceName": "affiliation",
-                "type": [
-                    {
-                        "code": "extension",
-                        "profile": [
-                            "http://hl7.org/fhir/ca/scratch/StructureDefinition/ext-affiliation"
-                        ]
-                    }
-                ]
-            },
-            {
                 "id": "Organization.extension:communication",
                 "path": "Organization.extension",
                 "sliceName": "communication",

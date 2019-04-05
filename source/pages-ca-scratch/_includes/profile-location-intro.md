@@ -4,8 +4,6 @@ This profile was generated from [HL7 StructureDefinition](https://www.hl7.org/fh
 
 Key differences from [USCoreR4 Location](https://build.fhir.org/ig/HL7/US-Core-R4/StructureDefinition-us-core-location.html):
 - Added extension for Communication language to be consistent (ON PPR has a Location Language element, added ext_communication to support requirement more generally)
-- Added extension for Affiliation (ON PPR has an Affiliation extension that appears to have a different semantic meaning than Location.managingOrganization)  
-- Added slicing for Canadian Jurisdictional Provider identifiers, licensing (same structure as Practitioner, Organization)
 
 **[ToDo]:**
 
