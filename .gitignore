@@ -1,9 +1,4 @@
-.git
-.DS_Store
-.tstamp
-generated_output
+temp
+website
+/src-generated/org.hl7.fhir.igpublisher.jar
 output
-ig-expansion-parameters.json
-ig-new.json
-ig-new.xml
-ig-validation-parameters.json

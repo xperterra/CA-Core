@@ -1,0 +1,101 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "profile-medicationrequest",
+    "url": "http://hl7.org/fhir/ca/core/StructureDefinition/profile-medicationrequest",
+    "version": "0.0.0",
+    "name": "MedicationRequest_Profile",
+    "title": "MedicationRequest Profile",
+    "status": "draft",
+    "date": "2019-03-31",
+    "publisher": "TBD",
+    "description": "Proposed constraints and extensions on the MedicationRequest Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.",
+    "fhirVersion": "4.0.0",
+    "kind": "resource",
+    "abstract": false,
+    "type": "MedicationRequest",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationRequest",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "MedicationRequest",
+                "path": "MedicationRequest",
+                "short": "MedicationRequest Profile",
+                "definition": "The MedicationRequest Profile is based upon the core FHIR MedicationRequest Resource",
+                "alias": [
+                    "Prescription",
+                    "Order"
+                ]
+            },
+            {
+                "id": "MedicationRequest.status",
+                "path": "MedicationRequest.status",
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationRequest.medication[x]",
+                "path": "MedicationRequest.medication[x]",
+                "mustSupport": true,
+                "type": [
+                    {
+                        "code": "CodeableConcept"
+                    },
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/ca/core/StructureDefinition/profile-medication"
+                        ]
+                    }
+                ],
+                "binding": {
+                    "strength": "extensible",
+                    "description": "A coded concept identifying substance or product that can be ordered.",
+                    "valueSet": "http://hl7.org/fhir/ca/core/ValueSet/prescriptionmedicinalproduct"
+                }
+            },
+            {
+                "id": "MedicationRequest.subject",
+                "path": "MedicationRequest.subject",
+                "mustSupport": true,
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/ca/core/StructureDefinition/profile-patient"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "MedicationRequest.authoredOn",
+                "path": "MedicationRequest.authoredOn",
+                "min": 1,
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationRequest.requester",
+                "path": "MedicationRequest.requester",
+                "min": 0,
+                "mustSupport": true,
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/ca/core/StructureDefinition/profile-practitioner"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "MedicationRequest.dosageInstruction",
+                "path": "MedicationRequest.dosageInstruction",
+                "mustSupport": true
+            },
+            {
+                "id": "MedicationRequest.dosageInstruction.text",
+                "path": "MedicationRequest.dosageInstruction.text",
+                "mustSupport": true
+            }
+        ]
+    }
+}

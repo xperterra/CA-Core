@@ -1,0 +1,461 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="cacore"/>
+  <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
+    <valueString value="C:\Users\lloyd\Documents\SVN\CA-Core\src-generated\resources"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
+    <valueString value="C:\Users\lloyd\Documents\SVN\CA-Core\src\resources"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
+    <valueString value="C:\Users\lloyd\Documents\SVN\CA-Core\src\vocabulary"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
+    <valueString value="C:\Users\lloyd\Documents\SVN\CA-Core\src\examples"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
+    <valueString value="C:\Users\lloyd\Documents\SVN\CA-Core\src\images"/>
+  </extension>
+  <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
+    <valueString value="C:\Users\lloyd\Documents\SVN\CA-Core\src-generated\pages"/>
+  </extension>
+  <url value="http://hl7.org/fhir/ca/core/ImplementationGuide/cacore"/>
+  <version value="0.1"/>
+  <name value="CACore"/>
+  <title value="Canadian Core"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <publisher value="Good question..."/>
+  <contact>
+    <telecom>
+      <system value="other"/>
+      <value value="http://tbd"/>
+    </telecom>
+  </contact>
+  <description value="provides basic interoperability expectations for human-patient systems in the Canadian space.  Modeled after the US-Core implementation guide"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="CA"/>
+    </coding>
+  </jurisdiction>
+  <packageId value="hl7.fhir.ca.core"/>
+  <license value="CC0-1.0"/>
+  <fhirVersion value="4.0.0"/>
+  <fhirVersion value="4.0.0"/>
+  <definition>
+    <grouping id="profiles">
+      <name value="Profiles"/>
+      <description value="Constraints on FHIR resources to be adhered to as part of the CA-Core implementation guide"/>
+    </grouping>
+    <grouping id="extensions">
+      <name value="Extensions"/>
+      <description value="Extensions defined as part of the CA-Core implementation guide"/>
+    </grouping>
+    <grouping id="terminology">
+      <name value="Terminology"/>
+      <description value="ValueSets (and Code Systems) defined for use within the CA-Core implementation guide"/>
+    </grouping>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/ext-patientbirthsex"/>
+      </reference>
+      <name value="Birth Sex"/>
+      <description value="A code classifying the person&#39;s sex assigned at birth. Replicates the birthsex extension in US-Core-R4 for interoperability."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="extensions"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/ext-resourcecommunication"/>
+      </reference>
+      <name value="Communication"/>
+      <description value="Indentifies languages that that services are provided in."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="extensions"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/ext-dateestimated"/>
+      </reference>
+      <name value="Date Estimated Flag"/>
+      <description value="If true, indicates that information entered is an estimate and may not be precise"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="extensions"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/ext-identifierversion"/>
+      </reference>
+      <name value="Identifier Version"/>
+      <description value="A version string indicating the currency/validity of an identifier"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="extensions"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-allergyintolerance"/>
+      </reference>
+      <name value="AllergyIntolerance Profile"/>
+      <description value="Proposed constraints and extensions on the AllergyIntolerance Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="extensions"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-condition"/>
+      </reference>
+      <name value="Condition Profile"/>
+      <description value="Proposed constraints and extensions on the Condition Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-device"/>
+      </reference>
+      <name value="Device Profile"/>
+      <description value="Proposed constraints and extensions on the Device Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-encounter"/>
+      </reference>
+      <name value="Encounter Profile"/>
+      <description value="Proposed constraints and extensions on the Encounter Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-immunization"/>
+      </reference>
+      <name value="Immunization Profile"/>
+      <description value="Proposed constraints and extensions on the Immunization Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-location"/>
+      </reference>
+      <name value="Location Profile"/>
+      <description value="Proposed constraints and extensions on the Location Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-medication"/>
+      </reference>
+      <name value="Medication Profile"/>
+      <description value="Proposed constraints and extensions on the Medication Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-medicationrequest"/>
+      </reference>
+      <name value="MedicationRequest Profile"/>
+      <description value="Proposed constraints and extensions on the MedicationRequest Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-medicationstatement"/>
+      </reference>
+      <name value="MedicationStatement Profile"/>
+      <description value="Proposed constraints and extensions on the MedicationStatement Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-observation"/>
+      </reference>
+      <name value="Observation Profile"/>
+      <description value="Proposed constraints and extensions on the Observation Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-organization"/>
+      </reference>
+      <name value="Organization Profile"/>
+      <description value="Proposed constraints and extensions on the Organization Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-organizationaffiliation"/>
+      </reference>
+      <name value="OrganizationAffiliation Profile"/>
+      <description value="Proposed constraints and extensions on the OrganizationAffiliation Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-patient"/>
+      </reference>
+      <name value="Patient Profile"/>
+      <description value="Proposed constraints and extensions on the Patient Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-practitioner"/>
+      </reference>
+      <name value="Practitioner Profile"/>
+      <description value="Proposed constraints and extensions on the Practitioner Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-practitionerrole"/>
+      </reference>
+      <name value="PractitionerRole Profile"/>
+      <description value="Proposed constraints and extensions on the PractitionerRole Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-procedure"/>
+      </reference>
+      <name value="Procedure Profile"/>
+      <description value="Proposed constraints and extensions on the Procedure Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/birthsex"/>
+      </reference>
+      <name value="Birth Sex"/>
+      <description value="Codes for documenting sex at birth. (Replicates the birthsex ValueSet in US-Core-R4 for interoperability.)"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="terminology"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/healthconcerncode"/>
+      </reference>
+      <name value="Health Concern Codes"/>
+      <description value="Clinical problems, conditions, diagnoses, symptoms, findings and complaints, as interpreted by the provider."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="terminology"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/prescriptiondrugform"/>
+      </reference>
+      <name value="Prescription Drug Form"/>
+      <description value="The list of forms in which compounded drugs or active ingredients can be dispensed to the patient."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="terminology"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/prescriptionmedicinalproduct"/>
+      </reference>
+      <name value="Prescription Medicinal Product"/>
+      <description value="The list of commonly used Medicinal products used for prescribing and dispensing in Canada."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="terminology"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/vaccinecodes"/>
+      </reference>
+      <name value="Vaccine Codes"/>
+      <description value="**Placeholder**\nCurrent and historical vaccines are published as separate lists by Canada Health Infoway."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="terminology"/>
+    </resource>
+    <page>
+      <nameUrl value="toc.html"/>
+      <title value="Table of Contents"/>
+      <generation value="html"/>
+      <page>
+        <nameUrl value="index.html"/>
+        <title value="Home"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="general-guidance.html"/>
+        <title value="General Guidance"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="security.html"/>
+        <title value="Security"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="downloads.html"/>
+        <title value="Downloads"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="artifacts.html"/>
+        <title value="Artifact List"/>
+        <generation value="html"/>
+        <page>
+          <nameUrl value="extension-ext-patientbirthsex.html"/>
+          <title value="Birth Sex"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="extension-ext-resourcecommunication.html"/>
+          <title value="Communication"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="extension-ext-dateestimated.html"/>
+          <title value="Date Estimated Flag"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="extension-ext-identifierversion.html"/>
+          <title value="Identifier Version"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="extension-profile-allergyintolerance.html"/>
+          <title value="AllergyIntolerance Profile"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="profile-condition.html"/>
+          <title value="Condition Profile"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="profile-device.html"/>
+          <title value="Device Profile"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="profile-encounter.html"/>
+          <title value="Encounter Profile"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="profile-immunization.html"/>
+          <title value="Immunization Profile"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="profile-location.html"/>
+          <title value="Location Profile"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="profile-medication.html"/>
+          <title value="Medication Profile"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="profile-medicationrequest.html"/>
+          <title value="MedicationRequest Profile"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="profile-medicationstatement.html"/>
+          <title value="MedicationStatement Profile"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="profile-observation.html"/>
+          <title value="Observation Profile"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="profile-organization.html"/>
+          <title value="Organization Profile"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="profile-organizationaffiliation.html"/>
+          <title value="OrganizationAffiliation Profile"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="profile-patient.html"/>
+          <title value="Patient Profile"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="profile-practitioner.html"/>
+          <title value="Practitioner Profile"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="profile-practitionerrole.html"/>
+          <title value="PractitionerRole Profile"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="profile-procedure.html"/>
+          <title value="Procedure Profile"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="valueset-birthsex.html"/>
+          <title value="Birth Sex"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="valueset-healthconcerncode.html"/>
+          <title value="Health Concern Codes"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="valueset-prescriptiondrugform.html"/>
+          <title value="Prescription Drug Form"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="valueset-prescriptionmedicinalproduct.html"/>
+          <title value="Prescription Medicinal Product"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="valueset-vaccinecodes.html"/>
+          <title value="Vaccine Codes"/>
+          <generation value="generated"/>
+        </page>
+      </page>
+    </page>
+    <parameter>
+      <code value="apply"/>
+      <value value="version"/>
+    </parameter>
+    <parameter>
+      <code value="html-template"/>
+      <value value="template-page.html"/>
+    </parameter>
+    <parameter>
+      <code value="generate-json"/>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code value="generate-xml"/>
+      <value value="true"/>
+    </parameter>
+    <parameter>
+      <code value="generate-turtle"/>
+      <value value="true"/>
+    </parameter>
+  </definition>
+</ImplementationGuide>

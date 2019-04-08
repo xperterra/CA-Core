@@ -1,0 +1,96 @@
+{
+    "resourceType": "StructureDefinition",
+    "id": "profile-allergyintolerance",
+    "url": "http://hl7.org/fhir/ca/core/StructureDefinition/profile-allergyintolerance",
+    "version": "0.0.0",
+    "name": "AllergyIntolerance_Profile",
+    "title": "AllergyIntolerance Profile",
+    "status": "draft",
+    "date": "2019-03-31",
+    "publisher": "TBD",
+    "description": "Proposed constraints and extensions on the AllergyIntolerance Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.",
+    "fhirVersion": "4.0.0",
+    "kind": "resource",
+    "abstract": false,
+    "type": "AllergyIntolerance",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/AllergyIntolerance",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "AllergyIntolerance",
+                "path": "AllergyIntolerance",
+                "short": "AllergyIntolerance Profile",
+                "definition": "The AllergyIntolerance Profile is based upon the core FHIR AllergyIntolerance Resource",
+                "comment": "Substances include, but are not limited to: a therapeutic substance #      administered correctly at an appropriate dosage for the individual; food; material #      derived from plants or animals; or venom from insect stings."
+            },
+            {
+                "id": "AllergyIntolerance.clinicalStatus",
+                "path": "AllergyIntolerance.clinicalStatus",
+                "mustSupport": true
+            },
+            {
+                "id": "AllergyIntolerance.verificationStatus",
+                "path": "AllergyIntolerance.verificationStatus",
+                "min": 1,
+                "mustSupport": true
+            },
+            {
+                "id": "AllergyIntolerance.code",
+                "path": "AllergyIntolerance.code",
+                "min": 0,
+                "max": "1",
+                "mustSupport": true,
+                "binding": {
+                    "strength": "example",
+                    "description": "Type of the substance/product, allergy or intolerance condition, or negation/exclusion codes for reporting no known allergies.",
+                    "valueSet": "http://hl7.org/fhir/ValueSet/allergyintolerance-code"
+                }
+            },
+            {
+                "id": "AllergyIntolerance.code.coding",
+                "path": "AllergyIntolerance.code.coding",
+                "mustSupport": true
+            },
+            {
+                "id": "AllergyIntolerance.code.coding.system",
+                "path": "AllergyIntolerance.code.coding.system",
+                "min": 1,
+                "mustSupport": true
+            },
+            {
+                "id": "AllergyIntolerance.code.coding.code",
+                "path": "AllergyIntolerance.code.coding.code",
+                "min": 1,
+                "mustSupport": true
+            },
+            {
+                "id": "AllergyIntolerance.code.coding.display",
+                "path": "AllergyIntolerance.code.coding.display",
+                "min": 1,
+                "maxLength": 1000,
+                "mustSupport": true
+            },
+            {
+                "id": "AllergyIntolerance.code.text",
+                "path": "AllergyIntolerance.code.text",
+                "min": 1,
+                "maxLength": 1000,
+                "mustSupport": true
+            },
+            {
+                "id": "AllergyIntolerance.patient",
+                "path": "AllergyIntolerance.patient",
+                "mustSupport": true,
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/ca/core/StructureDefinition/profile-patient"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
