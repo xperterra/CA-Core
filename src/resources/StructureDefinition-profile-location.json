@@ -1,7 +1,7 @@
 {
     "resourceType": "StructureDefinition",
     "id": "profile-location",
-    "url": "http://hl7.org/fhir/ca/scratch/StructureDefinition/profile-location",
+    "url": "http://hl7.org/fhir/ca/core/StructureDefinition/profile-location",
     "version": "0.0.0",
     "name": "Location_Profile",
     "title": "Location Profile",
@@ -31,7 +31,7 @@
                     {
                         "code": "extension",
                         "profile": [
-                            "http://hl7.org/fhir/ca/scratch/StructureDefinition/ext-servicelanguage"
+                            "http://hl7.org/fhir/ca/core/StructureDefinition/ext-servicelanguage"
                         ]
                     }
                 ]
@@ -250,7 +250,7 @@
                     {
                         "code": "Reference",
                         "targetProfile": [
-                            "http://hl7.org/fhir/ca/scratch/StructureDefinition/profile-organization"
+                            "http://hl7.org/fhir/ca/core/StructureDefinition/profile-organization"
                         ]
                     }
                 ]

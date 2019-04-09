@@ -1,7 +1,7 @@
 {
     "resourceType": "StructureDefinition",
     "id": "ext-servicelanguage",
-    "url": "http://hl7.org/fhir/ca/scratch/StructureDefinition/ext-servicelanguage",
+    "url": "http://hl7.org/fhir/ca/core/StructureDefinition/ext-servicelanguage",
     "version": "0.0.0",
     "name": "ServiceLanguage",
     "title": "Extension: ServiceLanguage",
@@ -43,7 +43,7 @@
             {
                 "id": "Extension:servicelanguage.url",
                 "path": "Extension.url",
-                "fixedUri": "http://hl7.org/fhir/ca/scratch/StructureDefinition/ext-servicelanguage"
+                "fixedUri": "http://hl7.org/fhir/ca/core/StructureDefinition/ext-servicelanguage"
             },
             {
                 "id": "Extension:servicelanguage.valueCodeableConcept",
