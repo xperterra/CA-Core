@@ -62,9 +62,9 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/ext-resourcecommunication"/>
+        <reference value="StructureDefinition/ext-servicelanguage"/>
       </reference>
-      <name value="Communication"/>
+      <name value="ServiceLanguage"/>
       <description value="Indentifies languages that that services are provided in."/>
       <exampleBoolean value="false"/>
       <groupingId value="extensions"/>

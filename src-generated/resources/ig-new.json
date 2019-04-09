@@ -3,27 +3,27 @@
   "id" : "cacore",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "C:\\Users\\lloyd\\Documents\\SVN\\CA-Core\\src-generated\\resources"
+    "valueString" : "/guide-in/src-generated/resources"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "C:\\Users\\lloyd\\Documents\\SVN\\CA-Core\\src\\resources"
+    "valueString" : "/guide-in/src/resources"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "C:\\Users\\lloyd\\Documents\\SVN\\CA-Core\\src\\vocabulary"
+    "valueString" : "/guide-in/src/vocabulary"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "C:\\Users\\lloyd\\Documents\\SVN\\CA-Core\\src\\examples"
+    "valueString" : "/guide-in/src/examples"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "C:\\Users\\lloyd\\Documents\\SVN\\CA-Core\\src\\images"
+    "valueString" : "/guide-in/src/images"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "C:\\Users\\lloyd\\Documents\\SVN\\CA-Core\\src-generated\\pages"
+    "valueString" : "/guide-in/src-generated/pages"
   }],
   "url" : "http://hl7.org/fhir/ca/core/ImplementationGuide/cacore",
   "version" : "0.1",
@@ -76,9 +76,9 @@
     },
     {
       "reference" : {
-        "reference" : "StructureDefinition/ext-resourcecommunication"
+        "reference" : "StructureDefinition/ext-servicelanguage"
       },
-      "name" : "Communication",
+      "name" : "ServiceLanguage",
       "description" : "Indentifies languages that that services are provided in.",
       "exampleBoolean" : false,
       "groupingId" : "extensions"
@@ -324,8 +324,8 @@
           "generation" : "generated"
         },
         {
-          "nameUrl" : "extension-ext-resourcecommunication.html",
-          "title" : "Communication",
+          "nameUrl" : "extension-ext-servicelanguage.html",
+          "title" : "ServiceLanguage",
           "generation" : "generated"
         },
         {

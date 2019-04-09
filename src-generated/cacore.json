@@ -117,7 +117,7 @@
       "profile-json": "extension-{{[id]}}.profile.json.html",
       "profile-ttl": "extension-{{[id]}}.profile.ttl.html"
     },
-    "StructureDefinition/ext-resourcecommunication":{
+    "StructureDefinition/ext-servicelanguage":{
       "template-base": "../framework/templates/template-ext.html",
       "template-defns": "../framework/templates/template-ext-definitions.html",
       "template-mappings": "../framework/templates/template-ext-mappings.html",

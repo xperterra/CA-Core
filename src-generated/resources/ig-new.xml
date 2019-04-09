@@ -3,22 +3,22 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="cacore"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="C:\Users\lloyd\Documents\SVN\CA-Core\src-generated\resources"/>
+    <valueString value="/guide-in/src-generated/resources"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="C:\Users\lloyd\Documents\SVN\CA-Core\src\resources"/>
+    <valueString value="/guide-in/src/resources"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="C:\Users\lloyd\Documents\SVN\CA-Core\src\vocabulary"/>
+    <valueString value="/guide-in/src/vocabulary"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="C:\Users\lloyd\Documents\SVN\CA-Core\src\examples"/>
+    <valueString value="/guide-in/src/examples"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="C:\Users\lloyd\Documents\SVN\CA-Core\src\images"/>
+    <valueString value="/guide-in/src/images"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="C:\Users\lloyd\Documents\SVN\CA-Core\src-generated\pages"/>
+    <valueString value="/guide-in/src-generated/pages"/>
   </extension>
   <url value="http://hl7.org/fhir/ca/core/ImplementationGuide/cacore"/>
   <version value="0.1"/>
@@ -68,9 +68,9 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/ext-resourcecommunication"/>
+        <reference value="StructureDefinition/ext-servicelanguage"/>
       </reference>
-      <name value="Communication"/>
+      <name value="ServiceLanguage"/>
       <description value="Indentifies languages that that services are provided in."/>
       <exampleBoolean value="false"/>
       <groupingId value="extensions"/>
@@ -316,8 +316,8 @@
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="extension-ext-resourcecommunication.html"/>
-          <title value="Communication"/>
+          <nameUrl value="extension-ext-servicelanguage.html"/>
+          <title value="ServiceLanguage"/>
           <generation value="generated"/>
         </page>
         <page>

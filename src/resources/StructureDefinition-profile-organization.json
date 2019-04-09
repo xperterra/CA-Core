@@ -1,7 +1,7 @@
 {
     "resourceType": "StructureDefinition",
     "id": "profile-organization",
-    "url": "http://hl7.org/fhir/ca/core/StructureDefinition/profile-organization",
+    "url": "http://hl7.org/fhir/ca/scratch/StructureDefinition/profile-organization",
     "version": "0.0.0",
     "name": "Organization_Profile",
     "title": "Organization Profile",
@@ -24,14 +24,14 @@
                 "definition": "The Organization Profile is based upon the core FHIR Organization Resource"
             },
             {
-                "id": "Organization.extension:communication",
+                "id": "Organization.extension:servicelanguage",
                 "path": "Organization.extension",
                 "sliceName": "communication",
                 "type": [
                     {
                         "code": "extension",
                         "profile": [
-                            "http://hl7.org/fhir/ca/core/StructureDefinition/ext-resourcecommunication"
+                            "http://hl7.org/fhir/ca/scratch/StructureDefinition/ext-servicelanguage"
                         ]
                     }
                 ],
@@ -246,7 +246,7 @@
                         ],
                         "code": "Reference",
                         "targetProfile": [
-                            "http://hl7.org/fhir/ca/core/StructureDefinition/profile-organization"
+                            "http://hl7.org/fhir/ca/scratch/StructureDefinition/profile-organization"
                         ]
                     }
                 ]
