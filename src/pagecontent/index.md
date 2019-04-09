@@ -15,13 +15,12 @@ The [GitHub repository for this CI build be found here](https://github.com/scrat
 ### Principles
 
 The following principles were applied when creating the profiles:
-
-- Be *consistent* with other pan-Canadian standards where possible
-- Avoid *arbitrary* differences between Canadian and US Core profiles to:
+- *Focus on core content*
+- *Be consistent* with other pan-Canadian standards where possible
+- *Avoid arbitrary differences* between Canadian and US Core profiles to:
   - increase the opportunity for Digital Health / mHealth application reuse across North America
-  - reduce developer / vendor effort adapt to Canadian requirements
-- Do not impose constraints unless strictly necessary; and
-- Focus on core content
+  - reduce developer / vendor effort to adapt to Canadian requirements
+- *Only* impose constraints when strictly necessary
 
 ### Content
 

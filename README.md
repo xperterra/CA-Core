@@ -12,11 +12,12 @@ A **living document** including **scratch** notes and profiles captured while re
 
 The following principles were applied when creating the profiles:
 
-- Be *consistent* with other pan-Canadian standards where possible
-- Avoid *arbitrary* differences between Canadian and US Core profiles to:
+- *Focus on core content*
+- *Be consistent* with other pan-Canadian standards where possible
+- *Avoid arbitrary differences* between Canadian and US Core profiles to:
   - increase the opportunity for Digital Health / mHealth application reuse across North America
-  - reduce developer / vendor effort adapt to Canadian requirements
-- Do not impose constraints unless strictly necessary; and
-- Focus on core content
+  - reduce developer / vendor effort to adapt to Canadian requirements
+- *Only* impose constraints when strictly necessary
+
 
 The [CI build for this repository can be found here](http://build.fhir.org/ig/scratch-fhir-profiles/CA-Scratch/).
