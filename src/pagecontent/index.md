@@ -24,17 +24,7 @@ The following principles were foundational to the analysis:
 
 ### Content
 
-The following **scratch content** has been developed so far:
-
-#### Profiles
-
-{% include list-simple-profiles.xhtml %}
-
-#### Extensions
-
-{% include list-simple-extensions.xhtml %}
-
-### Note
+The profiles and extensions developed so far can be found [here](artifacts.html).  
 
 Guidance, Capability Statements, and other have not yet been reviewed and added.
 
