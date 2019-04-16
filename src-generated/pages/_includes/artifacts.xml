@@ -11,6 +11,13 @@
 <tbody>
 <tr>
 <td style="column-width:30%">
+<a href="profile-allergyintolerance.html">
+                        •  AllergyIntolerance Profile</a>
+</td>
+<td>Proposed constraints and extensions on the AllergyIntolerance Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.</td>
+</tr>
+<tr>
+<td style="column-width:30%">
 <a href="profile-condition.html">
                         •  Condition Profile</a>
 </td>
@@ -150,13 +157,6 @@
                         •  Identifier Version</a>
 </td>
 <td>A version string indicating the currency/validity of an identifier</td>
-</tr>
-<tr>
-<td style="column-width:30%">
-<a href="extension-profile-allergyintolerance.html">
-                        •  AllergyIntolerance Profile</a>
-</td>
-<td>Proposed constraints and extensions on the AllergyIntolerance Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.</td>
 </tr>
 </tbody>
 </table>

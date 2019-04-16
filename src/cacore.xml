@@ -94,7 +94,7 @@
       <name value="AllergyIntolerance Profile"/>
       <description value="Proposed constraints and extensions on the AllergyIntolerance Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
       <exampleBoolean value="false"/>
-      <groupingId value="extensions"/>
+      <groupingId value="profiles"/>
     </resource>
     <resource>
       <reference>

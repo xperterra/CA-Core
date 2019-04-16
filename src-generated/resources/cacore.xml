@@ -93,7 +93,7 @@
       <name value="AllergyIntolerance Profile"/>
       <description value="Proposed constraints and extensions on the AllergyIntolerance Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
       <exampleBoolean value="false"/>
-      <groupingId value="extensions"/>
+      <groupingId value="profiles"/>
     </resource>
     <resource>
       <reference>
@@ -324,7 +324,7 @@
 <generation value="generated"/>
 </page>
 <page>
-<nameUrl value="extension-profile-allergyintolerance.html"/>
+<nameUrl value="profile-allergyintolerance.html"/>
 <ns4:title xmlns:ns4="http://hl7.org/fhir" value="AllergyIntolerance Profile"/>
 <generation value="generated"/>
 </page>
