@@ -3,27 +3,27 @@
   "id" : "cacore",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "C:\\Users\\lloyd\\Documents\\SVN\\CA-Core\\src-generated\\resources"
+    "valueString" : "/guide/src-generated/resources"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "C:\\Users\\lloyd\\Documents\\SVN\\CA-Core\\src\\resources"
+    "valueString" : "/guide/src/resources"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "C:\\Users\\lloyd\\Documents\\SVN\\CA-Core\\src\\vocabulary"
+    "valueString" : "/guide/src/vocabulary"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "C:\\Users\\lloyd\\Documents\\SVN\\CA-Core\\src\\examples"
+    "valueString" : "/guide/src/examples"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "C:\\Users\\lloyd\\Documents\\SVN\\CA-Core\\src\\images"
+    "valueString" : "/guide/src/images"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "C:\\Users\\lloyd\\Documents\\SVN\\CA-Core\\src-generated\\pages"
+    "valueString" : "/guide/src-generated/pages"
   }],
   "url" : "http://hl7.org/fhir/ca/core/ImplementationGuide/cacore",
   "version" : "0.1",

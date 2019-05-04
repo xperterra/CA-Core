@@ -3,22 +3,22 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="cacore"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="C:\Users\lloyd\Documents\SVN\CA-Core\src-generated\resources"/>
+    <valueString value="/guide/src-generated/resources"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="C:\Users\lloyd\Documents\SVN\CA-Core\src\resources"/>
+    <valueString value="/guide/src/resources"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="C:\Users\lloyd\Documents\SVN\CA-Core\src\vocabulary"/>
+    <valueString value="/guide/src/vocabulary"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="C:\Users\lloyd\Documents\SVN\CA-Core\src\examples"/>
+    <valueString value="/guide/src/examples"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="C:\Users\lloyd\Documents\SVN\CA-Core\src\images"/>
+    <valueString value="/guide/src/images"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="C:\Users\lloyd\Documents\SVN\CA-Core\src-generated\pages"/>
+    <valueString value="/guide/src-generated/pages"/>
   </extension>
   <url value="http://hl7.org/fhir/ca/core/ImplementationGuide/cacore"/>
   <version value="0.1"/>
