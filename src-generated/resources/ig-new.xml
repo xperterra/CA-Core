@@ -100,7 +100,7 @@
       <name value="AllergyIntolerance Profile"/>
       <description value="Proposed constraints and extensions on the AllergyIntolerance Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
       <exampleBoolean value="false"/>
-      <groupingId value="extensions"/>
+      <groupingId value="profiles"/>
     </resource>
     <resource>
       <reference>
@@ -331,7 +331,7 @@
           <generation value="generated"/>
         </page>
         <page>
-          <nameUrl value="extension-profile-allergyintolerance.html"/>
+          <nameUrl value="profile-allergyintolerance.html"/>
           <title value="AllergyIntolerance Profile"/>
           <generation value="generated"/>
         </page>
@@ -446,16 +446,12 @@
       <value value="template-page.html"/>
     </parameter>
     <parameter>
-      <code value="generate-json"/>
-      <value value="true"/>
+      <code value="generate"/>
+      <value value="xml"/>
     </parameter>
     <parameter>
-      <code value="generate-xml"/>
-      <value value="true"/>
-    </parameter>
-    <parameter>
-      <code value="generate-turtle"/>
-      <value value="true"/>
+      <code value="generate"/>
+      <value value="JSON"/>
     </parameter>
   </definition>
 </ImplementationGuide>

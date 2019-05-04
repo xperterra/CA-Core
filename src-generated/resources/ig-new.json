@@ -108,7 +108,7 @@
       "name" : "AllergyIntolerance Profile",
       "description" : "Proposed constraints and extensions on the AllergyIntolerance Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.",
       "exampleBoolean" : false,
-      "groupingId" : "extensions"
+      "groupingId" : "profiles"
     },
     {
       "reference" : {
@@ -339,7 +339,7 @@
           "generation" : "generated"
         },
         {
-          "nameUrl" : "extension-profile-allergyintolerance.html",
+          "nameUrl" : "profile-allergyintolerance.html",
           "title" : "AllergyIntolerance Profile",
           "generation" : "generated"
         },
@@ -454,16 +454,12 @@
       "value" : "template-page.html"
     },
     {
-      "code" : "generate-json",
-      "value" : "true"
+      "code" : "generate",
+      "value" : "xml"
     },
     {
-      "code" : "generate-xml",
-      "value" : "true"
-    },
-    {
-      "code" : "generate-turtle",
-      "value" : "true"
+      "code" : "generate",
+      "value" : "JSON"
     }]
   }
 }
