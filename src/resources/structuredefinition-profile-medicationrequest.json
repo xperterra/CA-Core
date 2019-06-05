@@ -3,7 +3,7 @@
     "id": "profile-medicationrequest",
     "url": "http://hl7.org/fhir/ca/core/StructureDefinition/profile-medicationrequest",
     "version": "0.0.0",
-    "name": "MedicationRequest_Profile",
+    "name": "MedicationRequestProfile",
     "title": "MedicationRequest Profile",
     "status": "draft",
     "date": "2019-03-31",

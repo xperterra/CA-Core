@@ -1,116 +1,124 @@
 {
-    "resourceType": "StructureDefinition",
-    "id": "profile-immunization",
-    "url": "http://hl7.org/fhir/ca/core/StructureDefinition/profile-immunization",
-    "version": "0.0.0",
-    "name": "Immunization_Profile",
-    "title": "Immunization Profile",
-    "status": "draft",
-    "date": "2019-03-31",
-    "publisher": "TBD",
-    "description": "Proposed constraints and extensions on the Immunization Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.",
-    "fhirVersion": "4.0.0",
-    "kind": "resource",
-    "abstract": false,
-    "type": "Immunization",
-    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Immunization",
-    "derivation": "constraint",
-    "differential": {
-        "element": [
+  "resourceType": "StructureDefinition",
+  "id": "profile-immunization",
+  "url": "http://hl7.org/fhir/ca/core/StructureDefinition/profile-immunization",
+  "version": "0.0.0",
+  "name": "ImmunizationProfile",
+  "title": "Immunization Profile",
+  "status": "draft",
+  "date": "2019-03-31",
+  "publisher": "TBD",
+  "description": "Proposed constraints and extensions on the Immunization Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.",
+  "fhirVersion": "4.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Immunization",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Immunization",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Immunization",
+        "path": "Immunization",
+        "short": "Immunization Profile",
+        "definition": "The Immunization Profile is based upon the core FHIR Immunization Resource"
+      },
+      {
+        "id": "Immunization.status",
+        "path": "Immunization.status",
+        "mustSupport": true
+      },
+      {
+        "id": "Immunization.statusReason",
+        "path": "Immunization.statusReason",
+        "comment": "A reason should be provided if the status is \"not-done\".",
+        "mustSupport": true
+      },
+      {
+        "id": "Immunization.vaccineCode",
+        "path": "Immunization.vaccineCode",
+        "mustSupport": true,
+        "binding": {
+          "strength": "example",
+          "valueSet": "http://hl7.org/fhir/ca/core/ValueSet/vaccinecodes"
+        }
+      },
+      {
+        "id": "Immunization.patient",
+        "path": "Immunization.patient",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/ca/core/StructureDefinition/profile-patient"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Immunization.occurrence[x]:occurrenceDateTime",
+        "path": "Immunization.occurrence[x]",
+        "sliceName": "occurrenceDateTime",
+        "type": [
+          {
+            "code": "dateTime"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Immunization.occurrence[x]:occurrenceDateTime.extension",
+        "path": "Immunization.occurrence[x].extension",
+        "slicing": {
+          "discriminator": [
             {
-                "id": "Immunization",
-                "path": "Immunization",
-                "short": "Immunization Profile",
-                "definition": "The Immunization Profile is based upon the core FHIR Immunization Resource"
-            },
-            {
-                "id": "Immunization.status",
-                "path": "Immunization.status",
-                "mustSupport": true
-            },
-            {
-                "id": "Immunization.statusReason",
-                "path": "Immunization.statusReason",
-                "definition": "Indicates the reason the immunization event was not performed.",
-                "comment": "A reason should be provided if the status is \"not-done\".",
-                "mustSupport": true
-            },
-            {
-                "id": "Immunization.vaccineCode",
-                "path": "Immunization.vaccineCode",
-                "mustSupport": true,
-                "binding": {
-                    "strength": "example",
-                    "description": "The code for vaccine product administered.",
-                    "valueSet": "http://hl7.org/fhir/ca/core/ValueSet/vaccinecodes"
-                }
-            },
-            {
-                "id": "Immunization.patient",
-                "path": "Immunization.patient",
-                "mustSupport": true,
-                "type": [
-                    {
-                        "code": "Reference",
-                        "targetProfile": [
-                            "http://hl7.org/fhir/ca/core/StructureDefinition/profile-patient"
-                        ]
-                    }
-                ]
-            },
-            {
-                "id": "Immunization.occurrenceDateTime",
-                "path": "Immunization.occurrenceDateTime",
-                "mustSupport": true,
-                "type": [
-                    {
-                        "code": "dateTime"
-                    }
-                ]
-            },
-            {
-                "id": "Immunization.occurrenceDateTime.extension:estimated",
-                "path": "Immunization.occurrenceDateTime.extension",
-                "sliceName": "estimated",
-                "min": 0,
-                "max": "1",
-                "type": [
-                    {
-                        "code": "Extension",
-                        "profile": [
-                            "http://hl7.org/fhir/ca/core/StructureDefinition/ext-dateestimated"
-                        ]
-                    }
-                ],
-                "mustSupport": false
-            },
-            {
-                "id": "Immunization.primarySource",
-                "path": "Immunization.primarySource",
-                "short": "Indicates that data is from the primary record created at the time the vaccine was administered.",
-                "min": 1,
-                "max": "1",
-                "mustSupport": true
-            },
-            {
-                "id": "Immunization.reportOrigin",
-                "path": "Immunization.reportOrigin",
-                "short": "Indicates the source of a secondarily reported record",
-                "definition": "The source of the data when the report of the immunization event is not based on information from the person who administered the vaccine.",
-                "comment": "Should not be populated if primarySource = True, not required even if primarySource = False."
-            },
-            {
-                "id": "Immunization.location",
-                "path": "Immunization.location",
-                "type": [
-                    {
-                        "code": "Reference",
-                        "targetProfile": [
-                            "http://hl7.org/fhir/ca/core/StructureDefinition/profile-location"
-                        ]
-                    }
-                ]
+              "type": "value",
+              "path": "url"
             }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Immunization.occurrence[x]:occurrenceDateTime.extension:estimated",
+        "path": "Immunization.occurrence[x].extension",
+        "sliceName": "estimated",
+        "max": "1",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/ca/core/StructureDefinition/ext-dateestimated"
+            ]
+          }
+        ],
+        "mustSupport": false
+      },
+      {
+        "id": "Immunization.occurrence[x]:occurrenceDateTime.extension:estimated.value[x]:valueBoolean",
+        "path": "Immunization.occurrence[x].extension.value[x]",
+        "sliceName": "valueBoolean"
+      },
+      {
+        "id": "Immunization.primarySource",
+        "path": "Immunization.primarySource",
+        "short": "Indicates that data is from the primary record created at the time the vaccine was administered.",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Immunization.location",
+        "path": "Immunization.location",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/ca/core/StructureDefinition/profile-location"
+            ]
+          }
         ]
-    }
+      }
+    ]
+  }
 }

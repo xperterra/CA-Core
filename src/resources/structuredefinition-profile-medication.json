@@ -3,7 +3,7 @@
     "id": "profile-medication",
     "url": "http://hl7.org/fhir/ca/core/StructureDefinition/profile-medication",
     "version": "0.0.0",
-    "name": "Medication_Profile",
+    "name": "MedicationProfile",
     "title": "Medication Profile",
     "status": "draft",
     "date": "2019-03-31",
