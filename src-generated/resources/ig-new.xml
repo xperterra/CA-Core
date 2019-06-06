@@ -239,6 +239,15 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/profile-smokingstatus"/>
+      </reference>
+      <name value="SmokingStatus Profile"/>
+      <description value="Proposed constraints and extensions on the Observation Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="ValueSet/birthsex"/>
       </reference>
       <name value="Birth Sex"/>
@@ -408,6 +417,11 @@
         <page>
           <nameUrl value="profile-procedure.html"/>
           <title value="Procedure Profile"/>
+          <generation value="generated"/>
+        </page>
+        <page>
+          <nameUrl value="profile-smokingstatus.html"/>
+          <title value="SmokingStatus Profile"/>
           <generation value="generated"/>
         </page>
         <page>

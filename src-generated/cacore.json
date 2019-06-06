@@ -200,6 +200,8 @@
     },
     "StructureDefinition/profile-procedure":{
     },
+    "StructureDefinition/profile-smokingstatus":{
+    },
     "ValueSet/birthsex":{
     },
     "ValueSet/healthconcerncode":{
