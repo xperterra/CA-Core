@@ -194,13 +194,13 @@
     },
     "StructureDefinition/profile-patient":{
     },
+    "StructureDefinition/profile-pediatricbmi":{
+    },
     "StructureDefinition/profile-practitioner":{
     },
     "StructureDefinition/profile-practitionerrole":{
     },
     "StructureDefinition/profile-procedure":{
-    },
-    "StructureDefinition/profile-smokingstatus":{
     },
     "ValueSet/birthsex":{
     },

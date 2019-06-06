@@ -3,22 +3,22 @@
 <ImplementationGuide xmlns="http://hl7.org/fhir">
   <id value="cacore"/>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="/guide/src-generated/resources"/>
+    <valueString value="/Users/Sheridan/CA-Scratch/src-generated/resources"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="/guide/src/resources"/>
+    <valueString value="/Users/Sheridan/CA-Scratch/src/resources"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="/guide/src/vocabulary"/>
+    <valueString value="/Users/Sheridan/CA-Scratch/src/vocabulary"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource">
-    <valueString value="/guide/src/examples"/>
+    <valueString value="/Users/Sheridan/CA-Scratch/src/examples"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="/guide/src/images"/>
+    <valueString value="/Users/Sheridan/CA-Scratch/src/images"/>
   </extension>
   <extension url="http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages">
-    <valueString value="/guide/src-generated/pages"/>
+    <valueString value="/Users/Sheridan/CA-Scratch/src-generated/pages"/>
   </extension>
   <url value="http://hl7.org/fhir/ca/core/ImplementationGuide/cacore"/>
   <version value="0.1"/>
@@ -212,6 +212,15 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/profile-pediatricbmi"/>
+      </reference>
+      <name value="Pediatric BMI Profile"/>
+      <description value="Proposed constraints and extensions on the Observation Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/profile-practitioner"/>
       </reference>
       <name value="Practitioner Profile"/>
@@ -234,15 +243,6 @@
       </reference>
       <name value="Procedure Profile"/>
       <description value="Proposed constraints and extensions on the Procedure Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="profiles"/>
-    </resource>
-    <resource>
-      <reference>
-        <reference value="StructureDefinition/profile-smokingstatus"/>
-      </reference>
-      <name value="SmokingStatus Profile"/>
-      <description value="Proposed constraints and extensions on the Observation Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
     </resource>
@@ -405,6 +405,11 @@
           <generation value="generated"/>
         </page>
         <page>
+          <nameUrl value="profile-pediatricbmi.html"/>
+          <title value="Pediatric BMI Profile"/>
+          <generation value="generated"/>
+        </page>
+        <page>
           <nameUrl value="profile-practitioner.html"/>
           <title value="Practitioner Profile"/>
           <generation value="generated"/>
@@ -417,11 +422,6 @@
         <page>
           <nameUrl value="profile-procedure.html"/>
           <title value="Procedure Profile"/>
-          <generation value="generated"/>
-        </page>
-        <page>
-          <nameUrl value="profile-smokingstatus.html"/>
-          <title value="SmokingStatus Profile"/>
           <generation value="generated"/>
         </page>
         <page>

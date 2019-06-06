@@ -1,0 +1,90 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-pediatricbmi",
+  "url": "http://hl7.org/fhir/ca/core/StructureDefinition/profile-pediatricbmi",
+  "version": "0.0.0",
+  "name": "PediatricBMI",
+  "status": "draft",
+  "publisher": "TBD",
+  "description": "Proposed constraints and extensions on the Observation Resource to support collection of pediatric BMI information.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.",
+  "fhirVersion": "4.0.0",
+  "kind": "resource",
+  "abstract": false,
+  "type": "Observation",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Observation",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "label": "BMI percentile per age and sex for youth 2-20"
+      },
+      {
+        "id": "Observation.code.coding",
+        "path": "Observation.code.coding",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Observation.code.coding.system",
+        "path": "Observation.code.coding.system",
+        "min": 1,
+        "fixedUri": "http://loinc.org",
+        "mustSupport": false
+      },
+      {
+        "id": "Observation.code.coding.code",
+        "path": "Observation.code.coding.code",
+        "min": 1,
+        "fixedCode": "59576-9"
+      },
+      {
+        "id": "Observation.value",
+        "path": "Observation.value",
+        "min": 1,
+        "max": 1,
+        "mustSupport": false
+      },
+      {
+        "id": "Observation.valueQuantity",
+        "path": "Observation.valueQuantity",
+        "min": 1,
+        "max": 1,
+        "mustSupport": false
+      },
+      {
+        "id": "Observation.valueQuantity.value",
+        "path": "Observation.valueQuantity.value",
+        "min": 1,
+        "max": 1,
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.valueQuantity.unit",
+        "path": "Observation.valueQuantity.unit",
+        "min": 1,
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.valueQuantity.system",
+        "path": "Observation.valueQuantity.system",
+        "min": 1,
+        "fixedUri": "http://unitsofmeasure.org",
+        "mustSupport": true
+      },
+      {
+        "id": "Observation.valueQuantity.code",
+        "path": "Observation.valueQuantity.code",
+        "min": 1,
+        "fixedCode": "%",
+        "mustSupport": true
+      }
+    ]
+  }
+}

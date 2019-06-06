@@ -206,6 +206,15 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/profile-pediatricbmi"/>
+      </reference>
+      <name value="Pediatric BMI Profile"/>
+      <description value="Proposed constraints and extensions on the Observation Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/profile-practitioner"/>
       </reference>
       <name value="Practitioner Profile"/>
@@ -231,7 +240,7 @@
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
     </resource>
-    <resource>
+    <!--<resource>
       <reference>
         <reference value="StructureDefinition/profile-smokingstatus"/>
       </reference>
@@ -239,7 +248,7 @@
       <description value="Proposed constraints and extensions on the Observation Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
-    </resource>
+    </resource> -->
     <resource>
       <reference>
         <reference value="ValueSet/birthsex"/>
