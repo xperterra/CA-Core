@@ -256,6 +256,15 @@
     },
     {
       "reference" : {
+        "reference" : "StructureDefinition/profile-smokingstatus"
+      },
+      "name" : "SmokingStatus Profile",
+      "description" : "Proposed constraints and extensions on the Observation Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.",
+      "exampleBoolean" : false,
+      "groupingId" : "profiles"
+    },
+    {
+      "reference" : {
         "reference" : "ValueSet/birthsex"
       },
       "name" : "Birth Sex",
@@ -430,6 +439,11 @@
         {
           "nameUrl" : "profile-procedure.html",
           "title" : "Procedure Profile",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "profile-smokingstatus.html",
+          "title" : "SmokingStatus Profile",
           "generation" : "generated"
         },
         {
