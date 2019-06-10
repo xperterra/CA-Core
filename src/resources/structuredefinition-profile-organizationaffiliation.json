@@ -3,7 +3,7 @@
     "id": "profile-organizationaffiliation",
     "url": "http://hl7.org/fhir/ca/core/StructureDefinition/profile-organizationaffiliation",
     "version": "0.0.0",
-    "name": "OrganizationAffiliation_Profile",
+    "name": "OrganizationAffiliationProfile",
     "title": "OrganizationAffiliation Profile",
     "status": "draft",
     "date": "2019-04-05",

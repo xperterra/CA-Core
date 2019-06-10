@@ -3,27 +3,27 @@
   "id" : "cacore",
   "extension" : [{
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "/guide/src-generated/resources"
+    "valueString" : "/Users/Sheridan/CA-Scratch/src-generated/resources"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "/guide/src/resources"
+    "valueString" : "/Users/Sheridan/CA-Scratch/src/resources"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "/guide/src/vocabulary"
+    "valueString" : "/Users/Sheridan/CA-Scratch/src/vocabulary"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-resource",
-    "valueString" : "/guide/src/examples"
+    "valueString" : "/Users/Sheridan/CA-Scratch/src/examples"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "/guide/src/images"
+    "valueString" : "/Users/Sheridan/CA-Scratch/src/images"
   },
   {
     "url" : "http://hl7.org/fhir/StructureDefinition/igpublisher-folder-pages",
-    "valueString" : "/guide/src-generated/pages"
+    "valueString" : "/Users/Sheridan/CA-Scratch/src-generated/pages"
   }],
   "url" : "http://hl7.org/fhir/ca/core/ImplementationGuide/cacore",
   "version" : "0.1",
@@ -220,6 +220,15 @@
     },
     {
       "reference" : {
+        "reference" : "StructureDefinition/profile-pediatricbmi"
+      },
+      "name" : "Pediatric BMI Profile",
+      "description" : "Proposed constraints and extensions on the Observation Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.",
+      "exampleBoolean" : false,
+      "groupingId" : "profiles"
+    },
+    {
+      "reference" : {
         "reference" : "StructureDefinition/profile-practitioner"
       },
       "name" : "Practitioner Profile",
@@ -242,6 +251,15 @@
       },
       "name" : "Procedure Profile",
       "description" : "Proposed constraints and extensions on the Procedure Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.",
+      "exampleBoolean" : false,
+      "groupingId" : "profiles"
+    },
+    {
+      "reference" : {
+        "reference" : "StructureDefinition/profile-smokingstatus"
+      },
+      "name" : "SmokingStatus Profile",
+      "description" : "Proposed constraints and extensions on the Observation Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.",
       "exampleBoolean" : false,
       "groupingId" : "profiles"
     },
@@ -404,6 +422,11 @@
           "generation" : "generated"
         },
         {
+          "nameUrl" : "profile-pediatricbmi.html",
+          "title" : "Pediatric BMI Profile",
+          "generation" : "generated"
+        },
+        {
           "nameUrl" : "profile-practitioner.html",
           "title" : "Practitioner Profile",
           "generation" : "generated"
@@ -416,6 +439,11 @@
         {
           "nameUrl" : "profile-procedure.html",
           "title" : "Procedure Profile",
+          "generation" : "generated"
+        },
+        {
+          "nameUrl" : "profile-smokingstatus.html",
+          "title" : "SmokingStatus Profile",
           "generation" : "generated"
         },
         {

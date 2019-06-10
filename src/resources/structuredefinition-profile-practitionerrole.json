@@ -3,7 +3,7 @@
     "id": "profile-practitionerrole",
     "url": "http://hl7.org/fhir/ca/core/StructureDefinition/profile-practitionerrole",
     "version": "0.0.0",
-    "name": "PractitionerRole_Profile",
+    "name": "PractitionerRoleProfile",
     "title": "PractitionerRole Profile",
     "status": "draft",
     "date": "2019-03-29",
