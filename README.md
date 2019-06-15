@@ -21,3 +21,7 @@ The following principles were applied when creating the profiles:
 
 
 The [CI build for this repository can be found here](http://build.fhir.org/ig/scratch-fhir-profiles/CA-Scratch/).
+
+#### Want to contribute?
+
+[Visit the wiki getting started page!](https://github.com/scratch-fhir-profiles/CA-Core/wiki/Getting-Started)
