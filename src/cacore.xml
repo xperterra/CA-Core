@@ -116,10 +116,28 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/profile-diagnosticreport"/>
+      </reference>
+      <name value="DiagnosticReport Profile"/>
+      <description value="Proposed constraints and extensions on the DiagnosticReport Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/profile-encounter"/>
       </reference>
       <name value="Encounter Profile"/>
       <description value="Proposed constraints and extensions on the Encounter Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-goal"/>
+      </reference>
+      <name value="Goal Profile"/>
+      <description value="Proposed constraints and extensions on the Goal Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
       <exampleBoolean value="false"/>
       <groupingId value="profiles"/>
     </resource>

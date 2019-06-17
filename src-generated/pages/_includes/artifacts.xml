@@ -32,10 +32,24 @@
                 </tr>
                 <tr>
                     <td style="column-width:30%">
+                        <a href="profile-diagnosticreport.html">
+                        •  DiagnosticReport Profile</a>
+                    </td>
+                    <td>Proposed constraints and extensions on the DiagnosticReport Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.</td>
+                </tr>
+                <tr>
+                    <td style="column-width:30%">
                         <a href="profile-encounter.html">
                         •  Encounter Profile</a>
                     </td>
                     <td>Proposed constraints and extensions on the Encounter Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.</td>
+                </tr>
+                <tr>
+                    <td style="column-width:30%">
+                        <a href="profile-goal.html">
+                        •  Goal Profile</a>
+                    </td>
+                    <td>Proposed constraints and extensions on the Goal Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.</td>
                 </tr>
                 <tr>
                     <td style="column-width:30%">

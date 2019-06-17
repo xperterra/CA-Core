@@ -218,6 +218,24 @@
                   
             <reference>
                         
+                <reference value="StructureDefinition/profile-diagnosticreport"/>
+                      
+            </reference>
+                  
+            <name value="DiagnosticReport Profile"/>
+                  
+            <description value="Proposed constraints and extensions on the DiagnosticReport Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+                  
+            <exampleBoolean value="false"/>
+                  
+            <groupingId value="profiles"/>
+                
+        </resource>
+            
+        <resource>
+                  
+            <reference>
+                        
                 <reference value="StructureDefinition/profile-encounter"/>
                       
             </reference>
@@ -225,6 +243,24 @@
             <name value="Encounter Profile"/>
                   
             <description value="Proposed constraints and extensions on the Encounter Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+                  
+            <exampleBoolean value="false"/>
+                  
+            <groupingId value="profiles"/>
+                
+        </resource>
+            
+        <resource>
+                  
+            <reference>
+                        
+                <reference value="StructureDefinition/profile-goal"/>
+                      
+            </reference>
+                  
+            <name value="Goal Profile"/>
+                  
+            <description value="Proposed constraints and extensions on the Goal Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
                   
             <exampleBoolean value="false"/>
                   
@@ -684,108 +720,118 @@
                     <generation value="generated"/>
                 </page>
                 <page>
+                    <nameUrl value="profile-diagnosticreport.html"/>
+                    <ns7:title xmlns:ns7="http://hl7.org/fhir" value="DiagnosticReport Profile"/>
+                    <generation value="generated"/>
+                </page>
+                <page>
                     <nameUrl value="profile-encounter.html"/>
-                    <ns7:title xmlns:ns7="http://hl7.org/fhir" value="Encounter Profile"/>
+                    <ns8:title xmlns:ns8="http://hl7.org/fhir" value="Encounter Profile"/>
+                    <generation value="generated"/>
+                </page>
+                <page>
+                    <nameUrl value="profile-goal.html"/>
+                    <ns9:title xmlns:ns9="http://hl7.org/fhir" value="Goal Profile"/>
                     <generation value="generated"/>
                 </page>
                 <page>
                     <nameUrl value="profile-immunization.html"/>
-                    <ns8:title xmlns:ns8="http://hl7.org/fhir" value="Immunization Profile"/>
+                    <ns10:title xmlns:ns10="http://hl7.org/fhir" value="Immunization Profile"/>
                     <generation value="generated"/>
                 </page>
                 <page>
                     <nameUrl value="profile-location.html"/>
-                    <ns9:title xmlns:ns9="http://hl7.org/fhir" value="Location Profile"/>
+                    <ns11:title xmlns:ns11="http://hl7.org/fhir" value="Location Profile"/>
                     <generation value="generated"/>
                 </page>
                 <page>
                     <nameUrl value="profile-medication.html"/>
-                    <ns10:title xmlns:ns10="http://hl7.org/fhir" value="Medication Profile"/>
+                    <ns12:title xmlns:ns12="http://hl7.org/fhir" value="Medication Profile"/>
                     <generation value="generated"/>
                 </page>
                 <page>
                     <nameUrl value="profile-medicationrequest.html"/>
-                    <ns11:title xmlns:ns11="http://hl7.org/fhir" value="MedicationRequest Profile"/>
+                    <ns13:title xmlns:ns13="http://hl7.org/fhir" value="MedicationRequest Profile"/>
                     <generation value="generated"/>
                 </page>
                 <page>
                     <nameUrl value="profile-medicationstatement.html"/>
-                    <ns12:title xmlns:ns12="http://hl7.org/fhir" value="MedicationStatement Profile"/>
+                    <ns14:title xmlns:ns14="http://hl7.org/fhir" value="MedicationStatement Profile"/>
                     <generation value="generated"/>
                 </page>
                 <page>
                     <nameUrl value="profile-observation.html"/>
-                    <ns13:title xmlns:ns13="http://hl7.org/fhir" value="Observation Profile"/>
+                    <ns15:title xmlns:ns15="http://hl7.org/fhir" value="Observation Profile"/>
                     <generation value="generated"/>
                 </page>
                 <page>
                     <nameUrl value="profile-organization.html"/>
-                    <ns14:title xmlns:ns14="http://hl7.org/fhir" value="Organization Profile"/>
+                    <ns16:title xmlns:ns16="http://hl7.org/fhir" value="Organization Profile"/>
                     <generation value="generated"/>
                 </page>
                 <page>
                     <nameUrl value="profile-organizationaffiliation.html"/>
-                    <ns15:title xmlns:ns15="http://hl7.org/fhir" value="OrganizationAffiliation Profile"/>
+                    <ns17:title xmlns:ns17="http://hl7.org/fhir" value="OrganizationAffiliation Profile"/>
                     <generation value="generated"/>
                 </page>
                 <page>
                     <nameUrl value="profile-patient.html"/>
-                    <ns16:title xmlns:ns16="http://hl7.org/fhir" value="Patient Profile"/>
+                    <ns18:title xmlns:ns18="http://hl7.org/fhir" value="Patient Profile"/>
                     <generation value="generated"/>
                 </page>
                 <page>
                     <nameUrl value="profile-pediatricbmi.html"/>
-                    <ns17:title xmlns:ns17="http://hl7.org/fhir" value="Pediatric BMI Profile"/>
+                    <ns19:title xmlns:ns19="http://hl7.org/fhir" value="Pediatric BMI Profile"/>
                     <generation value="generated"/>
                 </page>
                 <page>
                     <nameUrl value="profile-practitioner.html"/>
-                    <ns18:title xmlns:ns18="http://hl7.org/fhir" value="Practitioner Profile"/>
+                    <ns20:title xmlns:ns20="http://hl7.org/fhir" value="Practitioner Profile"/>
                     <generation value="generated"/>
                 </page>
                 <page>
                     <nameUrl value="profile-practitionerrole.html"/>
-                    <ns19:title xmlns:ns19="http://hl7.org/fhir" value="PractitionerRole Profile"/>
+                    <ns21:title xmlns:ns21="http://hl7.org/fhir" value="PractitionerRole Profile"/>
                     <generation value="generated"/>
                 </page>
                 <page>
                     <nameUrl value="profile-procedure.html"/>
-                    <ns20:title xmlns:ns20="http://hl7.org/fhir" value="Procedure Profile"/>
+                    <ns22:title xmlns:ns22="http://hl7.org/fhir" value="Procedure Profile"/>
                     <generation value="generated"/>
                 </page>
                 <page>
                     <nameUrl value="profile-results.html"/>
-                    <ns21:title xmlns:ns21="http://hl7.org/fhir" value="Results Profile"/>
+                    <ns23:title xmlns:ns23="http://hl7.org/fhir" value="Results Profile"/>
                     <generation value="generated"/>
                 </page>
                 <page>
                     <nameUrl value="profile-smokingstatus.html"/>
-                    <ns22:title xmlns:ns22="http://hl7.org/fhir" value="SmokingStatus Profile"/>
+                    <ns24:title xmlns:ns24="http://hl7.org/fhir" value="SmokingStatus Profile"/>
                     <generation value="generated"/>
                 </page>
                 <page>
                     <nameUrl value="valueset-birthsex.html"/>
-                    <ns23:title xmlns:ns23="http://hl7.org/fhir" value="Birth Sex"/>
+                    <ns25:title xmlns:ns25="http://hl7.org/fhir" value="Birth Sex"/>
                     <generation value="generated"/>
                 </page>
                 <page>
                     <nameUrl value="valueset-healthconcerncode.html"/>
-                    <ns24:title xmlns:ns24="http://hl7.org/fhir" value="Health Concern Codes"/>
+                    <ns26:title xmlns:ns26="http://hl7.org/fhir" value="Health Concern Codes"/>
                     <generation value="generated"/>
                 </page>
                 <page>
                     <nameUrl value="valueset-prescriptiondrugform.html"/>
-                    <ns25:title xmlns:ns25="http://hl7.org/fhir" value="Prescription Drug Form"/>
+                    <ns27:title xmlns:ns27="http://hl7.org/fhir" value="Prescription Drug Form"/>
                     <generation value="generated"/>
                 </page>
                 <page>
                     <nameUrl value="valueset-prescriptionmedicinalproduct.html"/>
-                    <ns26:title xmlns:ns26="http://hl7.org/fhir" value="Prescription Medicinal Product"/>
+                    <ns28:title xmlns:ns28="http://hl7.org/fhir" value="Prescription Medicinal Product"/>
                     <generation value="generated"/>
                 </page>
                 <page>
                     <nameUrl value="valueset-vaccinecodes.html"/>
-                    <ns27:title xmlns:ns27="http://hl7.org/fhir" value="Vaccine Codes"/>
+                    <ns29:title xmlns:ns29="http://hl7.org/fhir" value="Vaccine Codes"/>
                     <generation value="generated"/>
                 </page>
             </page>
