@@ -202,6 +202,8 @@
     },
     "StructureDefinition/profile-procedure":{
     },
+    "StructureDefinition/profile-results":{
+    },
     "StructureDefinition/profile-smokingstatus":{
     },
     "ValueSet/birthsex":{

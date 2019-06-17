@@ -6,7 +6,7 @@
   "name": "SmokingStatus",
   "status": "draft",
   "publisher": "TBD",
-  "description": "Proposed constraints and extensions on the Observation Resource to support collection of pediatric BMI information.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.",
+  "description": "Proposed constraints and extensions on the Observation Resource to support collection of smoking status information.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.",
   "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
@@ -15,6 +15,12 @@
   "derivation": "constraint",
   "differential": {
     "element": [
+      {
+          "id": "Observation",
+          "path": "Observation",
+          "short": "Smoking Status Profile",
+          "definition": "The Smoking Status Profile is based upon the core FHIR Observation Resource"
+      },
       {
         "id": "Observation.status",
         "path": "Observation.status",
@@ -29,18 +35,36 @@
         "id": "Observation.code",
         "path": "Observation.code",
         "short": "Smoking Status: LOINC 72166-2 = Tobacco smoking status NHIS",
+        "patternCodeableConcept": {
+          "coding": [
+            {
+              "system": "http://loinc.org",
+              "code": "72166-2"
+            }
+          ]
+        },
         "mustSupport": true
       },
       {
         "id": "Observation.subject",
         "path": "Observation.subject",
+        "short": "The patient that the smoking status observation refers to",
         "min": 1,
         "max": 1,
-        "mustSupport": true
+        "mustSupport": true,
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/ca/core/StructureDefinition/profile-patient"
+            ]
+          }
+        ]
       },
       {
         "id": "Observation.issued",
         "path": "Observation.issued",
+        "short": "Date/Time this version of the smoking status observation was made available",
         "min": 1,
         "max": 1,
         "mustSupport": true
@@ -48,16 +72,20 @@
       {
         "id": "Observation.value",
         "path": "Observation.value",
+        "short": "Coded Responses from Smoking Status ValueSet",
         "min": 1,
         "max": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Observation.valueCodeableConcept",
-        "path": "Observation.valueCodeableConcept",
-        "min": 1,
-        "max": 1,
-        "mustSupport": true
+        "mustSupport": true,
+        "binding": {
+            "strength": "extensible",
+            "description": "A code to identify a specific procedure .",
+            "valueSet": "http://hl7.org/fhir/ca/core/ValueSet/ca-core-observation-smokingstatus"
+        },
+        "type": [
+          {
+            "code": "CodeableConcept"
+          }
+        ]
       }
     ]
   }
