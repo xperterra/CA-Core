@@ -125,6 +125,24 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/profile-diagnosticreportnote"/>
+      </reference>
+      <name value="DiagnosticReport for Report and Note Profile"/>
+      <description value="Proposed constraints and extensions on the DiagnosticReport Resource to support collection of diagnostic report information for reports and notes.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-documentreference"/>
+      </reference>
+      <name value="Document Reference Profile"/>
+      <description value="Proposed constraints and extensions on the DocumentReference Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/profile-encounter"/>
       </reference>
       <name value="Encounter Profile"/>
