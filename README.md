@@ -20,7 +20,7 @@ The following principles were applied when creating the profiles:
 - *Only* impose constraints when strictly necessary
 
 
-The [CI build for this repository can be found here](https://github.com/scratch-fhir-profiles/CA-Core).
+The [CI build for this repository can be found here](https://build.fhir.org/ig/scratch-fhir-profiles/CA-Core/).
 
 #### Want to contribute?
 
