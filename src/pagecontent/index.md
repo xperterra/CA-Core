@@ -10,7 +10,7 @@ A **living document** including **scratch** notes and profiles captured while re
   - [PCR](https://simplifier.net/guide/provincialclientregistrypcrhl7fhirimplementationguidev2.0/home), [PPR](https://simplifier.net/guide/provincialproviderregistrypprhl7fhirimplementationguide-v1.0/home), [OLIS](https://simplifier.net/guide/ontariolaboratoriesinformationsystemconsumerquery/home)
 - [pan-Canadian HL7v3 specs](https://infocentral.infoway-inforoute.ca/extra/ca/mr0206-html/html/start.html)
 
-The [GitHub repository for this CI build be found here](https://github.com/scratch-fhir-profiles/CA-Scratch).
+The [GitHub repository for this CI build be found here](https://github.com/scratch-fhir-profiles/CA-Core).
 
 ### Principles
 

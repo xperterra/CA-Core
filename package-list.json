@@ -1,12 +1,12 @@
 {
  "package-id" : "hl7.fhir.ca.core",
- "title" : "Canadian Core", 
- "canonical" : "http://hl7.org/fhir/ca/core", 
+ "title" : "Canadian Core",
+ "canonical" : "http://hl7.org/fhir/ca/core",
  "introduction" : "An initial proposal for a Canadian core set of profiles, aligned with US Core",
  "list" : [{
   "version" : "current",
   "desc" : "Continuous Integration Build (latest in version control)",
-  "path" : "http://build.fhir.org/ig/scratch-fhir-profiles/CA-Scratch",
+  "path" : "http://build.fhir.org/ig/scratch-fhir-profiles/CA-Core",
   "status" : "ci-build",
   "current" : true
  }]
