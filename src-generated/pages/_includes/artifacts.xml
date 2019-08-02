@@ -202,17 +202,24 @@
                 </tr>
                 <tr>
                     <td style="column-width:30%">
+                        <a href="extension-ext-dataabsentreason.html">
+                        •  Data Absent Reason</a>
+                    </td>
+                    <td>Provides a reason why the expected value or elements in the element that is extended are missing.</td>
+                </tr>
+                <tr>
+                    <td style="column-width:30%">
                         <a href="extension-ext-dateestimated.html">
                         •  Date Estimated Flag</a>
                     </td>
-                    <td>If true, indicates that information entered is an estimate and may not be precise</td>
+                    <td>If true, indicates that information entered is an estimate and may not be precise.</td>
                 </tr>
                 <tr>
                     <td style="column-width:30%">
                         <a href="extension-ext-identifierversion.html">
                         •  Identifier Version</a>
                     </td>
-                    <td>A version string indicating the currency/validity of an identifier</td>
+                    <td>A version string indicating the currency/validity of an identifier.</td>
                 </tr>
             </tbody>
         </table>

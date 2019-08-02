@@ -15,3 +15,6 @@ The Version Code is current captured separately from the JHN because, in Ontario
 - The working assumption is that it is useful to have this stable identifier but not all of the Ontario specs reviewed stored it as a separate field.  In one case, it appears to be an Patient.identifier.coding.value instead of the identifier ...
 - Example JHN and Patient Information from [Ontario Health Care Validation Reference Manual](http://www.health.gov.on.ca/english/providers/pub/ohip/ohipvalid_manual/ohipvalid_manual.pdf)
 - Question: would specific examples like this be helpful to illustrate Canadian requirements?
+
+**Note** Data Absent Reason
+In situations where information on a particular data element is missing and the Responder knows the precise reason for the absence of data, Responders SHALL send the reason for the missing information using values (such as nullFlavors) from the value set where they exist or using the dataAbsentReason extension (http://hl7.org/fhir/StructureDefinition/data-absent-reason).

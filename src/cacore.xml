@@ -71,10 +71,19 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/ext-dataabsentreason"/>
+      </reference>
+      <name value="Data Absent Reason"/>
+      <description value="Provides a reason why the expected value or elements in the element that is extended are missing."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="extensions"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/ext-dateestimated"/>
       </reference>
       <name value="Date Estimated Flag"/>
-      <description value="If true, indicates that information entered is an estimate and may not be precise"/>
+      <description value="If true, indicates that information entered is an estimate and may not be precise."/>
       <exampleBoolean value="false"/>
       <groupingId value="extensions"/>
     </resource>
@@ -83,7 +92,7 @@
         <reference value="StructureDefinition/ext-identifierversion"/>
       </reference>
       <name value="Identifier Version"/>
-      <description value="A version string indicating the currency/validity of an identifier"/>
+      <description value="A version string indicating the currency/validity of an identifier."/>
       <exampleBoolean value="false"/>
       <groupingId value="extensions"/>
     </resource>
