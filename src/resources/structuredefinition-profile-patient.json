@@ -272,21 +272,16 @@
         "path": "Patient.address.state",
         "mustSupport": true,
         "binding": {
-          "strength": "required",
+          "strength": "extensible",
           "description": "This value set defines canadian province and terriroty codes",
-          "valueSet": "http://hl7.org/fhir/ValueSet/canada-post-province-and-territory"
+          "valueSet": "http://ehealthontario.ca/fhir/ValueSet/province-state-code"
         }
       },
       {
         "id": "Patient.address.postalCode",
         "path": "Patient.address.postalCode",
         "short": "Canadian Postal Codes",
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "description": "This value set defines canadian postal codes",
-          "valueSet": "http://hl7.org/fhir/ca/core/ValueSet/ca-core-postalcodes"
-        }
+        "mustSupport": true
       },
       {
         "id": "Patient.communication",
