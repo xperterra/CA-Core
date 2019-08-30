@@ -98,7 +98,7 @@
         }
       },
       {
-        "id": "Patient.identifier:JHN.extension:myExtension",
+        "id": "Patient.identifier:JHN.extension:versionCode",
         "path": "Patient.identifier.extension",
         "sliceName": "myExtension",
         "short": "Health Number Version Code",
@@ -112,7 +112,7 @@
         ]
       },
       {
-        "id": "Patient.identifier:JHN.extension:myExtension.value[x]:valueString",
+        "id": "Patient.identifier:JHN.extension:versionCode.value[x]:valueString",
         "path": "Patient.identifier.extension.value[x]",
         "sliceName": "valueString"
       },
@@ -200,17 +200,46 @@
         "id": "Patient.name",
         "path": "Patient.name",
         "min": 1,
+        "constraint" : [
+          {
+            "key" : "ca-core-8",
+            "severity" : "error",
+            "human" : "Patient.name.given  or Patient.name.family or both SHALL be present",
+            "expression" : "family.exists() or given.exists()",
+            "xpath" : "f:given or f:family"
+          }
+        ],
         "mustSupport": true
       },
       {
         "id": "Patient.name.family",
         "path": "Patient.name.family",
-        "min": 1,
         "mustSupport": true
       },
       {
         "id": "Patient.name.given",
         "path": "Patient.name.given",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.telecom",
+        "path": "Patient.telecom",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.telecom.system",
+        "path": "Patient.telecom.system",
+        "min": 1,
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "Telecommunications form for contact point.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/contact-point-system"
+        }
+      },
+      {
+        "id": "Patient.telecom.value",
+        "path": "Patient.telecom.value",
         "min": 1,
         "mustSupport": true
       },
@@ -218,11 +247,57 @@
         "id": "Patient.gender",
         "path": "Patient.gender",
         "min": 1,
-        "mustSupport": true
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "The gender of a person used for administrative purposes.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/administrative-gender"
+        }
       },
       {
         "id": "Patient.birthDate",
         "path": "Patient.birthDate",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address",
+        "path": "Patient.address",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address.line",
+        "path": "Patient.address.line",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address.city",
+        "path": "Patient.address.city",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.address.state",
+        "path": "Patient.address.state",
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible",
+          "description": "This value set defines canadian province and terriroty codes",
+          "valueSet": "http://ehealthontario.ca/fhir/ValueSet/province-state-code"
+        }
+      },
+      {
+        "id": "Patient.address.postalCode",
+        "path": "Patient.address.postalCode",
+        "short": "Canadian Postal Codes",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.communication",
+        "path": "Patient.communication",
+        "mustSupport": true
+      },
+      {
+        "id": "Patient.communication.language",
+        "path": "Patient.communication.language",
         "mustSupport": true
       }
     ]
