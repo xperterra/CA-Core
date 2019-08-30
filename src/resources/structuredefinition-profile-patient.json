@@ -277,7 +277,12 @@
       {
         "id": "Patient.address.state",
         "path": "Patient.address.state",
-        "mustSupport": true
+        "mustSupport": true,
+        "binding": {
+          "strength": "required",
+          "description": "This value set defines canadian province and terriroty codes",
+          "valueSet": "http://ehealthontario.ca/fhir/ValueSet/province-state-code"
+        }
       },
       {
         "id": "Patient.address.postalCode",
