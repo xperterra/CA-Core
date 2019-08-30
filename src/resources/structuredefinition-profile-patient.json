@@ -253,37 +253,6 @@
         "mustSupport": true
       },
       {
-        "id": "Patient.address",
-        "path": "Patient.address",
-        "mustSupport": true
-      },
-      {
-        "id": "Patient.address.line",
-        "path": "Patient.address.line",
-        "mustSupport": true
-      },
-      {
-        "id": "Patient.address.city",
-        "path": "Patient.address.city",
-        "mustSupport": true
-      },
-      {
-        "id": "Patient.address.state",
-        "path": "Patient.address.state",
-        "mustSupport": true,
-        "binding": {
-          "strength": "required",
-          "description": "This value set defines canadian province and terriroty codes",
-          "valueSet": "http://hl7.org/fhir/ValueSet/canada-post-province-and-territory"
-        }
-      },
-      {
-        "id": "Patient.address.postalCode",
-        "path": "Patient.address.postalCode",
-        "short": "Canadian Postal Codes",
-        "mustSupport": true
-      },
-      {
         "id": "Patient.communication",
         "path": "Patient.communication",
         "mustSupport": true
