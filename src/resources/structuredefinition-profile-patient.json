@@ -59,7 +59,7 @@
       },
       {
         "id" : "Patient.extension:birthsex.valueCode",
-        "path" : "Patient.extension.value[x]"
+        "path" : "Patient.extension.valueCode"
       },
       {
         "id": "Patient.identifier",
