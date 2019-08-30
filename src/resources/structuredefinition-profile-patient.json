@@ -49,12 +49,13 @@
               "http://hl7.org/fhir/ca/core/StructureDefinition/ext-patientbirthsex"
             ]
           }
-        ]
-      },
-      {
-        "id": "Patient.extension:birthsex.value[x]:valueCode",
-        "path": "Patient.extension.value[x]",
-        "sliceName": "valueCode"
+        ],
+        "mustSupport": false,
+        "binding": {
+          "strength": "required",
+          "description": "Code for sex assigned at birth",
+          "valueSet": "http://hl7.org/fhir/ca/core/ValueSet/birthsex"
+        }
       },
       {
         "id": "Patient.identifier",
