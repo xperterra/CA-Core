@@ -26,6 +26,37 @@
         "isModifier": false
       },
       {
+        "id": "Patient.extension",
+        "path": "Patient.extension",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "value",
+              "path": "url"
+            }
+          ],
+          "rules": "open"
+        }
+      },
+      {
+        "id": "Patient.extension:birthsex",
+        "path": "Patient.extension",
+        "sliceName": "birthsex",
+        "type": [
+          {
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/ca/core/StructureDefinition/ext-patientbirthsex"
+            ]
+          }
+        ]
+      },
+      {
+        "id": "Patient.extension:birthsex.value[x]:valueCode",
+        "path": "Patient.extension.value[x]",
+        "sliceName": "valueCode"
+      },
+      {
         "id": "Patient.identifier",
         "path": "Patient.identifier",
         "slicing": {
