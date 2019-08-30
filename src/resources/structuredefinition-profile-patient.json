@@ -274,7 +274,7 @@
         "binding": {
           "strength": "required",
           "description": "This value set defines canadian province and terriroty codes",
-          "valueSet": "http://ehealthontario.ca/fhir/ValueSet/province-state-code"
+          "valueSet": "http://hl7.org/fhir/ValueSet/canada-post-province-and-territory"
         }
       },
       {
