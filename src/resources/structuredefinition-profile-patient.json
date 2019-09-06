@@ -128,7 +128,7 @@
       {
         "id": "Patient.identifier:JHN.extension:versionCode",
         "path": "Patient.identifier.extension",
-        "sliceName": "myExtension",
+        "sliceName": "versionCode",
         "short": "Health Number Version Code",
         "type": [
           {
