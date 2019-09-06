@@ -58,11 +58,6 @@
         }
       },
       {
-        "id" : "Patient.extension:birthsex.value[x]:valueCode",
-        "path" : "Patient.extension.value[x]",
-        "sliceName" : "valueCode"
-      },
-      {
         "id": "Patient.identifier",
         "path": "Patient.identifier",
         "slicing": {
