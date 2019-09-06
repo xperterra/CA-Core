@@ -58,8 +58,9 @@
         }
       },
       {
-        "id" : "Patient.extension:birthsex.valueCode",
-        "path" : "Patient.extension.valueCode"
+        "id" : "Patient.extension:birthsex.value[x]:valueCode",
+        "path" : "Patient.extension.value[x]",
+        "sliceName" : "valueCode"
       },
       {
         "id": "Patient.identifier",
@@ -156,14 +157,7 @@
         "isModifier": false
       },
       {
-        "id": "Patient.identifier:OTH",
-        "path": "Patient.identifier",
-        "sliceName": "OTH",
-        "sliceIsConstraining": false,
-        "short": "Other Identifier"
-      },
-      {
-        "id": "Patient.identifier:OTH.type",
+        "id": "Patient.identifier.type",
         "path": "Patient.identifier.type",
         "min": 1,
         "example": [
@@ -182,14 +176,14 @@
         "mustSupport": true
       },
       {
-        "id": "Patient.identifier:OTH.system",
+        "id": "Patient.identifier.system",
         "path": "Patient.identifier.system",
         "min": 1,
         "mustSupport": true,
         "isModifier": false
       },
       {
-        "id": "Patient.identifier:OTH.value",
+        "id": "Patient.identifier.value",
         "path": "Patient.identifier.value",
         "min": 1,
         "mustSupport": true,
