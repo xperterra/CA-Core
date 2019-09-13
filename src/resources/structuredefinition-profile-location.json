@@ -37,6 +37,10 @@
                 ]
             },
             {
+                "id": "Location.identifier",
+                "path": "Location.identifier"
+            },
+            {
                 "id": "Location.status",
                 "path": "Location.status",
                 "mustSupport": true
