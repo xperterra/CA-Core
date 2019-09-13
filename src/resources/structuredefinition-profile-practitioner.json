@@ -34,14 +34,19 @@
         "id": "Practitioner.identifier.type",
         "path": "Practitioner.identifier.type",
         "min": 1,
-        "example": {
-          "coding": [
-            {
-              "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-              "code": "PRN"
+        "example": [
+          {
+            "label": "Pattern",
+            "valueCodeableConcept": {
+              "coding": [
+                {
+                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                  "code": "PRN"
+                }
+              ]
             }
-          ]
-        },
+          }
+        ],
         "mustSupport": true
       },
       {

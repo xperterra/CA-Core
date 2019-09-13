@@ -41,6 +41,42 @@
                 "path": "Location.identifier"
             },
             {
+                "id": "Location.identifier.type",
+                "path": "Location.identifier.type",
+                "example": [
+                  {
+                    "label": "Pattern",
+                    "valueCodeableConcept": {
+                      "coding": [
+                        {
+                          "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
+                          "code": "PRN"
+                        }
+                      ]
+                    }
+                  }
+                ]            },
+            {
+                "id": "Location.identifier.system",
+                "path": "Location.identifier.system",
+                "short": "Naming systems used to uniquely identify health care providers within a Jurisditional Provider Registry.",
+                "min": 1,
+                "example": [
+                  {
+                    "label": "(Ontario)",
+                    "valueUri": "https://fhir.infoway-inforoute.ca/NamingSystem/ca-on-provider-upi"
+                  }
+                ],
+                "mustSupport": true
+            },
+            {
+                "id": "Location.identifier:PRN.value",
+                "path": "Location.identifier.value",
+                "min": 1,
+                "mustSupport": true,
+                "isModifier": false
+            },
+            {
                 "id": "Location.status",
                 "path": "Location.status",
                 "mustSupport": true
