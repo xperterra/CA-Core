@@ -61,8 +61,6 @@
             {
                 "id": "Medication.code.text",
                 "path": "Medication.code.text",
-                "min": 1,
-                "maxLength": 1000,
                 "mustSupport": true
             },
             {
@@ -96,7 +94,6 @@
             {
                 "id": "Medication.ingredient",
                 "path": "Medication.ingredient",
-                "mustSupport": true
             },
             {
                 "id": "Medication.ingredient.itemCodeableConcept",
