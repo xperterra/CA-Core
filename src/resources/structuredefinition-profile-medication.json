@@ -55,7 +55,6 @@
                 "id": "Medication.code.coding.display",
                 "path": "Medication.code.coding.display",
                 "min": 1,
-                "maxLength": 1000,
                 "mustSupport": true
             },
             {
@@ -93,7 +92,7 @@
             },
             {
                 "id": "Medication.ingredient",
-                "path": "Medication.ingredient",
+                "path": "Medication.ingredient"
             },
             {
                 "id": "Medication.ingredient.itemCodeableConcept",
