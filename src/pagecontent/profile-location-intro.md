@@ -5,5 +5,7 @@ This profile was generated from [HL7 StructureDefinition](https://www.hl7.org/fh
 Key differences from [USCoreR4 Location](https://build.fhir.org/ig/HL7/US-Core-R4/StructureDefinition-us-core-location.html):
 - Added extension for Service Language (ON PPR has a Location Language element, added ext_servicelanguage to support requirement more generally)
 
-Note: Location Identifier 
+**Note:** Location Identifier 
+
 Currently, there is no consensus or requirement for pan-Canadian method to identify a location using a business identifier. Location.identifier will remain unsliced until a requirement or rationale is put forth that supports the need to have unique constraints determined by the business identifier.
+
