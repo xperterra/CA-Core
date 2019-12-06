@@ -10,7 +10,7 @@
     "valueInteger" : 1
   }],
   "url" : "http://hl7.org/fhir/StructureDefinition/dataabsentreason",
-  "version" : "4.0.0",
+  "version" : "0.0.0",
   "name" : "Data Absent Reason",
   "title" : "Why value is missing",
   "status" : "draft",
@@ -23,7 +23,7 @@
     }]
   }],
   "description" : "Provides a reason why the expected value or elements in the element that is extended are missing.",
-  "fhirVersion" : "4.0.0",
+  "fhirVersion" : "4.0.1",
   "mapping" : [{
     "identity" : "rim",
     "uri" : "http://hl7.org/v3",
