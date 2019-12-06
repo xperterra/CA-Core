@@ -9,7 +9,6 @@
     "date": "2019-03-08",
     "publisher": "TBD",
     "description": "If true, indicates that information entered is an estimate and may not be precise",
-    "fhirVersion": "4.0.1",
     "kind": "complex-type",
     "abstract": false,
     "context": [

@@ -9,7 +9,6 @@
     "date": "2019-03-08",
     "publisher": "TBD",
     "description": "A code classifying the person's sex assigned at birth. Replicates the birthsex extension in US-Core-R4 for interoperability.",
-    "fhirVersion": "4.0.1",
     "kind": "complex-type",
     "abstract": false,
     "context": [

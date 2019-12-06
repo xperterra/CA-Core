@@ -9,7 +9,6 @@
     "date": "2019-03-31",
     "publisher": "TBD",
     "description": "Proposed constraints and extensions on the Observation Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.",
-    "fhirVersion": "4.0.1",
     "kind": "resource",
     "abstract": false,
     "type": "Observation",

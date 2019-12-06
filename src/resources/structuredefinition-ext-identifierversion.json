@@ -9,7 +9,6 @@
     "date": "2019-03-08",
     "publisher": "TBD",
     "description": "A version string indicating the currency/validity of an identifier",
-    "fhirVersion": "4.0.1",
     "kind": "complex-type",
     "abstract": false,
     "context": [
