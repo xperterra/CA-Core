@@ -1,0 +1,23 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "449868002",
+  "display" : "Current every day smoker"
+}, "valueSet" :null}####
+v: {
+  "display" : "Smokes tobacco daily",
+  "severity" : "warning",
+  "error" : "The display \"Current every day smoker\" is not a valid display for the code {http://snomed.info/sct}449868002 - should be one of [\"Smokes tobacco daily\",\"Smokes tobacco daily (finding)\"]"
+}
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://snomed.info/sct",
+  "code" : "449868002",
+  "display" : "Smokes tobacco daily"
+}, "valueSet" :null}####
+v: {
+  "display" : "Smokes tobacco daily",
+  "severity" : null,
+  "error" : ""
+}
+-------------------------------------------------------------------------------------
