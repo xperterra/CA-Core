@@ -1,12 +1,16 @@
 ## Structure Definition: Patient Profile
-{{link:Patient-duplicate-2}}
+{{link:PatientProfile}}
 
-{{render:TestProjectforJoel/profile-patient-intro}}
+{{render:profile-patient-intro}}
 
-### Formal Views of PRofile Content
-(needs some work)
-{{structure:TestProjectforJoel/PatientProfile-duplicate-2}}
+### Formal Views of Profile Content
+[Description of Profiles, Differentials, Snapshots and how the different presentations work.](http://hl7.org/fhir/r4/profiling.html#representation)
 
-{{table:TestProjectforJoel/PatientProfile-duplicate-2}}
+### Tree
+{{structure:PatientProfile}}
+
+### Table
+{{table:PatientProfile}}
+
 
 {{render:TestProjectforJoel/profile-patient-notes}}
