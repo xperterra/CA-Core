@@ -5,32 +5,32 @@
   "status": "draft",
   "definition": {
     "page": {
-      "nameUrl": "HomePage.md",
+      "nameUrl": "HomePage",
       "title": "HomePage",
       "generation": "markdown",
       "page": [
         {
-          "nameUrl": "GeneralGuidancePage.md",
+          "nameUrl": "GeneralGuidancePage",
           "title": "General Guidance",
           "generation": "markdown"
         },
         {
-          "nameUrl": "SecurityPage.md",
+          "nameUrl": "SecurityPage",
           "title": "Secuirty",
           "generation": "markdown"
         },
         {
-          "nameUrl": "ArtifactListPage.md",
+          "nameUrl": "ArtifactListPage",
           "title": "Artifact Index",
           "generation": "markdown"
         },
         {
-          "nameUrl": "GeneralGuidance.md",
+          "nameUrl": "GeneralGuidance",
           "title": "General Guidance",
           "generation": "markdown"
         },
         {
-          "nameUrl": "GeneralGuidance.md",
+          "nameUrl": "GeneralGuidance",
           "title": "General Guidance",
           "generation": "markdown"
         }
