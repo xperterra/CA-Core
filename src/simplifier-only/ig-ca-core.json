@@ -1,11 +1,8 @@
 {
   "resourceType": "ImplementationGuide",
-  "url": "https://simplifier.net/guide/ca-core",
-  "name": "Canadian FHIR Baseline Profiles (CA-Core)",
+  "url": "https://simplifier.net/guide/ca-core-test",
+  "name": "Canadian FHIR Baseline Profiles",
   "status": "draft",
-  "fhirVersion": [
-    "4.0.0"
-  ],
   "definition": {
     "page": {
       "nameUrl": "HomePage.md",
@@ -13,13 +10,28 @@
       "generation": "markdown",
       "page": [
         {
-          "nameUrl": "PatientProfilePage.md",
-          "title": "PatientProfilePage",
+          "nameUrl": "GeneralGuidancePage.md",
+          "title": "General Guidance",
           "generation": "markdown"
         },
         {
-          "nameUrl": "Newitem.md",
-          "title": "New item",
+          "nameUrl": "SecurityPage.md",
+          "title": "Secuirty",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "ArtifactListPage.md",
+          "title": "Artifact Index",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "GeneralGuidance.md",
+          "title": "General Guidance",
+          "generation": "markdown"
+        },
+        {
+          "nameUrl": "GeneralGuidance.md",
+          "title": "General Guidance",
           "generation": "markdown"
         }
       ]
