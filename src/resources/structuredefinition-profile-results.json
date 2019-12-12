@@ -132,7 +132,7 @@
         "binding": {
             "strength": "extensible",
             "description": "Observation Value Absent Reason.",
-            "valueSet": "http://hl7.org/fhir/ValueSet/observation-valueabsentreason"
+            "valueSet": "http://hl7.org/fhir/ValueSet/data-absent-reason|4.0.0"
         }
       }
     ]
