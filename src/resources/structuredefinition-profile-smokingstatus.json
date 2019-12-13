@@ -75,6 +75,11 @@
         "min": 1,
         "max": 1,
         "mustSupport": true,
+        "binding": {
+            "strength": "extensible",
+            "description": "A code to identify a specific procedure .",
+            "valueSet": "http://hl7.org/fhir/ca/core/ValueSet/ca-core-observation-smokingstatus"
+        },
         "type": [
           {
             "code": "CodeableConcept"
