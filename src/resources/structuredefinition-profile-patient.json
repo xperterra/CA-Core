@@ -193,8 +193,7 @@
             "severity" : "error",
             "human" : "Patient.name.given  or Patient.name.family or both SHALL be present",
             "expression" : "family.exists() or given.exists()",
-            "xpath" : "f:given or f:family",
-            "source" : "http://hl7.org/fhir/ca/core/StructureDefinition/profile-patient"
+            "xpath" : "f:given or f:family"
           }
         ],
         "mustSupport": true
