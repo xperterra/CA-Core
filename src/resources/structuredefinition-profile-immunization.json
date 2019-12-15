@@ -67,19 +67,6 @@
         "mustSupport": true
       },
       {
-        "id": "Immunization.occurrence[x]:occurrenceDateTime.extension",
-        "path": "Immunization.occurrence[x].extension",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "value",
-              "path": "url"
-            }
-          ],
-          "rules": "open"
-        }
-      },
-      {
         "id": "Immunization.occurrence[x]:occurrenceDateTime.extension:estimated",
         "path": "Immunization.occurrence[x].extension",
         "sliceName": "estimated",
@@ -93,11 +80,6 @@
           }
         ],
         "mustSupport": false
-      },
-      {
-        "id": "Immunization.occurrence[x]:occurrenceDateTime.extension:estimated.value[x]:valueBoolean",
-        "path": "Immunization.occurrence[x].extension.value[x]",
-        "sliceName": "valueBoolean"
       },
       {
         "id": "Immunization.primarySource",

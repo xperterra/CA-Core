@@ -15,44 +15,43 @@
   "differential": {
     "element": [
       {
-          "id": "Observation",
-          "path": "Observation",
-          "short": "Results Profile",
-          "definition": "The Results Profile is based upon the core FHIR Observation Resource",
-          "constraint": [
-            {
-              "key" : "ca-core-results-1",
-              "severity" : "error",
-              "human" : "If there is no component or related element then either a value[x] or a data absent reason must be present.",
-              "expression" : "(component.empty() and related.empty()) implies (dataAbsentReason or value)",
-              "xpath": "exists(f:component) or exists(f:related) or exists(f:*[starts-with(local-name(.), 'value)]) or exists(f:dataAbsentReason)"
-            }
-          ]
+        "id": "Observation",
+        "path": "Observation",
+        "short": "Results Profile",
+        "definition": "The Results Profile is based upon the core FHIR Observation Resource",
+        "constraint": [
+          {
+            "key": "ca-core-results-1",
+            "severity": "error",
+            "human": "If there is no component or related element then either a value[x] or a data absent reason must be present.",
+            "expression": "(component.empty() and related.empty()) implies (dataAbsentReason or value)",
+            "xpath": "exists(f:component) or exists(f:related) or exists(f:*[starts-with(local-name(.), 'value)]) or exists(f:dataAbsentReason)"
+          }
+        ]
       },
       {
         "id": "Observation.status",
         "path": "Observation.status",
         "mustSupport": true,
         "binding": {
-            "strength": "required",
-            "description": "Codes providing the status of an observation.",
-            "valueSet": "http://hl7.org/fhir/ValueSet/observation-status"
+          "strength": "required",
+          "valueSet": "http://hl7.org/fhir/ValueSet/observation-status"
         }
       },
       {
         "id": "Observation.category",
         "path": "Observation.category",
-        "mustSupport": true,
         "min": 1,
         "constraint": [
           {
-            "key" : "ca-core-results-2",
-            "severity" : "error",
-            "human" : "Must have a category of 'laboratory' and a code system 'http://hl7.org/fhir/observation-category'",
-            "expression" : "where(coding.system='http://hl7.org/fhir/observation-category' and coding.code='laboratory').exists()",
+            "key": "ca-core-results-2",
+            "severity": "error",
+            "human": "Must have a category of 'laboratory' and a code system 'http://hl7.org/fhir/observation-category'",
+            "expression": "where(coding.system='http://hl7.org/fhir/observation-category' and coding.code='laboratory').exists()",
             "xpath": "exists(f:coding/code[@value='laboratory']) and exists(f:coding/system[@value='http://hl7.org/fhir/observation-category'])"
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Observation.code",
@@ -60,9 +59,8 @@
         "short": "Laboratory Test Name",
         "mustSupport": true,
         "binding": {
-            "strength": "example",
-            "description": "LOINC Codes",
-            "valueSet": "http://hl7.org/fhir/ValueSet/observation-codes"
+          "strength": "example",
+          "description": "LOINC Codes"
         }
       },
       {
@@ -70,8 +68,6 @@
         "path": "Observation.subject",
         "short": "The patient that the lab results refer to",
         "min": 1,
-        "max": 1,
-        "mustSupport": true,
         "type": [
           {
             "code": "Reference",
@@ -79,7 +75,8 @@
               "http://hl7.org/fhir/ca/core/StructureDefinition/profile-patient"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "Observation.effective[x]",
@@ -95,10 +92,10 @@
         ],
         "constraint": [
           {
-            "key" : "ca-core-results-3",
-            "severity" : "error",
-            "human" : "Datetime must be at least to day.",
-            "expression" : "($this as dateTime).toString().length() >= 8"
+            "key": "ca-core-results-3",
+            "severity": "error",
+            "human": "Datetime must be at least to day.",
+            "expression": "($this as dateTime).toString().length() >= 8"
           }
         ],
         "mustSupport": true
@@ -109,18 +106,18 @@
         "short": "Result Value",
         "constraint": [
           {
-            "key" : "ca-core-results-4",
-            "severity" : "warning",
-            "human" : "SHOULD use Snomed CT for coded Results.",
-            "expression" : "valueCodeableConcept.coding.system.empty() or valueCodeableConcept.coding.system = 'http://snomed.info/sct'",
-            "xpath" : "not(exists(f:valueCodeableConcept/f:coding/f:system) ) or  f:valueCodeableConcept/f:coding/f:system[@value='http://snomed.info/sct']"
+            "key": "ca-core-results-4",
+            "severity": "warning",
+            "human": "SHOULD use Snomed CT for coded Results.",
+            "expression": "valueCodeableConcept.coding.system.empty() or valueCodeableConcept.coding.system = 'http://snomed.info/sct'",
+            "xpath": "not(exists(f:valueCodeableConcept/f:coding/f:system) ) or  f:valueCodeableConcept/f:coding/f:system[@value='http://snomed.info/sct']"
           },
           {
-            "key" : "ca-core-results-5",
-            "severity" : "error",
-            "human" : "SHALL use UCUM for coded quantity units.",
-            "expression" : "valueQuantity.system.empty() or valueQuantity.system = 'http://unitsofmeasure.org'",
-            "xpath" : "not(exists(f:valueQuantity/f:system) ) or  f:valueQuantity/f:system[@value='http://unitsofmeasure.org']"
+            "key": "ca-core-results-5",
+            "severity": "error",
+            "human": "SHALL use UCUM for coded quantity units.",
+            "expression": "valueQuantity.system.empty() or valueQuantity.system = 'http://unitsofmeasure.org'",
+            "xpath": "not(exists(f:valueQuantity/f:system) ) or  f:valueQuantity/f:system[@value='http://unitsofmeasure.org']"
           }
         ],
         "mustSupport": true
@@ -130,9 +127,9 @@
         "path": "Observation.dataAbsentReason",
         "mustSupport": true,
         "binding": {
-            "strength": "extensible",
-            "description": "Observation Value Absent Reason.",
-            "valueSet": "http://hl7.org/fhir/ValueSet/observation-valueabsentreason"
+          "strength": "extensible",
+          "description": "Observation Value Absent Reason.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/data-absent-reason|4.0.0"
         }
       }
     ]
