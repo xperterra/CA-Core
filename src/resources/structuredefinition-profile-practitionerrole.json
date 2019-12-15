@@ -1,85 +1,107 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "profile-practitioner",
-  "url": "http://hl7.org/fhir/ca/core/StructureDefinition/profile-practitioner",
+  "id": "profile-practitionerrole",
+  "url": "http://hl7.org/fhir/ca/core/StructureDefinition/profile-practitionerrole",
   "version": "0.0.0",
-  "name": "PractitionerProfile",
-  "title": "Practitioner Profile",
+  "name": "PractitionerRoleProfile",
+  "title": "PractitionerRole Profile",
   "status": "draft",
-  "date": "2019-03-31",
+  "date": "2019-03-29",
   "publisher": "TBD",
-  "description": "Proposed constraints and extensions on the Practitioner Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.",
+  "description": "Proposed constraints and extensions on the PractitionerRole Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.",
   "kind": "resource",
   "abstract": false,
-  "type": "Practitioner",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Practitioner",
+  "type": "PractitionerRole",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
   "derivation": "constraint",
   "differential": {
     "element": [
       {
-        "id": "Practitioner",
-        "path": "Practitioner",
-        "short": "Practitioner Profile",
-        "definition": "The Practitioner Profile is based upon the core FHIR Practitioner Resource",
-        "mustSupport": true
+        "id": "PractitionerRole",
+        "path": "PractitionerRole",
+        "short": "PractitionerRole Profile",
+        "definition": "The PractitionerRole Profile is based upon the core FHIR PractitionerRole Resource"
       },
       {
-        "id": "Practitioner.identifier",
-        "path": "Practitioner.identifier",
+        "id": "PractitionerRole.practitioner",
+        "path": "PractitionerRole.practitioner",
+        "short": "Practitioner that is able to provide the defined services for the organization.",
         "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "Practitioner.identifier.type",
-        "path": "Practitioner.identifier.type",
-        "min": 1,
-        "example": [
+        "type": [
           {
-            "label": "Pattern",
-            "valueCodeableConcept": {
-              "coding": [
-                {
-                  "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-                  "code": "PRN"
-                }
-              ]
-            }
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/ca/core/StructureDefinition/profile-practitioner"
+            ]
           }
         ],
         "mustSupport": true
       },
       {
-        "id": "Practitioner.identifier.system",
-        "path": "Practitioner.identifier.system",
-        "short": "Naming systems used to uniquely identify health care providers within a Jurisditional Provider Registry.",
+        "id": "PractitionerRole.organization",
+        "path": "PractitionerRole.organization",
+        "short": "Organization where the practioner provides services",
         "min": 1,
-        "example": [
+        "type": [
           {
-            "label": "(Ontario)",
-            "valueUri": "https://fhir.infoway-inforoute.ca/NamingSystem/ca-on-provider-upi"
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/ca/core/StructureDefinition/profile-organization"
+            ]
           }
         ],
         "mustSupport": true
       },
       {
-        "id": "Practitioner.identifier.value",
-        "path": "Practitioner.identifier.value",
+        "id": "PractitionerRole.code",
+        "path": "PractitionerRole.code",
         "min": 1,
-        "mustSupport": true,
-        "isModifier": false
-      },
-      {
-        "id": "Practitioner.name",
-        "path": "Practitioner.name",
         "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible"
+        }
+      },
+      {
+        "id": "PractitionerRole.specialty",
+        "path": "PractitionerRole.specialty",
+        "min": 1,
+        "max": "1",
+        "mustSupport": true,
+        "binding": {
+          "strength": "extensible"
+        }
+      },
+      {
+        "id": "PractitionerRole.location",
+        "path": "PractitionerRole.location",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/ca/core/StructureDefinition/profile-location"
+            ]
+          }
+        ],
         "mustSupport": true
       },
       {
-        "id": "Practitioner.name.family",
-        "path": "Practitioner.name.family",
+        "id": "PractitionerRole.telecom",
+        "path": "PractitionerRole.telecom",
+        "short": "Contact point",
+        "mustSupport": true
+      },
+      {
+        "id": "PractitionerRole.telecom.system",
+        "path": "PractitionerRole.telecom.system",
         "min": 1,
-        "mustSupport": true,
-        "isModifier": false
+        "mustSupport": true
+      },
+      {
+        "id": "PractitionerRole.telecom.value",
+        "path": "PractitionerRole.telecom.value",
+        "min": 1,
+        "mustSupport": true
       }
     ]
   }
