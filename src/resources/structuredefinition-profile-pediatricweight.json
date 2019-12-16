@@ -4,6 +4,7 @@
   "url": "http://hl7.org/fhir/ca/core/StructureDefinition/profile-pediatricweight",
   "version": "0.0.0",
   "name": "PediatricWeightProfile",
+  "title": "Pediatric Weight Profile",
   "status": "draft",
   "publisher": "TBD",
   "description": "Proposed constraints and extensions on the Observation Resource to support collection of pediatric weight information.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.",
@@ -15,78 +16,78 @@
   "differential": {
     "element": [
       {
-          "id": "Observation",
-          "path": "Observation",
-          "short": "Pediatric Weight Profile",
-          "definition": "The Goal Profile is based upon the core FHIR Goal Resource"
+        "id": "Observation",
+        "path": "Observation",
+        "short": "Pediatric Weight Profile",
+        "definition": "The Goal Profile is based upon the core FHIR Goal Resource"
       },
       {
-          "id": "Observation.code",
-          "path": "Observation.code",
-          "short": "Weight-for-length per age and gender",
-          "must support": false
+        "id": "Observation.code",
+        "path": "Observation.code",
+        "short": "Weight-for-length per age and gender"
       },
       {
-          "id": "Observation.code.coding",
-          "path": "Observation.code.coding",
-          "min": 1,
-          "max": 1,
-          "slicing" : {
-            "discriminator" : [
-              {
-                "type": "value",
-                "path": "code"
-              },
-              {
-                "type": "value",
-                "path": "system"
-              }
-            ],
-            "rules": "open"
-          },
-          "must support": false
-      },
-      {
-          "id": "Observation.code.coding.WtPercentile",
-          "path": "Observation.code.coding",
-          "sliceName": "WtPercentile",
-          "short": "Code defined by a terminology system",
-          "min": 1,
-          "max": 1,
-          "must support": false
-      },
-      {
-          "id": "Observation.code.coding.WtPercentile.system",
-          "path": "Observation.code.coding.system",
-          "min": 1,
-          "max": 1,
-          "type": [
+        "id": "Observation.code.coding",
+        "path": "Observation.code.coding",
+        "slicing": {
+          "discriminator": [
             {
-              "code": "uri"
+              "type": "value",
+              "path": "code"
+            },
+            {
+              "type": "value",
+              "path": "system"
             }
           ],
-          "fixedUri": "http://loinc.org",
-          "must support": false
-      },
-      {
-          "id": "Observation.code.coding.WtPercentile.code",
-          "path": "Observation.code.coding.code",
-          "sliceName": "WtPercentile",
-          "min": 1,
-          "max": 1,
-          "type": [
-            {
-              "code": "code"
-            }
-          ],
-          "fixedCode": "77606-2",
-          "must support": false
-      },
-      {
-        "id": "Observation.valueQuantity",
-        "path": "Observation.valueQuantity",
+          "rules": "open"
+        },
         "min": 1,
-        "max": 1,
+        "max": "1"
+      },
+      {
+        "id": "Observation.code.coding:WtPercentile",
+        "path": "Observation.code.coding",
+        "sliceName": "WtPercentile",
+        "min": 1,
+        "max": "1"
+      },
+      {
+        "id": "Observation.code.coding:WtPercentile.system",
+        "path": "Observation.code.coding.system",
+        "min": 1,
+        "fixedUri": "http://loinc.org"
+      },
+      {
+        "id": "Observation.code.coding:WtPercentile.code:WtPercentile",
+        "path": "Observation.code.coding.code",
+        "sliceName": "WtPercentile",
+        "min": 1,
+        "fixedCode": "77606-2"
+      },
+      {
+        "id": "Observation.value[x]",
+        "path": "Observation.value[x]",
+        "slicing": {
+          "discriminator": [
+            {
+              "type": "type",
+              "path": "$this"
+            }
+          ],
+          "rules": "closed"
+        },
+        "type": [
+          {
+            "code": "Quantity"
+          }
+        ]
+      },
+      {
+        "id": "Observation.value[x]:valueQuantity",
+        "path": "Observation.value[x]",
+        "sliceName": "valueQuantity",
+        "min": 1,
         "type": [
           {
             "code": "Quantity"
@@ -95,52 +96,28 @@
         "mustSupport": false
       },
       {
-        "id": "Observation.valueQuantity.value",
-        "path": "Observation.valueQuantity.value",
+        "id": "Observation.value[x]:valueQuantity.value",
+        "path": "Observation.value[x].value",
         "min": 1,
-        "max": 1,
-        "type": [
-          {
-            "code": "decimal"
-          }
-        ],
         "mustSupport": true
       },
       {
-        "id": "Observation.valueQuantity.unit",
-        "path": "Observation.valueQuantity.unit",
+        "id": "Observation.value[x]:valueQuantity.unit",
+        "path": "Observation.value[x].unit",
         "min": 1,
-        "max": 1,
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
         "mustSupport": true
       },
       {
-        "id": "Observation.valueQuantity.system",
-        "path": "Observation.valueQuantity.system",
+        "id": "Observation.value[x]:valueQuantity.system",
+        "path": "Observation.value[x].system",
         "min": 1,
-        "max": 1,
-        "type": [
-          {
-            "code": "uri"
-          }
-        ],
         "fixedUri": "http://unitsofmeasure.org",
         "mustSupport": true
       },
       {
-        "id": "Observation.valueQuantity.code",
-        "path": "Observation.valueQuantity.code",
+        "id": "Observation.value[x]:valueQuantity.code",
+        "path": "Observation.value[x].code",
         "min": 1,
-        "max": 1,
-        "type": [
-          {
-            "code": "code"
-          }
-        ],
         "fixedCode": "%",
         "mustSupport": true
       }

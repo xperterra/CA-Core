@@ -3,7 +3,8 @@
   "id": "profile-diagnosticreportnote",
   "url": "http://hl7.org/fhir/ca/core/StructureDefinition/profile-diagnosticreportnote",
   "version": "0.0.0",
-  "name": "DiagnosticReport Profile for Report and Note Exchange",
+  "name": "DiagnosticReportNoteProfile",
+  "title": "Diagnostic Report for Report and Note Exchange Profile",
   "status": "draft",
   "publisher": "TBD",
   "description": "Proposed constraints and extensions on the Diagnostic Report Resource to support collection of diagnostic report information for reports and notes.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.",
@@ -15,19 +16,19 @@
   "differential": {
     "element": [
       {
-          "id": "DiagnosticReport",
-          "path": "DiagnosticReport",
-          "short": "DiagnosticReport for Report and Note Profile",
-          "definition": "The DiagnosticReport Profile is based upon the core FHIR DiagnosticReport Resource"
+        "id": "DiagnosticReport",
+        "path": "DiagnosticReport",
+        "short": "DiagnosticReport for Report and Note Profile",
+        "definition": "The DiagnosticReport Profile is based upon the core FHIR DiagnosticReport Resource"
       },
       {
         "id": "DiagnosticReport.status",
         "path": "DiagnosticReport.status",
         "mustSupport": true,
         "binding": {
-            "strength": "required",
-            "description": "Codes providing the status of a DiagnosticReport.",
-            "valueSet": "http://hl7.org/fhir/ValueSet/diagnostic-report-status"
+          "strength": "required",
+          "description": "Codes providing the status of a DiagnosticReport.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/diagnostic-report-status"
         }
       },
       {
@@ -37,9 +38,9 @@
         "min": 1,
         "mustSupport": true,
         "binding": {
-            "strength": "extensible",
-            "description": "The CA Core Diagnostic Report Cateogy Value Set is a 'starter set' of categories supported for fetching and Diagnostic Reports and Notes.",
-            "valueSet": "http://hl7.org/fhir/ca/core/ValueSet/ca-core-diagnosticreport-category"
+          "strength": "extensible",
+          "description": "The CA Core Diagnostic Report Cateogy Value Set is a 'starter set' of categories supported for fetching and Diagnostic Reports and Notes.",
+          "valueSet": "http://hl7.org/fhir/ca/core/ValueSet/ca-core-diagnosticreport-category"
         }
       },
       {
@@ -48,9 +49,9 @@
         "short": "CA Core Report Code",
         "mustSupport": true,
         "binding": {
-            "strength": "extensible",
-            "description": "CA Core Diagnostic Report and Note Codes",
-            "valueSet": "http://hl7.org/fhir/ca/core/ValueSet/ca-core-diagnosticreport-report-and-note-codes"
+          "strength": "extensible",
+          "description": "CA Core Diagnostic Report and Note Codes",
+          "valueSet": "http://hl7.org/fhir/ca/core/ValueSet/ca-core-diagnosticreport-report-and-note-codes"
         }
       },
       {
@@ -58,8 +59,6 @@
         "path": "DiagnosticReport.subject",
         "short": "The patient that the diagnostic report refers to",
         "min": 1,
-        "max": 1,
-        "mustSupport": true,
         "type": [
           {
             "code": "Reference",
@@ -67,13 +66,12 @@
               "http://hl7.org/fhir/ca/core/StructureDefinition/profile-patient"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "DiagnosticReport.encounter",
         "path": "DiagnosticReport.encounter",
-        "short": "",
-        "mustSupport": true,
         "type": [
           {
             "code": "Reference",
@@ -81,14 +79,14 @@
               "http://hl7.org/fhir/ca/core/StructureDefinition/profile-encounter"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "DiagnosticReport.effective[x]",
         "path": "DiagnosticReport.effective[x]",
         "short": "Time of report or note",
         "min": 1,
-        "max": 1,
         "mustSupport": true
       },
       {
@@ -101,7 +99,6 @@
         "id": "DiagnosticReport.performer",
         "path": "DiagnosticReport.performer",
         "short": "Responsible Diagnostic Service",
-        "mustSupport": true,
         "type": [
           {
             "code": "Reference",
@@ -115,7 +112,8 @@
               "http://hl7.org/fhir/ca/core/StructureDefinition/profile-organization"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "DiagnosticReport.media",

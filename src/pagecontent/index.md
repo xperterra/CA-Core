@@ -28,6 +28,6 @@ The profiles and extensions developed so far can be found [here](artifacts.html)
 
 Guidance, Capability Statements, and other have not yet been reviewed and added.
 
-----
+-----
 
 Contact: [Russ Buchanan](mailto:rbuchanan@gevityinc.com)

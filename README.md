@@ -1,4 +1,4 @@
-# CA-Core (test)
+# CA-Core
 
 ### Canadian Core Implementation Guide
 
