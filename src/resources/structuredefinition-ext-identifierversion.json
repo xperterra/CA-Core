@@ -1,70 +1,57 @@
 {
-  "resourceType": "StructureDefinition",
-  "id": "ext-identifierversion",
-  "url": "http://hl7.org/fhir/ca/core/StructureDefinition/ext-identifierversion",
-  "version": "0.0.0",
-  "name": "ExtensionIdentifierVersion",
-  "title": "Extension: Identifier Version",
-  "status": "draft",
-  "date": "2019-03-08",
-  "publisher": "TBD",
-  "description": "A version string indicating the currency/validity of an identifier",
-  "kind": "complex-type",
-  "abstract": false,
-  "context": [
-    {
-      "type": "element",
-      "expression": "Patient.identifier"
-    }
-  ],
-  "type": "Extension",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-  "derivation": "constraint",
-  "differential": {
-    "element": [
-      {
-        "id": "Extension",
-        "path": "Extension",
-        "definition": "A code indicating a specific version of an identifier credential",
-        "comment": "For example, a health card version number, credit card version number, etc.  Used to help verify the authenticity of a credential",
-        "max": "1",
-        "mustSupport": false
-      },
-      {
-        "id": "Extension.url",
-        "path": "Extension.url",
-        "fixedUri": "http://hl7.org/fhir/ca/core/StructureDefinition/ext-identifierversion"
-      },
-      {
-        "id": "Extension.value[x]",
-        "path": "Extension.value[x]",
-        "slicing": {
-          "discriminator": [
+    "resourceType": "StructureDefinition",
+    "id": "ext-identifierversion",
+    "url": "http://hl7.org/fhir/ca/core/StructureDefinition/ext-identifierversion",
+    "version": "0.0.0",
+    "name": "ExtensionIdentifierVersion",
+    "title": "Extension: Identifier Version",
+    "status": "draft",
+    "date": "2019-03-08",
+    "publisher": "TBD",
+    "description": "A version string indicating the currency/validity of an identifier",
+    "kind": "complex-type",
+    "abstract": false,
+    "context": [
+        {
+            "type": "element",
+            "expression": "Patient.identifier"
+        }
+    ],
+    "type": "Extension",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
             {
-              "type": "type",
-              "path": "$this"
+                "id": "Extension",
+                "path": "Extension",
+                "definition": "A code indicating a specific version of an identifier credential",
+                "comment": "For example, a health card version number, credit card version number, etc.  Used to help verify the authenticity of a credential",
+                "min": 0,
+                "max": "1",
+                "mustSupport": false
+            },
+            {
+                "id": "Extension.extension",
+                "path": "Extension.extension",
+                "max": "0"
+            },
+            {
+                "id": "Extension.url",
+                "path": "Extension.url",
+                "fixedUri": "http://hl7.org/fhir/ca/core/StructureDefinition/ext-identifierversion"
+            },
+            {
+                "id": "Extension.valueString",
+                "path": "Extension.valueString",
+                "type": [
+                    {
+                        "code": "string"
+                    }
+                ],
+                "min": 1,
+                "mustSupport": true
             }
-          ],
-          "rules": "closed"
-        },
-        "type": [
-          {
-            "code": "string"
-          }
         ]
-      },
-      {
-        "id": "Extension.value[x]:valueString",
-        "path": "Extension.value[x]",
-        "sliceName": "valueString",
-        "min": 1,
-        "type": [
-          {
-            "code": "string"
-          }
-        ],
-        "mustSupport": true
-      }
-    ]
-  }
+    }
 }

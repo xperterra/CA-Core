@@ -1,68 +1,52 @@
 {
-  "resourceType": "StructureDefinition",
-  "id": "ext-dateestimated",
-  "url": "http://hl7.org/fhir/ca/core/StructureDefinition/ext-dateestimated",
-  "version": "0.0.0",
-  "name": "ExtensionDateEstimatedFlag",
-  "title": "Extension: Date Estimated Flag",
-  "status": "draft",
-  "date": "2019-03-08",
-  "publisher": "TBD",
-  "description": "If true, indicates that information entered is an estimate and may not be precise",
-  "kind": "complex-type",
-  "abstract": false,
-  "context": [
-    {
-      "type": "element",
-      "expression": "DateTime"
-    }
-  ],
-  "type": "Extension",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
-  "derivation": "constraint",
-  "differential": {
-    "element": [
-      {
-        "id": "Extension",
-        "path": "Extension",
-        "short": "Information entered is is an estimate",
-        "definition": "If true, information entered may not be accurate or precise",
-        "isModifier": false
-      },
-      {
-        "id": "Extension.url",
-        "path": "Extension.url",
-        "fixedUri": "http://hl7.org/fhir/ca/core/StructureDefinition/ext-dateestimated"
-      },
-      {
-        "id": "Extension.value[x]",
-        "path": "Extension.value[x]",
-        "slicing": {
-          "discriminator": [
+    "resourceType": "StructureDefinition",
+    "id": "ext-dateestimated",
+    "url": "http://hl7.org/fhir/ca/core/StructureDefinition/ext-dateestimated",
+    "version": "0.0.0",
+    "name": "ExtensionDateEstimatedFlag",
+    "title": "Extension: Date Estimated Flag",
+    "status": "draft",
+    "date": "2019-03-08",
+    "publisher": "TBD",
+    "description": "If true, indicates that information entered is an estimate and may not be precise",
+    "kind": "complex-type",
+    "abstract": false,
+    "context": [
+        {
+            "type": "element",
+            "expression": "DateTime"
+        }
+    ],
+    "type": "Extension",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/Extension",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
             {
-              "type": "type",
-              "path": "$this"
+                "id": "Extension:estimated",
+                "path": "Extension",
+                "short": "Information entered is is an estimate",
+                "definition": "If true, information entered may not be accurate or precise",
+                "min": 0,
+                "max": "*",
+                "isModifier": false
+            },
+            {
+                "id": "Extension:estimated.url",
+                "path": "Extension.url",
+                "fixedUri": "http://hl7.org/fhir/ca/core/StructureDefinition/ext-dateestimated"
+            },
+            {
+                "id": "Extension:estimated.valueBoolean",
+                "path": "Extension.valueBoolean",
+                "min": 1,
+                "max": "1",
+                "type": [
+                    {
+                        "code": "boolean"
+                    }
+                ]
             }
-          ],
-          "rules": "closed"
-        },
-        "type": [
-          {
-            "code": "boolean"
-          }
         ]
-      },
-      {
-        "id": "Extension.value[x]:valueBoolean",
-        "path": "Extension.value[x]",
-        "sliceName": "valueBoolean",
-        "min": 1,
-        "type": [
-          {
-            "code": "boolean"
-          }
-        ]
-      }
-    ]
-  }
+    }
 }
