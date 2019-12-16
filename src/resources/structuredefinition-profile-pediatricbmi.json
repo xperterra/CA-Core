@@ -4,7 +4,6 @@
   "url": "http://hl7.org/fhir/ca/core/StructureDefinition/profile-pediatricbmi",
   "version": "0.0.0",
   "name": "PediatricBMI",
-  "title": "Pediatric BMI Profile",
   "status": "draft",
   "publisher": "TBD",
   "description": "Proposed constraints and extensions on the Observation Resource to support collection of pediatric BMI information.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.",
@@ -18,18 +17,18 @@
       {
         "id": "Observation",
         "path": "Observation",
-        "short": "Pediatric BMI Profile"
+        "label": "Pediatric BMI Profile"
       },
       {
         "id": "Observation.code",
         "path": "Observation.code",
-        "short": "BMI percentile per age and sex for youth 2-20"
+        "label": "BMI percentile per age and sex for youth 2-20"
       },
       {
         "id": "Observation.code.coding",
         "path": "Observation.code.coding",
         "min": 1,
-        "max": "1",
+        "max": 1,
         "mustSupport": false
       },
       {
@@ -46,28 +45,10 @@
         "fixedCode": "59576-9"
       },
       {
-        "id": "Observation.value[x]",
-        "path": "Observation.value[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "type",
-              "path": "$this"
-            }
-          ],
-          "rules": "closed"
-        },
-        "type": [
-          {
-            "code": "Quantity"
-          }
-        ]
-      },
-      {
-        "id": "Observation.value[x]:valueQuantity",
-        "path": "Observation.value[x]",
-        "sliceName": "valueQuantity",
+        "id": "Observation.valueQuantity",
+        "path": "Observation.valueQuantity",
         "min": 1,
+        "max": 1,
         "type": [
           {
             "code": "Quantity"
@@ -76,28 +57,49 @@
         "mustSupport": false
       },
       {
-        "id": "Observation.value[x]:valueQuantity.value",
-        "path": "Observation.value[x].value",
+        "id": "Observation.valueQuantity.value",
+        "path": "Observation.valueQuantity.value",
         "min": 1,
+        "max": 1,
+        "type": [
+          {
+            "code": "decimal"
+          }
+        ],
         "mustSupport": true
       },
       {
-        "id": "Observation.value[x]:valueQuantity.unit",
-        "path": "Observation.value[x].unit",
+        "id": "Observation.valueQuantity.unit",
+        "path": "Observation.valueQuantity.unit",
         "min": 1,
+        "type": [
+          {
+            "code": "string"
+          }
+        ],
         "mustSupport": true
       },
       {
-        "id": "Observation.value[x]:valueQuantity.system",
-        "path": "Observation.value[x].system",
+        "id": "Observation.valueQuantity.system",
+        "path": "Observation.valueQuantity.system",
         "min": 1,
+        "type": [
+          {
+            "code": "uri"
+          }
+        ],
         "fixedUri": "http://unitsofmeasure.org",
         "mustSupport": true
       },
       {
-        "id": "Observation.value[x]:valueQuantity.code",
-        "path": "Observation.value[x].code",
+        "id": "Observation.valueQuantity.code",
+        "path": "Observation.valueQuantity.code",
         "min": 1,
+        "type": [
+          {
+            "code": "code"
+          }
+        ],
         "fixedCode": "%",
         "mustSupport": true
       }

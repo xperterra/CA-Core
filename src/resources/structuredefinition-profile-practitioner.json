@@ -62,7 +62,7 @@
         "mustSupport": true
       },
       {
-        "id": "Practitioner.identifier.value",
+        "id": "Practitioner.identifier:PRN.value",
         "path": "Practitioner.identifier.value",
         "min": 1,
         "mustSupport": true,

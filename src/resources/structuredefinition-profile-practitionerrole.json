@@ -1,108 +1,141 @@
 {
-  "resourceType": "StructureDefinition",
-  "id": "profile-practitionerrole",
-  "url": "http://hl7.org/fhir/ca/core/StructureDefinition/profile-practitionerrole",
-  "version": "0.0.0",
-  "name": "PractitionerRoleProfile",
-  "title": "PractitionerRole Profile",
-  "status": "draft",
-  "date": "2019-03-29",
-  "publisher": "TBD",
-  "description": "Proposed constraints and extensions on the PractitionerRole Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.",
-  "kind": "resource",
-  "abstract": false,
-  "type": "PractitionerRole",
-  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
-  "derivation": "constraint",
-  "differential": {
-    "element": [
-      {
-        "id": "PractitionerRole",
-        "path": "PractitionerRole",
-        "short": "PractitionerRole Profile",
-        "definition": "The PractitionerRole Profile is based upon the core FHIR PractitionerRole Resource"
-      },
-      {
-        "id": "PractitionerRole.practitioner",
-        "path": "PractitionerRole.practitioner",
-        "short": "Practitioner that is able to provide the defined services for the organization.",
-        "min": 1,
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/ca/core/StructureDefinition/profile-practitioner"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "PractitionerRole.organization",
-        "path": "PractitionerRole.organization",
-        "short": "Organization where the practioner provides services",
-        "min": 1,
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/ca/core/StructureDefinition/profile-organization"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "PractitionerRole.code",
-        "path": "PractitionerRole.code",
-        "min": 1,
-        "max": "1",
-        "mustSupport": true,
-        "binding": {
-          "strength": "extensible"
-        }
-      },
-      {
-        "id": "PractitionerRole.specialty",
-        "path": "PractitionerRole.specialty",
-        "min": 1,
-        "max": "1",
-        "mustSupport": true,
-        "binding": {
-          "strength": "extensible"
-        }
-      },
-      {
-        "id": "PractitionerRole.location",
-        "path": "PractitionerRole.location",
-        "type": [
-          {
-            "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/ca/core/StructureDefinition/profile-location"
-            ]
-          }
-        ],
-        "mustSupport": true
-      },
-      {
-        "id": "PractitionerRole.telecom",
-        "path": "PractitionerRole.telecom",
-        "short": "Contact point",
-        "mustSupport": true
-      },
-      {
-        "id": "PractitionerRole.telecom.system",
-        "path": "PractitionerRole.telecom.system",
-        "min": 1,
-        "mustSupport": true
-      },
-      {
-        "id": "PractitionerRole.telecom.value",
-        "path": "PractitionerRole.telecom.value",
-        "min": 1,
-        "mustSupport": true
-      }
-    ]
-  }
+    "resourceType": "StructureDefinition",
+    "id": "profile-practitionerrole",
+    "url": "http://hl7.org/fhir/ca/core/StructureDefinition/profile-practitionerrole",
+    "version": "0.0.0",
+    "name": "PractitionerRoleProfile",
+    "title": "PractitionerRole Profile",
+    "status": "draft",
+    "date": "2019-03-29",
+    "publisher": "TBD",
+    "description": "Proposed constraints and extensions on the PractitionerRole Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.",
+    "kind": "resource",
+    "abstract": false,
+    "type": "PractitionerRole",
+    "baseDefinition": "http://hl7.org/fhir/StructureDefinition/PractitionerRole",
+    "derivation": "constraint",
+    "differential": {
+        "element": [
+            {
+                "id": "PractitionerRole",
+                "path": "PractitionerRole",
+                "short": "PractitionerRole Profile",
+                "definition": "The PractitionerRole Profile is based upon the core FHIR PractitionerRole Resource"
+            },
+            {
+                "id": "PractitionerRole.practitioner",
+                "path": "PractitionerRole.practitioner",
+                "short": "Practitioner that is able to provide the defined services for the organization",
+                "min": 1,
+                "max": "1",
+                "mustSupport": true,
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/ca/core/StructureDefinition/profile-practitioner"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "PractitionerRole.organization",
+                "path": "PractitionerRole.organization",
+                "short": "Organization where the practioner provides services",
+                "min": 1,
+                "max": "1",
+                "mustSupport": true,
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/ca/core/StructureDefinition/profile-organization"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "PractitionerRole.code",
+                "path": "PractitionerRole.code",
+                "short": "Roles which this practitioner may perform",
+                "min": 1,
+                "max": "1",
+                "mustSupport": true,
+                "binding": {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                            "valueString": "PractitionerRole"
+                        }
+                    ],
+                    "strength": "extensible",
+                    "valueSet": "http://hl7.org/fhir/ValueSet/practitioner-role"
+                }
+            },
+            {
+                "id": "PractitionerRole.specialty",
+                "path": "PractitionerRole.specialty",
+                "short": "Specific specialty of the practitioner",
+                "min": 1,
+                "max": "1",
+                "mustSupport": true,
+                "binding": {
+                    "extension": [
+                        {
+                            "url": "http://hl7.org/fhir/StructureDefinition/elementdefinition-bindingName",
+                            "valueString": "PractitionerSpecialty"
+                        }
+                    ],
+                    "strength": "extensible",
+                    "valueSet": "http://hl7.org/fhir/ValueSet/c80-practice-codes"
+                }
+            },
+            {
+                "id": "PractitionerRole.location",
+                "path": "PractitionerRole.location",
+                "short": "The location(s) at which this practitioner provides care",
+                "mustSupport": true,
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/ca/core/StructureDefinition/profile-location"
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "PractitionerRole.telecom",
+                "path": "PractitionerRole.telecom",
+                "short": "Contact point",
+                "mustSupport": true
+            },
+            {
+                "id": "PractitionerRole.telecom.system",
+                "path": "PractitionerRole.telecom.system",
+                "min": 1,
+                "max": "1",
+                "mustSupport": true
+            },
+            {
+                "id": "PractitionerRole.telecom.value",
+                "path": "PractitionerRole.telecom.value",
+                "min": 1,
+                "max": "1",
+                "mustSupport": true
+            },
+            {
+                "id": "PractitionerRole.endpoint",
+                "path": "PractitionerRole.endpoint",
+                "type": [
+                    {
+                        "code": "Reference",
+                        "targetProfile": [
+                            "http://hl7.org/fhir/StructureDefinition/Endpoint"
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
 }

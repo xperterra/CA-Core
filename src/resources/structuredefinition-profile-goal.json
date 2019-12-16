@@ -1,14 +1,14 @@
 {
   "resourceType": "StructureDefinition",
   "id": "profile-goal",
-  "meta": {
-    "lastUpdated": "2019-12-06T18:18:21.839+00:00"
+  "meta":{
+      "lastUpdated":"2019-12-06T18:18:21.839+00:00"
   },
   "url": "http://hl7.org/fhir/ca/core/StructureDefinition/profile-goal",
   "version": "0.0.0",
   "name": "GoalProfile",
   "status": "draft",
-  "date": "2019-12-06T18:18:20.332539+00:00",
+  "date":"2019-12-06T18:18:20.332539+00:00",
   "publisher": "TBD",
   "description": "Proposed constraints and extensions on the Goal Resource to support collection of diagnostic report information.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.",
   "kind": "resource",
@@ -19,18 +19,18 @@
   "differential": {
     "element": [
       {
-        "id": "Goal",
-        "path": "Goal",
-        "short": "Goal Profile",
-        "definition": "The Goal Profile is based upon the core FHIR Goal Resource"
+          "id": "Goal",
+          "path": "Goal",
+          "short": "Goal Profile",
+          "definition": "The Goal Profile is based upon the core FHIR Goal Resource"
       },
       {
         "id": "Goal.lifecycleStatus",
         "path": "Goal.lifecycleStatus",
         "mustSupport": true,
         "binding": {
-          "strength": "required",
-          "valueSet": "http://hl7.org/fhir/ValueSet/goal-status"
+            "strength": "required",
+            "valueSet": "http://hl7.org/fhir/ValueSet/goal-status"
         }
       },
       {
@@ -41,6 +41,7 @@
       {
         "id": "Goal.subject",
         "path": "Goal.subject",
+        "mustSupport": true,
         "type": [
           {
             "code": "Reference",
@@ -48,8 +49,7 @@
               "http://hl7.org/fhir/ca/core/StructureDefinition/profile-patient"
             ]
           }
-        ],
-        "mustSupport": true
+        ]
       },
       {
         "id": "Goal.target",
@@ -57,15 +57,27 @@
         "mustSupport": true
       },
       {
-        "id": "Goal.target.due[x]:dueDate",
-        "path": "Goal.target.due[x]",
-        "sliceName": "dueDate",
-        "type": [
-          {
-            "code": "date"
+          "id":"Goal.target.due[x]",
+          "path":"Goal.target.due[x]",
+          "slicing":{
+              "discriminator": [
+                  {
+                      "type":"type",
+                      "path":"$this"
+                  }
+              ]
           }
-        ],
-        "mustSupport": true
+      },
+      {
+          "id":"Goal.target.due[x]:dueDate",
+          "path":"Goal.target.due[x]",
+          "sliceName":"dueDate",
+          "type": [
+              {
+                  "code":"date"
+              }
+          ],
+          "mustSupport":true
       }
     ]
   }
