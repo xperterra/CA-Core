@@ -1,2 +1,0 @@
-## Security
-{{render:security}}

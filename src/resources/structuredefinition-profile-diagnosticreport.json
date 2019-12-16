@@ -4,6 +4,7 @@
   "url": "http://hl7.org/fhir/ca/core/StructureDefinition/profile-diagnosticreport",
   "version": "0.0.0",
   "name": "DiagnosticReportProfile",
+  "title": "Diagnostic Report Profile",
   "status": "draft",
   "publisher": "TBD",
   "description": "Proposed constraints and extensions on the Diagnostic Report Resource to support collection of diagnostic report information.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.",
@@ -15,25 +16,27 @@
   "differential": {
     "element": [
       {
-          "id": "DiagnosticReport",
-          "path": "DiagnosticReport",
-          "short": "DiagnosticReport Profile",
-          "definition": "The DiagnosticReport Profile is based upon the core FHIR DiagnosticReport Resource"
+        "id": "DiagnosticReport",
+        "path": "DiagnosticReport",
+        "short": "DiagnosticReport Profile",
+        "definition": "The DiagnosticReport Profile is based upon the core FHIR DiagnosticReport Resource"
       },
       {
         "id": "DiagnosticReport.status",
         "path": "DiagnosticReport.status",
         "mustSupport": true,
         "binding": {
-            "strength": "required",
-            "description": "Codes providing the status of a DiagnosticReport.",
-            "valueSet": "http://hl7.org/fhir/ValueSet/diagnostic-report-status"
+          "strength": "required",
+          "description": "Codes providing the status of a DiagnosticReport.",
+          "valueSet": "http://hl7.org/fhir/ValueSet/diagnostic-report-status"
         }
       },
       {
         "id": "DiagnosticReport.category",
         "path": "DiagnosticReport.category",
         "short": "Service Category",
+        "min": 1,
+        "max": "1",
         "patternCodeableConcept": {
           "coding": [
             {
@@ -42,9 +45,7 @@
             }
           ]
         },
-        "mustSupport": true,
-        "min": 1,
-        "max" : 1
+        "mustSupport": true
       },
       {
         "id": "DiagnosticReport.code",
@@ -52,9 +53,9 @@
         "short": "Laboratory Report Order Code",
         "mustSupport": true,
         "binding": {
-            "strength": "example",
-            "description": "LOINC Diagnostic Report Codes",
-            "valueSet": "http://hl7.org/fhir/ValueSet/report-codes"
+          "strength": "example",
+          "description": "LOINC Diagnostic Report Codes",
+          "valueSet": "http://hl7.org/fhir/ValueSet/report-codes"
         }
       },
       {
@@ -62,8 +63,6 @@
         "path": "DiagnosticReport.subject",
         "short": "The patient that the diagnostic report refers to",
         "min": 1,
-        "max": 1,
-        "mustSupport": true,
         "type": [
           {
             "code": "Reference",
@@ -71,14 +70,14 @@
               "http://hl7.org/fhir/ca/core/StructureDefinition/profile-patient"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "DiagnosticReport.effective[x]",
         "path": "DiagnosticReport.effective[x]",
         "short": "Specimen Collection dateTime or Period",
         "min": 1,
-        "max": 1,
         "mustSupport": true
       },
       {
@@ -86,14 +85,12 @@
         "path": "DiagnosticReport.issued",
         "short": "Date/Time this version of the DiagnosticReport was made available",
         "min": 1,
-        "max": 1,
         "mustSupport": true
       },
       {
         "id": "DiagnosticReport.performer",
         "path": "DiagnosticReport.performer",
         "short": "Responsible Diagnostic Service",
-        "mustSupport": true,
         "type": [
           {
             "code": "Reference",
@@ -107,13 +104,13 @@
               "http://hl7.org/fhir/ca/core/StructureDefinition/profile-organization"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "DiagnosticReport.result",
         "path": "DiagnosticReport.result",
         "short": "Result Observations referenced in the DiagnosticReport",
-        "mustSupport": true,
         "type": [
           {
             "code": "Reference",
@@ -121,7 +118,8 @@
               "http://hl7.org/fhir/ca/core/StructureDefinition/profile-results"
             ]
           }
-        ]
+        ],
+        "mustSupport": true
       },
       {
         "id": "DiagnosticReport.media",
