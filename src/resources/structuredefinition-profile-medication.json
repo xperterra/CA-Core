@@ -29,7 +29,7 @@
         "mustSupport": true,
         "binding": {
           "strength": "extensible",
-          "description": "Medicinal products for prescribing and dispensing in Canada",
+          "description": "Medicinal products for prescribing and dispensing in Canada. The use of the CCDD codes will be introduced in the future version.",
           "valueSet": "http://hl7.org/fhir/ca/core/ValueSet/prescriptionmedicinalproduct"
         }
       },
