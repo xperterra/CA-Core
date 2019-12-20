@@ -195,7 +195,7 @@
                 </tr>
                 <tr>
                     <td style="column-width:30%">
-                        <a href="extension-ext-ethnicity.html">
+                        <a href="ext-ethnicity.html">
                         •  Ethnicity</a>
                     </td>
                     <td>A code classifying the person's ethnic group or ethnicity as the category of people who identify with each other, usually on the basis of a presumed common genealogy or ancestry or on other similarities.</td>
@@ -246,8 +246,8 @@
                 </tr>
                 <tr>
                     <td style="column-width:30%">
-                        <a href="valueset-ethnicity.html">
-                        •  Ethnicity</a>
+                        <a href="valueset-ethnicity-code.html">
+                        •  Ethnicity Code</a>
                     </td>
                     <td>Codes representing a self-reported ethnic group. This should not be confused with citizenship or nationality.</td>
                 </tr>

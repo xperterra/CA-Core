@@ -4,7 +4,7 @@
   "url": "http://hl7.org/fhir/ca/core/StructureDefinition/ext-ethnicity",
   "version": "0.1.0",
   "name": "ExtensionEthnicity",
-  "title": "Extension: ethnicity",
+  "title": "Extension: Ethnicity",
   "status": "draft",
   "date": "2019-12-18",
   "publisher": "Canada Health Infoway",
