@@ -1,13 +1,13 @@
 {
 	"resourceType": "ValueSet",
-	"id": "ethnicity-code",
+	"id": "ethnicitycode",
 	"url": "https://fhir.infoway-inforoute.ca/ValueSet/ethnicitycode",
 	"version": "20190930",
 	"name": "EthnicityCode",
 	"status": "draft",
 	"date": "2019-09-30",
 	"publisher": "Canada Health Infoway",
-	"description": "Represents the self-reported ethnic group. This should not be confused with citizenship or nationality.",
+	"description": "Codes representing a self-reported ethnic group. This should not be confused with citizenship or nationality.",
 	"jurisdiction": [
 		{
 			"coding": [
@@ -23,7 +23,7 @@
 		"include": [
 			{
 				"system": "http://snomed.info/sct",
-				"version": "20190930",
+				"version": "20190731",
 				"concept": [
 					{
 						"code": "88790004",
