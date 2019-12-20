@@ -1,6 +1,6 @@
 {
 	"resourceType": "ValueSet",
-	"id": "ca-ethnicity-category",
+	"id": "ethnicity-code",
 	"url": "https://fhir.infoway-inforoute.ca/ValueSet/ethnicitycode",
 	"version": "20190930",
 	"name": "EthnicityCode",

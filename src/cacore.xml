@@ -62,15 +62,6 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/ext-servicelanguage"/>
-      </reference>
-      <name value="ServiceLanguage"/>
-      <description value="Indentifies languages that that services are provided in."/>
-      <exampleBoolean value="false"/>
-      <groupingId value="extensions"/>
-    </resource>
-    <resource>
-      <reference>
         <reference value="StructureDefinition/ext-dataabsentreason"/>
       </reference>
       <name value="Data Absent Reason"/>
@@ -80,10 +71,28 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/ext-ethnicity"/>
+      </reference>
+      <name value="Ethnicity"/>
+      <description value="A code classifying the person's ethnic group or ethnicity as the category of people who identify with each other, usually on the basis of a presumed common genealogy or ancestry or on other similarities."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="extensions"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/ext-dateestimated"/>
       </reference>
       <name value="Date Estimated Flag"/>
       <description value="If true, indicates that information entered is an estimate and may not be precise."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="extensions"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/ext-servicelanguage"/>
+      </reference>
+      <name value="ServiceLanguage"/>
+      <description value="Indentifies languages that that services are provided in."/>
       <exampleBoolean value="false"/>
       <groupingId value="extensions"/>
     </resource>
@@ -318,6 +327,15 @@
       </reference>
       <name value="Birth Sex"/>
       <description value="Codes for documenting sex at birth. (Replicates the birthsex ValueSet in US-Core-R4 for interoperability.)"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="terminology"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/ethnicitycode"/>
+      </reference>
+      <name value="Ethnicity Code"/>
+      <description value="Codes representing a self-reported ethnic group. This should not be confused with citizenship or nationality."/>
       <exampleBoolean value="false"/>
       <groupingId value="terminology"/>
     </resource>
