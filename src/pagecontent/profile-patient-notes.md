@@ -68,7 +68,7 @@ URIs used with this identifier type:
 * Canada Royal Canadian Mounted Police (RCMP) health card number - https://fhir.infoway-inforoute.ca/NamingSystem/ca-royal-mounted-police-health-id
 * Canada Armed Forces health card number - https://fhir.infoway-inforoute.ca/NamingSystem/ca-armed-forces-health-id 
 
-**Extension**
+**Version Code**
 The [Version Code](http://hl7.org/fhir/ca/core/StructureDefinition/ext-identifierversion) extension is added to indicate the currency/validity of an identifier.
 
 The rational is that the version code is current captured separately from the JHN because, in Ontario at least, the JHN is a stable identifier whereas the version code changes over time. 
@@ -123,7 +123,7 @@ The Canadian Postal Code is a six-character uniformly structured and SHOULD be i
 A hyphen SHOULD NOT be used (example of UNacceptable format: T0L-1K0).
 
 ### Preferred 
-The [Preferred](http://hl7.org/fhir/StructureDefinition/iso21090-preferred) is the FHIR standard defined extension used in Patient.address is a flag denoting whether parent address item is preferred.
+The [Preferred](http://hl7.org/fhir/StructureDefinition/iso21090-preferred) is the FHIR standard defined extension used in Patient.address as a flag denoting whether parent address item is preferred.
 
 ### No Fixed Address
 The [No Fixed Address](http://hl7.org/fhir/ca/core/StructureDefinition/no-fixed-address) extension applies to the Patient.address to indicate that there is an assertion that there is no fixed address (e.g., homeless).
