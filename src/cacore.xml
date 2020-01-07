@@ -89,19 +89,28 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/ext-servicelanguage"/>
+        <reference value="StructureDefinition/ext-identifierversion"/>
       </reference>
-      <name value="ServiceLanguage"/>
-      <description value="Indentifies languages that that services are provided in."/>
+      <name value="Identifier Version"/>
+      <description value="A version string indicating the currency/validity of an identifier."/>
       <exampleBoolean value="false"/>
       <groupingId value="extensions"/>
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/ext-identifierversion"/>
+        <reference value="StructureDefinition/ext-nofixedaddress"/>
       </reference>
-      <name value="Identifier Version"/>
-      <description value="A version string indicating the currency/validity of an identifier."/>
+      <name value="No Fixed Address"/>
+      <description value="This extension applies to the Address datatype and indicates that there is an assertion that there is no fixed address."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="extensions"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/ext-servicelanguage"/>
+      </reference>
+      <name value="Service Language"/>
+      <description value="Indentifies languages that that services are provided in."/>
       <exampleBoolean value="false"/>
       <groupingId value="extensions"/>
     </resource>
