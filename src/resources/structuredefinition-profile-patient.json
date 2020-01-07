@@ -386,7 +386,7 @@
           {
             "code": "Extension",
             "profile": [
-              "http://hl7.org/fhir/ca/core/StructureDefinition/no-fixed-address"
+              "http://hl7.org/fhir/ca/core/StructureDefinition/ext-nofixedaddress"
             ]
           }
         ]
