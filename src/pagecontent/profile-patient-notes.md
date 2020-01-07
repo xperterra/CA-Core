@@ -43,7 +43,7 @@ URIs used with this identifier type:
 * Interim Federal Health Program identifier - https://fhir.infoway-inforoute.ca/NamingSystem/ca-interim-federal-health-id
 
 **Example:**
-```
+```json
 {
   "type": {
     "coding": [
@@ -77,7 +77,7 @@ The rational is that the version code is current captured separately from the JH
 - Question: would specific examples like this be helpful to illustrate Canadian requirements?
 
 **Example:**
-```
+```json
 {
   "type": {
     "coding": [
@@ -132,4 +132,3 @@ The [No Fixed Address](http://hl7.org/fhir/ca/core/StructureDefinition/no-fixed-
 The binding for this element is [extensible](https://www.hl7.org/fhir/terminologies.html#extensible) meaning that to be conformant, codes in this element SHALL be from the specified value set if any of the codes within the value set can apply to the concept being communicated.
 
 Systems can send additional codes (Stats Canada, SNOMED CT, etc.) but can only do that if they also send the relevant HL7-assigned codes.
-
