@@ -1,6 +1,6 @@
 {
   "resourceType": "StructureDefinition",
-  "id": "ca-core-profile-patient",
+  "id": "profile-patient",
   "url": "http://hl7.org/fhir/ca/core/StructureDefinition/profile-patient",
   "version": "0.1.0",
   "name": "PatientProfile",
@@ -9,7 +9,6 @@
   "date": "2020-01-07",
   "publisher": "Canada Health Infoway",
   "description": "Proposed constraints and extensions on the Patient Resource",
-  "fhirVersion": "4.0.0",
   "kind": "resource",
   "abstract": false,
   "type": "Patient",
