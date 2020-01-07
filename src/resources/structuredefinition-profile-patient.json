@@ -203,7 +203,7 @@
         "id": "Patient.identifier:JPID",
         "path": "Patient.identifier",
         "sliceName": "JPID",
-        "short": "Federal Patient identifiers",
+        "short": "Jurisdictional Person Identification",
         "definition": "Federal patient and person identifiers used by all jurisdictions across Canada",
         "mustSupport": false
       },
