@@ -1,6 +1,7 @@
 <!--- Text entered into this file will appear at the top of the profiles page before the Formal Views of the profile content. -->
 # CA Core Patient Profile
 This Patient profile sets minimum expectations for the Patient resource to record, search and fetch demographics and other administrative information about an individual receiving care or other health-related services.
+
 Since not all concepts are included within the base FHIR Patient resource, this profile defines core localisation concepts for use in an Canadian context.
 
 ## Differences from US Core
@@ -8,14 +9,15 @@ Since not all concepts are included within the base FHIR Patient resource, this 
 
 Key differences from [USCoreR4 Patient](https://build.fhir.org/ig/HL7/US-Core-R4/StructureDefinition-us-core-patient.html):
 
-- Removed US Race (no Canadian requirement)
-- Added slice to Patient.identifier
-- Added extensions to Patient.address
-- Retained FHIR default ValueSet instead of US Simple-Language (some existing Canadian specs appear to use full http://tools.ietf.org/html/bcp47)
+* Removed US Race (no Canadian requirement)
+* Added slice and extensions to Patient.identifier
+* Added extensions to Patient.address
+* Retained FHIR default ValueSet instead of US Simple-Language (some existing Canadian specs appear to use full http://tools.ietf.org/html/bcp47)
 
 ## Mandatory Data Elements
 All elements or attributes defined in FHIR have cardinality as part of their definition - a minimum number of required appearances and a maximum number.
 Most elements have a minimum cardinality of 0, which means that they may be missing from a resource when it is exchanged between systems. 
+
 Canadian Core Patient Profile defines following elements with minimum cardinality of 1 or as mandatory (i.e data MUST be present). 
 
 **Each Patient must have:**
@@ -26,6 +28,7 @@ In situations where the minimum cardinality of an element or attribute is 1 and 
 
 ## Must Support Data Elements
 Some elements are labeled as MustSupport meaning that implementations that produce or consume resources SHALL provide "support" for the element in some meaningful way (see [Must Support](https://build.fhir.org/ig/scratch-fhir-profiles/CA-Core/general-guidance.html#must-support) definition).
+
 Following elements are marked as Must Support in the Canadian Patient profile to aid record matching in databases with many pediatric records.
 
 **Must Support elements:**
