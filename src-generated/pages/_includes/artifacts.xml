@@ -216,17 +216,24 @@
 </tr>
 <tr>
 <td style="column-width:30%">
-<a href="extension-ext-servicelanguage.html">
-                        •  ServiceLanguage</a>
-</td>
-<td>Indentifies languages that that services are provided in.</td>
-</tr>
-<tr>
-<td style="column-width:30%">
 <a href="extension-ext-identifierversion.html">
                         •  Identifier Version</a>
 </td>
 <td>A version string indicating the currency/validity of an identifier.</td>
+</tr>
+<tr>
+<td style="column-width:30%">
+<a href="extension-ext-nofixedaddress.html">
+                        •  No Fixed Address</a>
+</td>
+<td>This extension applies to the Address datatype and indicates that there is an assertion that there is no fixed address.</td>
+</tr>
+<tr>
+<td style="column-width:30%">
+<a href="extension-ext-servicelanguage.html">
+                        •  Service Language</a>
+</td>
+<td>Indentifies languages that that services are provided in.</td>
 </tr>
 </tbody>
 </table>

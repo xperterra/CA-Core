@@ -6,7 +6,7 @@
   "name": "PatientProfile",
   "title": "Patient Profile",
   "status": "draft",
-  "date": "2019-12-18",
+  "date": "2020-01-07",
   "publisher": "Canada Health Infoway",
   "description": "Proposed constraints and extensions on the Patient Resource",
   "kind": "resource",
@@ -56,45 +56,6 @@
         "mustSupport": false
       },
       {
-        "id": "Patient.extension:birthsex.url",
-        "path": "Patient.extension.url",
-        "min": 1,
-        "fixedUri": "http://hl7.org/fhir/ca/core/StructureDefinition/ext-patientbirthsex"
-      },
-      {
-        "id": "Patient.extension:birthsex.value[x]:valueCoding",
-        "path": "Patient.extension.value[x]",
-        "sliceName": "valueCoding",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ],
-        "binding": {
-          "strength": "example",
-          "description": "A collection of codes specifying sex assigned at birth",
-          "valueSet": "http://hl7.org/fhir/ca/core/ValueSet/birthsex"
-        }
-      },
-      {
-        "id": "Patient.extension:birthsex.value[x]:valueCoding.system",
-        "path": "Patient.extension.value[x].system",
-        "min": 1
-      },
-      {
-        "id": "Patient.extension:birthsex.value[x]:valueCoding.code",
-        "path": "Patient.extension.value[x].code",
-        "min": 1
-      },
-      {
-        "id": "Patient.extension:birthsex.value[x]:valueCoding.display",
-        "path": "Patient.extension.value[x].display",
-        "short": "Optional description of the sex at birth code",
-        "definition": "Plain text representation of the sex at birth concept"
-      },
-      {
         "id": "Patient.extension:ethnicity",
         "path": "Patient.extension",
         "sliceName": "ethnicity",
@@ -130,77 +91,6 @@
             "comment": "This CDA R2 SDTC ethnicGroupCode extension is used to record additional ethnicity groups for the recordTarget or subjectPerson"
           }
         ]
-      },
-      {
-        "id": "Patient.extension:ethnicity.url",
-        "path": "Patient.extension.url",
-        "min": 1,
-        "fixedUri": "http://hl7.org/fhir/ca/core/StructureDefinition/ext-ethnicity"
-      },
-      {
-        "id": "Patient.extension:ethnicity.value[x]:valueCoding",
-        "path": "Patient.extension.value[x]",
-        "sliceName": "valueCoding",
-        "definition": "Concepts classifying the person into a named category of humans sharing common history, traits, geographical origin or nationality",
-        "min": 1,
-        "max": "1",
-        "type": [
-          {
-            "code": "Coding"
-          }
-        ],
-        "example": [
-          {
-            "label": "Example of the Ethnicity extension",
-            "valueCoding": {
-              "system": "http://snomed.info/sct",
-              "code": "733446001",
-              "display": "Canadian (ethnic group)"
-            }
-          }
-        ],
-        "binding": {
-          "strength": "preferred",
-          "description": "One of [self-reported ethnic group codes](https://tgateway.infoway-inforoute.ca/vs/ethnicitycode) representing the ethnicity concept and should not be confused with citizenship or nationality.",
-          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/ethnicitycode"
-        },
-        "mapping": [
-          {
-            "identity": "HL7v2",
-            "map": "PID.22 [Ethnic Group]",
-            "comment": "This field further defines the patient's ancestry.  Refer to User-defined Table 0189 - Ethnic Group in Chapter 2C, Code Tables, for suggested values."
-          },
-          {
-            "identity": "rim",
-            "map": "Person.ethnicGroupCode",
-            "comment": "A code classifying the person into a named category of humans sharing a common real or presumed heritage"
-          },
-          {
-            "identity": "CDA",
-            "map": "/ClinicalDocument/recordTarget/patientRole/patient/sdtc:ethnicGroupCode",
-            "comment": "This CDA R2 SDTC ethnicGroupCode extension is used to record additional ethnicity groups for the recordTarget or subjectPerson"
-          }
-        ]
-      },
-      {
-        "id": "Patient.extension:ethnicity.value[x]:valueCoding.system",
-        "path": "Patient.extension.value[x].system",
-        "short": "Identity of the terminology system",
-        "comment": "Expected URI is one of the following: SNOMED CT International (http://snomed.info/sct) or SNOMED CT CA Edition (https://fhir.infoway-inforoute.ca/CodeSystem/snomedctcaextension)",
-        "min": 1
-      },
-      {
-        "id": "Patient.extension:ethnicity.value[x]:valueCoding.code",
-        "path": "Patient.extension.value[x].code",
-        "short": "Code defining ethnicity concept",
-        "definition": "One of [self-reported ethnic group codes](https://tgateway.infoway-inforoute.ca/vs/ethnicitycode) representing the ethnicity concept and should not be confused with citizenship or nationality.",
-        "min": 1
-      },
-      {
-        "id": "Patient.extension:ethnicity.value[x]:valueCoding.display",
-        "path": "Patient.extension.value[x].display",
-        "short": "Optional description of the ethnicity code",
-        "definition": "Plain text representation of the ethnicity concept"
       },
       {
         "id": "Patient.identifier",
@@ -255,27 +145,6 @@
         "path": "Patient.identifier",
         "sliceName": "PPN",
         "short": "Canada Passport Number",
-        "example": [
-          {
-            "label": "Canada Passport Number identifier example",
-            "valueIdentifier": {
-              "type": {
-                "coding": [
-                  {
-                    "system": "http://terminology.hl7.org/CodeSystem/v2-0203",
-                    "code": "PPN"
-                  }
-                ]
-              },
-              "system": "https://fhir.infoway-inforoute.ca/NamingSystem/ca-passport-number",
-              "value": "AB123456",
-              "period": {
-                "start": "2005-05-11",
-                "end": "2015-05-11"
-              }
-            }
-          }
-        ],
         "mustSupport": false
       },
       {
@@ -312,7 +181,7 @@
         "id": "Patient.identifier:JPID",
         "path": "Patient.identifier",
         "sliceName": "JPID",
-        "short": "Federal Patient identifiers",
+        "short": "Jurisdictional Person Identification",
         "definition": "Federal patient and person identifiers used by all jurisdictions across Canada",
         "mustSupport": false
       },
@@ -506,28 +375,19 @@
         ]
       },
       {
-        "id": "Patient.address.extension:preferred.url",
-        "path": "Patient.address.extension.url",
-        "fixedUri": "http://hl7.org/fhir/StructureDefinition/iso21090-preferred"
-      },
-      {
-        "id": "Patient.address.extension.value[x]",
-        "path": "Patient.address.extension.value[x]",
-        "slicing": {
-          "discriminator": [
-            {
-              "type": "type",
-              "path": "$this"
-            }
-          ]
-        },
-        "definition": "Flag denoting whether address item is preferred",
-        "comment": "A person may have more than one address and indicate the preferred address to contact",
-        "min": 1,
+        "id": "Patient.address.extension:no-fixed-address",
+        "path": "Patient.address.extension",
+        "sliceName": "noFixedAddress",
+        "short": "No Fixed Address indicator",
+        "definition": "Flag indicating that there is an assertion that there is no fixed address",
+        "min": 0,
         "max": "1",
         "type": [
           {
-            "code": "boolean"
+            "code": "Extension",
+            "profile": [
+              "http://hl7.org/fhir/ca/core/StructureDefinition/no-fixed-address"
+            ]
           }
         ]
       }
