@@ -13,7 +13,7 @@ A unique number assigned to the document affirming that a person is a citizen of
 URI to use with this identifier type: https://fhir.infoway-inforoute.ca/NamingSystem/ca-passport-number
 
 **Example:**
-```
+```json
 {
   "type": {
     "coding": [
