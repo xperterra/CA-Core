@@ -69,7 +69,7 @@ URIs used with this identifier type:
 * Canada Armed Forces health card number - https://fhir.infoway-inforoute.ca/NamingSystem/ca-armed-forces-health-id 
 
 **Extension**
-The (Version Code](http://hl7.org/fhir/ca/core/StructureDefinition/ext-identifierversion) extension is added to indicate the currency/validity of an identifier.
+The [Version Code](http://hl7.org/fhir/ca/core/StructureDefinition/ext-identifierversion) extension is added to indicate the currency/validity of an identifier.
 
 The rational is that the version code is current captured separately from the JHN because, in Ontario at least, the JHN is a stable identifier whereas the version code changes over time. 
 - The working assumption is that it is useful to have this stable identifier but not all of the Ontario specs reviewed stored it as a separate field.  In one case, it appears to be an Patient.identifier.coding.value instead of the identifier ...
