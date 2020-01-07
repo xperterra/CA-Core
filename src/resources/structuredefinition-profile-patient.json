@@ -146,27 +146,6 @@
         "path": "Patient.identifier",
         "sliceName": "PPN",
         "short": "Canada Passport Number",
-        "example": [
-          {
-            "label": "Canada Passport Number identifier example",
-            "valueIdentifier": {
-              "type": {
-                "coding": [
-                  {
-                    "system": "http://hl7.org/fhir/ValueSet/identifier-type",
-                    "code": "PPN"
-                  }
-                ]
-              },
-              "system": "https://fhir.infoway-inforoute.ca/NamingSystem/ca-passport-number",
-              "value": "AB123456",
-              "period": {
-                "start": "2005-05-11",
-                "end": "2015-05-11"
-              }
-            }
-          }
-        ],
         "mustSupport": false
       },
       {
