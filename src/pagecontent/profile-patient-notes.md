@@ -1,6 +1,6 @@
 <!--- Text entered into this file will appear at the bottome of the profiles page after the Formal Views of the profile content. -->
 ## Identifiers
-Mutiple individual healthcare identifiers may be provded in Patient.identifier element. 
+Mutiple individual healthcare identifiers may be provded in Patient.identifier element.
 
 However, to support particular types of federal patient and person health numbers used by all jurisdictions across Canada following optional types are defined to uniquely identifying patients:
 * Canadian Passport Number
@@ -8,7 +8,7 @@ However, to support particular types of federal patient and person health number
 * Jurisdictional Health Number
 
 ### Canadian Passport Number (PPN)
-A unique number assigned to the document affirming that a person is a citizen of Canada. 
+A unique number assigned to the document affirming that a person is a citizen of Canada.
 
 URI to use with this identifier type: https://fhir.infoway-inforoute.ca/NamingSystem/ca-passport-number
 
@@ -33,7 +33,7 @@ URI to use with this identifier type: https://fhir.infoway-inforoute.ca/NamingSy
 ```
 
 ### Jurisdictional Patient Identifier Number (JPID)
-This patient identifier type identifies a number issued in Canada to administer various government programs. 
+This patient identifier type identifies a number issued in Canada to administer various government programs.
 
 URIs used with this identifier type:
 * Canada, Social Insurance Number (SIN) - https://fhir.infoway-inforoute.ca/NamingSystem/ca-social-insurance-number
@@ -63,16 +63,16 @@ URIs used with this identifier type:
 This patient identifier type identifies a number issued in Canada to let a patient to be recognized for services and stay connected to related support programs.
 
 URIs used with this identifier type:
-* Canada Veteran's Affairs health card number - https://fhir.infoway-inforoute.ca/NamingSystem/ca-veterans-affairs-health-id 
+* Canada Veteran's Affairs health card number - https://fhir.infoway-inforoute.ca/NamingSystem/ca-veterans-affairs-health-id
 * Canada Correctional Service health card number - https://fhir.infoway-inforoute.ca/NamingSystem/ca-correctional-service-health-id
 * Canada Royal Canadian Mounted Police (RCMP) health card number - https://fhir.infoway-inforoute.ca/NamingSystem/ca-royal-mounted-police-health-id
-* Canada Armed Forces health card number - https://fhir.infoway-inforoute.ca/NamingSystem/ca-armed-forces-health-id 
+* Canada Armed Forces health card number - https://fhir.infoway-inforoute.ca/NamingSystem/ca-armed-forces-health-id
 
 **Version Code**
 
-The [Version Code](extension-ext-identifierversion.html) extension is added to indicate the currency/validity of an identifier.
+The [Version Code](https://build.fhir.org/ig/scratch-fhir-profiles/CA-Core/extension-ext-identifierversion.html) extension is added to indicate the currency/validity of an identifier.
 
-The rational is that the version code is current captured separately from the JHN because, in Ontario at least, the JHN is a stable identifier whereas the version code changes over time. 
+The rational is that the version code is current captured separately from the JHN because, in Ontario at least, the JHN is a stable identifier whereas the version code changes over time.
 - The working assumption is that it is useful to have this stable identifier but not all of the Ontario specs reviewed stored it as a separate field.  In one case, it appears to be an Patient.identifier.coding.value instead of the identifier ...
 - Example JHN and Patient Information from [Ontario Health Care Validation Reference Manual](http://www.health.gov.on.ca/english/providers/pub/ohip/ohipvalid_manual/ohipvalid_manual.pdf)
 - Question: would specific examples like this be helpful to illustrate Canadian requirements?
@@ -102,7 +102,7 @@ Many systems and organizations only provide a single attribute to represent all 
 The FHIR Specification provides [guidance](https://www.hl7.org/fhir/patient.html#gender) and background for representing patient gender.
 
 In addition to that Canadian Patient profile defines following extensions:
-* **Gender Identity** - an indication from the patient about what gender they consider themselves to be. 
+* **Gender Identity** - an indication from the patient about what gender they consider themselves to be.
 * **Sex assigned at Birth** - the sex assigned at birth, as documented on the birth registration.
 * **Preferred Pronoun** - an indication from the patient about what pronoun to use in correspondence.
 
@@ -119,15 +119,15 @@ The Patient profile is provided for use in a Canadian context where some constra
 ### Canadian postal code
 If an address in the Patient resource instance represents Canadian address, it SHOULD follow Canadian postal code format.
 
-The Canadian Postal Code SHOULD be a six-character uniformly structured uppercase alphanumeric code in the form of "ANA NAN", where "A" represents an alphabetic character and "N" represents a numeric character, with one space between the first three and the last three characters. 
+The Canadian Postal Code SHOULD be a six-character uniformly structured uppercase alphanumeric code in the form of "ANA NAN", where "A" represents an alphabetic character and "N" represents a numeric character, with one space between the first three and the last three characters.
 
 A hyphen SHOULD NOT be used (example of UNacceptable format: T0L-1K0).
 
-### Preferred 
+### Preferred
 The Patient.address MAY have a [Preferred](http://hl7.org/fhir/StructureDefinition/iso21090-preferred) extension. This is the FHIR standard defined extension used as a flag denoting whether parent address item is preferred.
 
 ### No Fixed Address
-The Patient.address MAY have a [No Fixed Address](extension-ext-nofixedaddress.html) extension. This extension is to indicate that there is an assertion that there is no fixed address (e.g., homeless).
+The Patient.address MAY have a [No Fixed Address](https://build.fhir.org/ig/scratch-fhir-profiles/CA-Core/extension-ext-nofixedaddress.html) extension. This extension is to indicate that there is an assertion that there is no fixed address (e.g., homeless).
 
 ## Marital Status
 The binding for the Patient.maritalStatus element is [extensible](https://www.hl7.org/fhir/terminologies.html#extensible) meaning that to be conformant, codes in this element SHALL be from the specified value set if any of the codes within the value set can apply to the concept being communicated.
