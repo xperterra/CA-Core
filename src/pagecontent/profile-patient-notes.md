@@ -70,7 +70,7 @@ URIs used with this identifier type:
 
 **Version Code**
 
-The [Version Code](extension-ext-identifierversion.html) extension is added to indicate the currency/validity of an identifier.
+The [Version Code](https://build.fhir.org/ig/scratch-fhir-profiles/CA-Core/extension-ext-identifierversion.html) extension is added to indicate the currency/validity of an identifier.
 
 The rational is that the version code is current captured separately from the JHN because, in Ontario at least, the JHN is a stable identifier whereas the version code changes over time.
 - The working assumption is that it is useful to have this stable identifier but not all of the Ontario specs reviewed stored it as a separate field.  In one case, it appears to be an Patient.identifier.coding.value instead of the identifier ...
