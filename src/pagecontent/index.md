@@ -22,12 +22,13 @@ The following principles were applied when creating the profiles:
   - reduce developer / vendor effort to adapt to Canadian requirements
 - *Only* impose constraints when strictly necessary
 
-### Content
+### CA Core Profiles
 
-The profiles and extensions developed so far can be found [here](artifacts.html).  
+The list of CA Core Profiles can be found [**here**](artifacts.html). 
+
+Each profile defines the minimum mandatory elements, extensions and terminology requirements that MUST be present. For each profile, requirements and guidance are given in a simple narrative summary. A formal hierarchical table that presents a logical view of the content in both a differential and snapshot view is also provided along with references to appropriate terminologies and examples.
 
 Guidance, Capability Statements, and other have not yet been reviewed and added.
 
 -----
-
 Contact: [Russ Buchanan](mailto:rbuchanan@gevityinc.com)
