@@ -212,15 +212,7 @@
     </div>
   </div>
   <p>&#160;</p>
-  <p>Other representations of profile: <a href="{{[id]}}.sch">Schematron</a>
-  </p>
-  <a name="tx"> </a>
-  <h3 id="tx">Terminology Bindings</h3>
-  {%include StructureDefinition-{{[id]}}-tx.xhtml%}
-
-  <a name="inv"> </a>
-  <h3 id="inv">Constraints</h3>
-  {%include StructureDefinition-{{[id]}}-inv.xhtml%}
+  <p>Other representations of profile: <a href="{{[id]}}.sch">Schematron</a></p>
 
   {% assign notes = site.data.pages[page.path].notes %}
   {% if notes != null %}
@@ -237,6 +229,14 @@
   </div>
   {% endif %}
   {% endif %}
+
+  <a name="tx"> </a>
+  <h3 id="tx">Terminology Bindings</h3>
+  {%include StructureDefinition-{{[id]}}-tx.xhtml%}
+
+  <a name="inv"> </a>
+  <h3 id="inv">Constraints</h3>
+  {%include StructureDefinition-{{[id]}}-inv.xhtml%}
 
 </div>
 {% assign includetabscripts = 'true' %}
