@@ -62,7 +62,24 @@ URIs used with this identifier type:
 ### Jurisdictional Health Number (JHN)
 This patient identifier type identifies a number issued in Canada to let a patient to be recognized for services and stay connected to related support programs.
 
-URIs used with this identifier type:
+Following URIs are registered to identify health numbers for provinces and territories:
+* Alberta - https://fhir.infoway-inforoute.ca/NamingSystem/ca-ab-patient-healthcare-id
+* British Columbia - https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id
+* Manitoba - https://fhir.infoway-inforoute.ca/NamingSystem/ca-mb-patient-healthcare-id
+* New Brunswick - https://fhir.infoway-inforoute.ca/NamingSystem/ca-nb-patient-healthcare-id
+* Newfoundland and Labrador - https://fhir.infoway-inforoute.ca/NamingSystem/ca-nl-patient-healthcare-id
+* Northwest Terrirories - https://fhir.infoway-inforoute.ca/NamingSystem/ca-nt-patient-healthcare-id
+* Nova Scotia - https://fhir.infoway-inforoute.ca/NamingSystem/ca-ns-patient-healthcare-id
+* Nunavut - https://fhir.infoway-inforoute.ca/NamingSystem/ca-nu-patient-healthcare-id
+* Ontario - https://fhir.infoway-inforoute.ca/NamingSystem/ca-on-patient-hcn
+* Prince Edward Island - https://fhir.infoway-inforoute.ca/NamingSystem/ca-pe-patient-healthcare-id
+* Quebec - https://fhir.infoway-inforoute.ca/NamingSystem/ca-qc-patient-healthcare-id
+* Saskatchewan - https://fhir.infoway-inforoute.ca/NamingSystem/ca-sk-patient-healthcare-id
+* Yukon - https://fhir.infoway-inforoute.ca/NamingSystem/ca-yt-patient-healthcare-id
+
+The full list is in [Canadian URI Registry](https://simplifier.net/canadianuriregistry/~resources?category=NamingSystem)
+
+Other URIs used with this identifier type:
 * Canada Veteran's Affairs health card number - https://fhir.infoway-inforoute.ca/NamingSystem/ca-veterans-affairs-health-id
 * Canada Correctional Service health card number - https://fhir.infoway-inforoute.ca/NamingSystem/ca-correctional-service-health-id
 * Canada Royal Canadian Mounted Police (RCMP) health card number - https://fhir.infoway-inforoute.ca/NamingSystem/ca-royal-mounted-police-health-id
