@@ -60,8 +60,6 @@ URIs used with this identifier type:
 ```
 
 ### Jurisdictional Health Number (JHN)
-This patient identifier type identifies a number issued in Canada to let a patient to be recognized for services and stay connected to related support programs.
-
 Following URIs are registered to identify health numbers for provinces and territories:
 * Alberta - https://fhir.infoway-inforoute.ca/NamingSystem/ca-ab-patient-healthcare-id
 * British Columbia - https://fhir.infoway-inforoute.ca/NamingSystem/ca-bc-patient-healthcare-id
@@ -79,7 +77,7 @@ Following URIs are registered to identify health numbers for provinces and terri
 
 The full list is in [Canadian URI Registry](https://simplifier.net/canadianuriregistry/~resources?category=NamingSystem)
 
-Other URIs used with this identifier type:
+This patient identifier type identifies a number issued in Canada to let a patient to be recognized for services and stay connected to related support programs:
 * Canada Veteran's Affairs health card number - https://fhir.infoway-inforoute.ca/NamingSystem/ca-veterans-affairs-health-id
 * Canada Correctional Service health card number - https://fhir.infoway-inforoute.ca/NamingSystem/ca-correctional-service-health-id
 * Canada Royal Canadian Mounted Police (RCMP) health card number - https://fhir.infoway-inforoute.ca/NamingSystem/ca-royal-mounted-police-health-id
