@@ -1,0 +1,11 @@
+-------------------------------------------------------------------------------------
+{"code" : {
+  "system" : "http://hl7.org/fhir/ValueSet/identifier-type",
+  "code" : "PPN"
+}, "valueSet" :null, "lang":"null", "useServer":"true", "useClient":"false", "guessSystem":"false"}####
+v: {
+  "display" : "",
+  "severity" : "error",
+  "error" : "The code system \"http://hl7.org/fhir/ValueSet/identifier-type\" is not known (encountered paired with code = \"PPN\"); The code provided (http://hl7.org/fhir/ValueSet/identifier-type#PPN) is not  valid in the value set All codes known to the system"
+}
+-------------------------------------------------------------------------------------
