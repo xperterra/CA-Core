@@ -1,4 +1,5 @@
 *.dropbox
+org.hl7.fhir.publisher.jar
 .DS_Store
 desktop.ini
 ig-expansion-parameters.json

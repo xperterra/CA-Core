@@ -62,19 +62,19 @@
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/ext-servicelanguage"/>
+        <reference value="StructureDefinition/ext-dataabsentreason"/>
       </reference>
-      <name value="ServiceLanguage"/>
-      <description value="Indentifies languages that that services are provided in."/>
+      <name value="Data Absent Reason"/>
+      <description value="Provides a reason why the expected value or elements in the element that is extended are missing."/>
       <exampleBoolean value="false"/>
       <groupingId value="extensions"/>
     </resource>
     <resource>
       <reference>
-        <reference value="StructureDefinition/ext-dataabsentreason"/>
+        <reference value="StructureDefinition/ext-ethnicity"/>
       </reference>
-      <name value="Data Absent Reason"/>
-      <description value="Provides a reason why the expected value or elements in the element that is extended are missing."/>
+      <name value="Ethnicity"/>
+      <description value="A code classifying the person's ethnic group or ethnicity as the category of people who identify with each other, usually on the basis of a presumed common genealogy or ancestry or on other similarities."/>
       <exampleBoolean value="false"/>
       <groupingId value="extensions"/>
     </resource>
@@ -93,6 +93,24 @@
       </reference>
       <name value="Identifier Version"/>
       <description value="A version string indicating the currency/validity of an identifier."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="extensions"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/ext-nofixedaddress"/>
+      </reference>
+      <name value="No Fixed Address"/>
+      <description value="This extension applies to the Address datatype and indicates that there is an assertion that there is no fixed address."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="extensions"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/ext-servicelanguage"/>
+      </reference>
+      <name value="Service Language"/>
+      <description value="Indentifies languages that that services are provided in."/>
       <exampleBoolean value="false"/>
       <groupingId value="extensions"/>
     </resource>
@@ -318,6 +336,15 @@
       </reference>
       <name value="Birth Sex"/>
       <description value="Codes for documenting sex at birth. (Replicates the birthsex ValueSet in US-Core-R4 for interoperability.)"/>
+      <exampleBoolean value="false"/>
+      <groupingId value="terminology"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="ValueSet/ethnicitycode"/>
+      </reference>
+      <name value="Ethnicity Code"/>
+      <description value="Codes representing a self-reported ethnic group. This should not be confused with citizenship or nationality."/>
       <exampleBoolean value="false"/>
       <groupingId value="terminology"/>
     </resource>
