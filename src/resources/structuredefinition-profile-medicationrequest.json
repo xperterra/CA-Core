@@ -43,8 +43,9 @@
         ],
         "mustSupport": true,
         "binding": {
-          "strength": "extensible",
-          "valueSet": "http://hl7.org/fhir/ca/core/ValueSet/prescriptionmedicinalproduct"
+          "strength": "preferred",
+          "description": "TBD. This is a placeholder for a comprehensive valueset, consisting of all Manufactured Product (MP), Non-proprietary Therapeutic Product (NTP) and Therapeutic Moiety (TM) codes, which would be created and maintained by Canada Health Infoway. Medicinal products for prescribing and dispensing in Canada. The content of this subset only contains commonly used medicinal products that are available for prescribing and dispensing in Canada. This content will expand to include all human medicinal products over time.",
+          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/prescriptionmedicinalproduct"
         }
       },
       {
@@ -63,7 +64,6 @@
       {
         "id": "MedicationRequest.authoredOn",
         "path": "MedicationRequest.authoredOn",
-        "min": 1,
         "mustSupport": true
       },
       {
