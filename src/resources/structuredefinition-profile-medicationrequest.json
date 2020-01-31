@@ -20,11 +20,36 @@
         "id": "MedicationRequest",
         "path": "MedicationRequest",
         "short": "MedicationRequest Profile",
-        "definition": "The MedicationRequest Profile is based upon the core FHIR MedicationRequest Resource"
+        "definition": "The Canadian Core MedicationRequest Profile is based upon the core FHIR MedicationRequest Resource"
       },
       {
         "id": "MedicationRequest.status",
         "path": "MedicationRequest.status",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationRequest.intent",
+        "path": "MedicationRequest.intent",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationRequest.reported[x]",
+        "path": "MedicationRequest.reported[x]",
+        "type" : [
+          {
+            "code" : "boolean"
+          },
+          {
+            "code" : "Reference",
+            "targetProfile" : [
+              "http://hl7.org/fhir/ca/core/StructureDefinition/profile-patient",
+              "http://hl7.org/fhir/ca/core/StructureDefinition/profile-practitioner",
+              "http://hl7.org/fhir/ca/core/StructureDefinition/profile-practitionerrole",
+              "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+              "http://hl7.org/fhir/ca/core/StructureDefinition/profile-organization"
+            ]
+          }
+        ],
         "mustSupport": true
       },
       {
@@ -72,8 +97,13 @@
         "type": [
           {
             "code": "Reference",
-            "targetProfile": [
-              "http://hl7.org/fhir/ca/core/StructureDefinition/profile-practitioner"
+            "targetProfile" : [
+              "http://hl7.org/fhir/ca/core/StructureDefinition/profile-practitioner",
+              "http://hl7.org/fhir/ca/core/StructureDefinition/profile-practitionerrole",
+              "http://hl7.org/fhir/ca/core/StructureDefinition/profile-organization",
+              "http://hl7.org/fhir/ca/core/StructureDefinition/profile-patient",
+              "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+              "http://hl7.org/fhir/ca/core/StructureDefinition/profile-device"
             ]
           }
         ],
