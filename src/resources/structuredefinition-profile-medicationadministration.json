@@ -67,8 +67,8 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.performer.actor",
-        "path": "MedicationRequest.performer.actor",
+        "id": "MedicationAdministration.performer.actor",
+        "path": "MedicationAdministration.performer.actor",
         "type": [
           {
             "code": "Reference",
@@ -84,13 +84,13 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosage",
-        "path": "MedicationRequest.dosage",
+        "id": "MedicationAdministration.dosage",
+        "path": "MedicationAdministration.dosage",
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosage.text",
-        "path": "MedicationRequest.dosage.text",
+        "id": "MedicationAdministration.dosage.text",
+        "path": "MedicationAdministration.dosage.text",
         "mustSupport": true
       }
     ]

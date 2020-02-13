@@ -106,13 +106,13 @@
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosage",
-        "path": "MedicationRequest.dosage",
+        "id": "MedicationStatement.dosage",
+        "path": "MedicationStatement.dosage",
         "mustSupport": true
       },
       {
-        "id": "MedicationRequest.dosage.text",
-        "path": "MedicationRequest.dosage.text",
+        "id": "MedicationStatement.dosage.text",
+        "path": "MedicationStatement.dosage.text",
         "mustSupport": true
       }
     ]
