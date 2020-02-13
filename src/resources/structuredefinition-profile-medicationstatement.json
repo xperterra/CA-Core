@@ -74,6 +74,18 @@
       {
         "id": "MedicationStatement.informationSource",
         "path": "MedicationStatement.informationSource",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile" : [
+              "http://hl7.org/fhir/ca/core/StructureDefinition/profile-patient",
+              "http://hl7.org/fhir/ca/core/StructureDefinition/profile-practitioner",
+              "http://hl7.org/fhir/ca/core/StructureDefinition/profile-practitionerrole",
+              "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+              "http://hl7.org/fhir/ca/core/StructureDefinition/profile-organization"
+            ]
+          }
+        ],
         "mustSupport": true
       },
       {
