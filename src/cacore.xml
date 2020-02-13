@@ -224,6 +224,24 @@
     </resource>
     <resource>
       <reference>
+        <reference value="StructureDefinition/profile-medicationadministration"/>
+      </reference>
+      <name value="MedicationAdministration Profile"/>
+      <description value="Proposed constraints and extensions on the MedicationAdministration Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
+        <reference value="StructureDefinition/profile-medicationdispense"/>
+      </reference>
+      <name value="MedicationDispense Profile"/>
+      <description value="Proposed constraints and extensions on the MedicationDispense Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles."/>
+      <exampleBoolean value="false"/>
+      <groupingId value="profiles"/>
+    </resource>
+    <resource>
+      <reference>
         <reference value="StructureDefinition/profile-medicationstatement"/>
       </reference>
       <name value="MedicationStatement Profile"/>
