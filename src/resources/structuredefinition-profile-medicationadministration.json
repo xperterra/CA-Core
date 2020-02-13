@@ -1,0 +1,98 @@
+{
+  "resourceType": "StructureDefinition",
+  "id": "profile-medicationadministration",
+  "url": "http://hl7.org/fhir/ca/core/StructureDefinition/profile-medicationadministration",
+  "version": "0.0.0",
+  "name": "MedicationAdministrationProfile",
+  "title": "MedicationAdministration Profile",
+  "status": "draft",
+  "date": "2019-03-31",
+  "publisher": "TBD",
+  "description": "Proposed constraints and extensions on the MedicationAdministration Resource.  Generated as a first step toward creating a set of Canadian Core FHIR profiles.",
+  "kind": "resource",
+  "abstract": false,
+  "type": "MedicationAdministration",
+  "baseDefinition": "http://hl7.org/fhir/StructureDefinition/MedicationAdministration",
+  "derivation": "constraint",
+  "differential": {
+    "element": [
+      {
+        "id": "MedicationAdministration",
+        "path": "MedicationAdministration",
+        "short": "MedicationAdministration Profile",
+        "definition": "The MedicationAdministration Profile is based upon the core FHIR MedicationAdministration Resource"
+      },
+      {
+        "id": "MedicationAdministration.status",
+        "path": "MedicationAdministration.status",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.medication[x]",
+        "path": "MedicationAdministration.medication[x]",
+        "type": [
+          {
+            "code": "CodeableConcept"
+          },
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/ca/core/StructureDefinition/profile-medication"
+            ]
+          }
+        ],
+        "mustSupport": true,
+        "binding": {
+          "strength": "preferred",
+          "description": "TBD. This is a placeholder for a comprehensive valueset, consisting of all Manufactured Product (MP), Non-proprietary Therapeutic Product (NTP) and Therapeutic Moiety (TM) codes, which would be created and maintained by Canada Health Infoway. Medicinal products for prescribing and dispensing in Canada. The content of this subset only contains commonly used medicinal products that are available for prescribing and dispensing in Canada. This content will expand to include all human medicinal products over time.",
+          "valueSet": "https://fhir.infoway-inforoute.ca/ValueSet/prescriptionmedicinalproduct"
+        }
+      },
+      {
+        "id": "MedicationAdministration.subject",
+        "path": "MedicationAdministration.subject",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile": [
+              "http://hl7.org/fhir/ca/core/StructureDefinition/profile-patient"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationAdministration.effective[x]",
+        "path": "MedicationAdministration.effective[x]",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationRequest.performer.actor",
+        "path": "MedicationRequest.performer.actor",
+        "type": [
+          {
+            "code": "Reference",
+            "targetProfile" : [
+              "http://hl7.org/fhir/ca/core/StructureDefinition/profile-practitioner",
+              "http://hl7.org/fhir/ca/core/StructureDefinition/profile-practitionerrole",
+              "http://hl7.org/fhir/ca/core/StructureDefinition/profile-patient",
+              "http://hl7.org/fhir/StructureDefinition/RelatedPerson",
+              "http://hl7.org/fhir/ca/core/StructureDefinition/profile-device"
+            ]
+          }
+        ],
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationRequest.dosage",
+        "path": "MedicationRequest.dosage",
+        "mustSupport": true
+      },
+      {
+        "id": "MedicationRequest.dosage.text",
+        "path": "MedicationRequest.dosage.text",
+        "mustSupport": true
+      }
+    ]
+  }
+}
